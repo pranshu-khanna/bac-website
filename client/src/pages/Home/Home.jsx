@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../../axios";
-import ChessBoard from "../../components/ChessBoard/ChessBoard";
+import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import "./Home.scss";
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
           <div className="landing-hero-visual">
             <div className="landing-hero-board-wrap">
               <div className="landing-hero-board-glow" />
-              <ChessBoard />
+              <HeroVideo />
             </div>
           </div>
         </div>
