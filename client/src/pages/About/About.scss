@@ -1,0 +1,17 @@
+.right-bar {
+  position: sticky;
+  top: 5.75rem;
+  align-self: start;
+}
+
+.right-bar-title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .right-bar {
+    position: static;
+  }
+}
