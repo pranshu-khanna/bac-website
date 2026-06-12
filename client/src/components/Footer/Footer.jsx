@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-copy">
-          © {new Date().getFullYear()} Bay Area Chess ·{" "}
+          © 2006–2026 Bay Area Chess ·{" "}
           <Link to="/contact">contact us</Link>
         </div>
       </div>

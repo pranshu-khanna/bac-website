@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import api from "../../axios";
 import "./Leaderboard.scss";
 
@@ -21,6 +20,60 @@ function PodiumSlot({ entry, variant }) {
         <span className="lb-podium-value">{entry.redeemed}</span>
       </div>
     </div>
+  );
+}
+
+function BacoinInfoPanel({ info }) {
+  if (!info) return null;
+
+  return (
+    <section className="lb-bacoin-info" aria-labelledby="bacoin-info-heading">
+      <div className="lb-bacoin-info-head">
+        <h2 id="bacoin-info-heading" className="lb-bacoin-title">
+          {info.title}
+        </h2>
+        {info.intro && <p className="lb-bacoin-intro">{info.intro}</p>}
+      </div>
+
+      <div className="lb-bacoin-grid">
+        {info.sections?.map((section) => (
+          <article key={section.id} className="lb-bacoin-card">
+            <h3>{section.heading}</h3>
+            <p>{section.body}</p>
+          </article>
+        ))}
+
+        <article className="lb-bacoin-card lb-bacoin-card--rates">
+          <h3>BACoin current exchange rates</h3>
+          <ul className="lb-rate-list">
+            {info.exchangeRates?.map((rate) => (
+              <li key={rate.coins}>
+                <span className="lb-rate-coins">{rate.coins} BA€</span>
+                <span className="lb-rate-eq">=</span>
+                <span className="lb-rate-prize">{rate.prize}</span>
+              </li>
+            ))}
+          </ul>
+        </article>
+
+        {info.redeem && (
+          <article className="lb-bacoin-card lb-bacoin-card--redeem">
+            <h3>{info.redeem.heading}</h3>
+            <p>{info.redeem.body}</p>
+            <a
+              className="lb-btn lb-btn--primary"
+              href={info.redeem.formUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {info.redeem.formLabel}
+            </a>
+          </article>
+        )}
+      </div>
+
+      {info.balanceNote && <p className="lb-bacoin-balance-note">{info.balanceNote}</p>}
+    </section>
   );
 }
 
@@ -72,18 +125,10 @@ export default function Leaderboard() {
         <div className="constrain lb-hero-grid">
           <div>
             <p className="lb-eyebrow">BACoin rewards</p>
-            <h1 className="lb-title">Tournament leaderboard</h1>
+            <h1 className="lb-title">BACoin leaderboard</h1>
             <p className="lb-lead">
-              Track BACoins earned at camps, clubs, and rated tournaments. {data.updatedNote}
+              Track BACoins earned at camps, clubs, and rated tournaments.
             </p>
-            <div className="lb-hero-actions">
-              <Link className="lb-btn lb-btn--primary" to="/membership">
-                Membership info
-              </Link>
-              <Link className="lb-btn btn secondary" to="/">
-                Back to home
-              </Link>
-            </div>
           </div>
           <div className="lb-hero-panel">
             <div className="lb-coin-stack" aria-hidden>
@@ -97,16 +142,7 @@ export default function Leaderboard() {
       </section>
 
       <div className="constrain lb-body">
-        <div className="lb-stats">
-          <div className="lb-stat-card">
-            <span className="lb-stat-label">Players</span>
-            <span className="lb-stat-value">{data.totalPlayers}</span>
-          </div>
-          <div className="lb-stat-card lb-stat-card--meta">
-            <span className="lb-stat-label">Showing</span>
-            <span className="lb-stat-value lb-stat-value--sm">{filtered.length} results</span>
-          </div>
-        </div>
+        <BacoinInfoPanel info={data.bacoinInfo} />
 
         {top3.length > 0 && (
           <section className="lb-podium-section">

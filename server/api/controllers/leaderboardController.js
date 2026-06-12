@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const bacoinInfo = require("../data/bacoinInfo");
 
 function parseCsv(text) {
   const rows = [];
@@ -93,6 +94,7 @@ exports.getLeaderboard = (_req, res) => {
       entries,
       totalPlayers: entries.length,
       updatedNote: "Data loaded from BACoin leaderboard CSV",
+      bacoinInfo,
     });
   } catch (err) {
     res.status(500).json({ error: "Could not load leaderboard data." });
