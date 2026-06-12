@@ -11,6 +11,8 @@ import Membership from "./pages/Membership/Membership";
 import Resources from "./pages/Resources/Resources";
 import Request from "./pages/Request/Request";
 import Login from "./pages/Login/Login";
+import Enrichment from "./pages/Enrichment/Enrichment";
+import EnrichmentLaunch from "./pages/Enrichment/EnrichmentLaunch";
 import NotFound from "./pages/NotFound/NotFound";
 
 export default function App() {
@@ -28,6 +30,8 @@ export default function App() {
         <Route path="resources" element={<Resources />} />
         <Route path="request" element={<Request />} />
         <Route path="login" element={<Login />} />
+        <Route path="enrichment" element={<Enrichment />} />
+        <Route path="enrichment/launch/:slug" element={<EnrichmentLaunch />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

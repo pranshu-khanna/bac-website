@@ -21,15 +21,10 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>Enrichment</h4>
-            <a href="https://enrichment.bayareachess.com/weekend-clubs" target="_blank" rel="noreferrer">
-              Weekend clubs
-            </a>
-            <a href="https://enrichment.bayareachess.com/All" target="_blank" rel="noreferrer">
-              Chess camps
-            </a>
-            <a href="https://enrichment.bayareachess.com/RisingStars" target="_blank" rel="noreferrer">
-              Rising Stars
-            </a>
+            <Link to="/enrichment">Enrichment hub</Link>
+            <Link to="/enrichment/launch/weekend-clubs">Weekend clubs</Link>
+            <Link to="/enrichment/launch/camps">Chess camps</Link>
+            <Link to="/enrichment/launch/rising-stars">Rising Stars</Link>
             <Link to="/programs">Programs</Link>
           </div>
           <div className="footer-col">

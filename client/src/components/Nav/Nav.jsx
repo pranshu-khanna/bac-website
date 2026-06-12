@@ -13,7 +13,9 @@ export default function Nav() {
       <NavLink to="/leaderboard" className={navClass}>
         Leaderboard
       </NavLink>
-      <a href="https://enrichment.bayareachess.com/">Enrichment</a>
+      <NavLink to="/enrichment" className={navClass}>
+        Enrichment
+      </NavLink>
       <a href="https://bayareachess.com/results/" target="_blank" rel="noreferrer">
         Results
       </a>

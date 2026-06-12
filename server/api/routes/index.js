@@ -10,6 +10,7 @@ const membershipRoutes = require("./membershipRoutes");
 const resourcesRoutes = require("./resourcesRoutes");
 const requestRoutes = require("./requestRoutes");
 const loginRoutes = require("./loginRoutes");
+const enrichmentRoutes = require("./enrichmentRoutes");
 
 const router = express.Router();
 
@@ -24,6 +25,7 @@ router.use("/membership", membershipRoutes);
 router.use("/resources", resourcesRoutes);
 router.use("/request", requestRoutes);
 router.use("/login", loginRoutes);
+router.use("/enrichment", enrichmentRoutes);
 
 router.get("/health", (_req, res) => {
   res.json({ ok: true });
