@@ -100,3 +100,20 @@
     grid-column: span 2;
   }
 }
+
+/* White card surfaces stay light in dark mode — use blue/dark text for readability */
+[data-theme="dark"] .lb-bacoin-card {
+  background: #fff;
+  border-color: rgba(39, 115, 174, 0.18);
+}
+
+[data-theme="dark"] .lb-bacoin-card p,
+[data-theme="dark"] .lb-bacoin-card .lb-rate-eq {
+  color: #2773ae;
+}
+
+[data-theme="dark"] .lb-bacoin-card h3,
+[data-theme="dark"] .lb-bacoin-card .lb-rate-coins,
+[data-theme="dark"] .lb-bacoin-card .lb-rate-prize {
+  color: #1d5a8a;
+}

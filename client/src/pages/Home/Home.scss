@@ -8,3 +8,14 @@
     width: min(440px, 94vw);
   }
 }
+
+[data-theme="dark"] .landing-hero-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 85% 20%, rgba(236, 192, 70, 0.1) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 10% 80%, rgba(91, 163, 217, 0.1) 0%, transparent 60%),
+    linear-gradient(180deg, var(--cream) 0%, var(--cream) 100%);
+}
+
+[data-theme="dark"] .landing-hero-copy {
+  color: var(--warm-gray);
+}

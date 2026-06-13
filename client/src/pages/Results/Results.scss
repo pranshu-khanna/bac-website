@@ -175,3 +175,22 @@
   background: var(--ink-pale);
   color: var(--ink-dark);
 }
+
+/* Light-surface fixes in dark mode */
+[data-theme="dark"] .results-legend {
+  background: #fff;
+  border-color: rgba(236, 192, 70, 0.45);
+  color: #333333;
+}
+
+[data-theme="dark"] .results-legend a {
+  color: #2773ae;
+}
+
+[data-theme="dark"] .results-prize-badge {
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.15rem 0.35rem;
+  line-height: 1;
+  box-shadow: 0 0 0 1px rgba(39, 115, 174, 0.12);
+}
