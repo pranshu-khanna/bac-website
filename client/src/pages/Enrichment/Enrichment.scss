@@ -5,25 +5,25 @@
   align-items: center;
   padding: 0.75rem max(1.25rem, env(safe-area-inset-left));
   padding-right: max(1.25rem, env(safe-area-inset-right));
-  background: var(--ink);
-  color: #fff;
-  border-bottom: 3px solid var(--gold);
+  background: var(--cream);
+  color: var(--ink);
+  border-bottom: 2px solid var(--gold);
 }
 
 .enrichment-return-link {
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
   text-decoration: none;
   font-size: 0.92rem;
   font-weight: 600;
 }
 
 .enrichment-return-link:hover {
-  color: var(--gold-light);
+  color: var(--ink-dark);
   text-decoration: underline;
 }
 
 .enrichment-return-link--primary {
-  color: var(--gold-light);
+  color: var(--ink-dark);
 }
 
 .enrichment-page .enrichment-intro {
@@ -37,8 +37,8 @@
   margin: 0 0 1.5rem;
   padding: 0.85rem 1rem;
   border-radius: 10px;
-  border: 1px solid rgba(65, 105, 225, 0.2);
-  background: rgba(65, 105, 225, 0.06);
+  border: 1px solid rgba(39, 115, 174, 0.14);
+  background: rgba(39, 115, 174, 0.06);
   font-size: 0.92rem;
   line-height: 1.55;
   max-width: 42rem;
@@ -98,7 +98,7 @@
   margin: 1rem 0 0;
   padding: 0.65rem 0.75rem;
   border-radius: 8px;
-  background: rgba(255, 215, 0, 0.15);
+  background: rgba(236, 192, 70, 0.15);
   color: var(--ink);
   font-size: 0.9rem;
   line-height: 1.5;
