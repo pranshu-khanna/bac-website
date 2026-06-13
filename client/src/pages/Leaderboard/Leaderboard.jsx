@@ -96,7 +96,18 @@ export default function Leaderboard() {
     return data.entries.filter((e) => e.name.toLowerCase().includes(q));
   }, [data, query]);
 
-  const top3 = filtered.slice(0, 3);
+  const displayLimit = data?.displayLimit ?? 25;
+  const isSearching = query.trim().length > 0;
+
+  const visible = useMemo(() => {
+    if (isSearching) return filtered;
+    return filtered.slice(0, displayLimit);
+  }, [filtered, isSearching, displayLimit]);
+
+  const top3 = useMemo(() => {
+    if (!data?.entries || isSearching) return [];
+    return data.entries.slice(0, 3);
+  }, [data, isSearching]);
   const variants = ["gold", "silver", "bronze"];
 
   if (error) {
@@ -157,7 +168,7 @@ export default function Leaderboard() {
 
         <section className="lb-table-section">
           <div className="lb-table-head">
-            <h2 className="lb-section-title">Full leaderboard</h2>
+            <h2 className="lb-section-title">Top 25 leaderboard</h2>
             <input
               className="lb-search-input"
               type="search"
@@ -167,7 +178,11 @@ export default function Leaderboard() {
               aria-label="Search leaderboard"
             />
           </div>
-          <p className="lb-table-hint">Sorted by total BACoins earned.</p>
+          <p className="lb-table-hint">
+            {isSearching
+              ? `Showing ${visible.length} match${visible.length === 1 ? "" : "es"} across ${data.totalPlayers} players.`
+              : `Showing top ${displayLimit} of ${data.totalPlayers} players. Search to find anyone.`}
+          </p>
           <div className="lb-table-wrap">
             <table className="lb-table">
               <thead>
@@ -180,7 +195,7 @@ export default function Leaderboard() {
                 </tr>
               </thead>
               <tbody>
-                {filtered.slice(0, 100).map((entry) => (
+                {visible.map((entry) => (
                   <tr key={entry.rank} className={entry.rank <= 5 ? "lb-row--elite" : ""}>
                     <td className="lb-rank-cell">
                       <span className="lb-rank-badge">{entry.rank}</span>
@@ -194,9 +209,6 @@ export default function Leaderboard() {
               </tbody>
             </table>
           </div>
-          {filtered.length > 100 && (
-            <p className="lb-more-hint">Showing top 100 matches. Refine your search to find others.</p>
-          )}
         </section>
       </div>
     </main>

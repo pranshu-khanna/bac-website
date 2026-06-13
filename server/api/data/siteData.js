@@ -113,6 +113,10 @@ module.exports = {
   googleSheetsBase:
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKKswJ_9d3ORBHxFet3QM3UwqK40UOeNmd0lmJfT62S_lm-zHVufhQb9HIcfriiQQrBKXfqcwhck9",
   resultsSheetGid: "1642745431",
+  bacoinSheetId: "1c8yb-Jqe4QcgE537STJX90LAzStBIwtha7b31TfuTUs",
+  bacoinSheetGid: "0",
+  leaderboardRefreshMs: 12 * 60 * 60 * 1000,
+  leaderboardListLimit: 25,
   resultsRefreshMs: 12 * 60 * 60 * 1000,
   resultsArchiveTabs: [
     {
