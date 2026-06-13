@@ -27,14 +27,6 @@ export default function Home() {
               {data.hero.title} <em>{data.hero.titleEm}</em>
             </h1>
             <p className="landing-hero-copy">{data.hero.description}</p>
-            <div className="landing-hero-buttons">
-              <Link className="landing-btn-primary" to={data.hero.primaryCta.path}>
-                {data.hero.primaryCta.label}
-              </Link>
-              <Link className="landing-btn-secondary" to={data.hero.secondaryCta.path}>
-                {data.hero.secondaryCta.label}
-              </Link>
-            </div>
           </div>
           <div className="landing-hero-visual">
             <div className="landing-hero-board-wrap">
@@ -58,7 +50,6 @@ export default function Home() {
 
       <section className="landing-section landing-section--pale constrain">
         <p className="landing-section-label">What we offer</p>
-        <h2 className="landing-section-title">Programs for every player</h2>
         <div className="landing-offerings-grid">
           {data.pillars.map((pillar) => (
             <div key={pillar.title} className="landing-offer-card">

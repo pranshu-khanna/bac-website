@@ -4,7 +4,6 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Events from "./pages/Events/Events";
-import Programs from "./pages/Programs/Programs";
 import Tournaments from "./pages/Tournaments/Tournaments";
 import Leaderboard from "./pages/Leaderboard/Leaderboard";
 import Membership from "./pages/Membership/Membership";
@@ -25,7 +24,6 @@ export default function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="events" element={<Events />} />
-        <Route path="programs" element={<Programs />} />
         <Route path="tournaments" element={<Tournaments />} />
         <Route path="leaderboard" element={<Leaderboard />} />
         <Route path="membership" element={<Membership />} />

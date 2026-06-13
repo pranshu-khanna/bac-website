@@ -23,7 +23,6 @@ export default function Footer() {
             <Link to="/enrichment/launch/weekend-clubs">Weekend clubs</Link>
             <Link to="/enrichment/launch/camps">Chess camps</Link>
             <Link to="/enrichment/launch/rising-stars">Rising Stars</Link>
-            <Link to="/programs">Programs</Link>
           </div>
           <div className="footer-col">
             <h4>Organization</h4>

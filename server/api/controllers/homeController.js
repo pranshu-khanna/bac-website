@@ -6,12 +6,9 @@ exports.getHome = (_req, res) => {
       titleEm: "Through Chess",
       description:
         "From first-timers to rated competitors, Bay Area Chess brings coaching, tournaments, and enrichment programs across the Bay.",
-      primaryCta: { label: "View tournaments", path: "/tournaments" },
-      secondaryCta: { label: "Explore programs", path: "/programs" },
     },
     stats: [
-      { value: "15+", label: "Years serving the Bay Area" },
-      { value: "1000s", label: "Players each year" },
+      { value: "20+", label: "Years serving the Bay Area" },
       { value: "2018", label: "USCF Club of the Year" },
     ],
     pillars: [

@@ -8,7 +8,6 @@ exports.getContact = (_req, res) => {
     hours: "Office hours vary — email ask@bayareachess.com for scheduling.",
     sidebarLinks: [
       { label: "Tournaments", path: "/tournaments" },
-      { label: "Programs", path: "/programs" },
       { label: "Membership", path: "/membership" },
       { label: "Resources", path: "/resources" },
     ],
