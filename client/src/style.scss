@@ -3,8 +3,8 @@
 .header-actions{display:flex;align-items:center;gap:.5rem;flex-shrink:0}
 .theme-toggle{background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff;padding:6px 10px;border-radius:6px;font-size:12px;cursor:pointer;font-family:var(--font-body)}
 .theme-toggle:hover{background:#ffffff14}
-[data-theme="dark"]{--cream:#152a3d;--ivory:#1e3a52;--ink:#5ba3d9;--gold:#ecc046;--gold-light:#e5c15d;color-scheme:dark}
-[data-theme="dark"] body,[data-theme="dark"] .site{background:var(--cream);color:#e2e8f0}
+[data-theme="dark"]{--cream:#152a3d;--ivory:#1e3a52;--ink:#5ba3d9;--ink-dark:#8ec5f0;--gold:#ecc046;--gold-light:#e5c15d;--text:#ffffff;--warm-gray:#ffffff;color-scheme:dark}
+[data-theme="dark"] body,[data-theme="dark"] .site{background:var(--cream);color:#ffffff}
 
 /* BAC site layering: white pages, pale blue sections, varied blue bands */
 .landing-section--pale{background:var(--cream)}
