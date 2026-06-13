@@ -1,0 +1,973 @@
+{
+  "fetchedAt": "2026-06-13T22:19:55.949Z",
+  "entries": [
+    {
+      "date": "JUN 7",
+      "id": "BAC 3416",
+      "name": "SAN JOSE CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202606070223",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1Q8sCIIFk4r6K3fOhSRncEOfSQxZ2cnjEe4t9rm6DxEo/edit?usp=sharing"
+    },
+    {
+      "date": "JUN 7",
+      "id": "BAC 3414",
+      "name": "SAN JOSE KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202606070233",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1Eu8XiBLdsxTwgxMeSQ7uv4uPwLvbiL8Gz1dJGghgN0Q/edit?usp=sharing"
+    },
+    {
+      "date": "JUN 7",
+      "id": "BAC 3413",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202606070083",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1NAXCft2x37r_xx1V-eaZQxosonefKTF5b7BwRUyvshY/edit?usp=sharing"
+    },
+    {
+      "date": "JUN 6",
+      "id": "BAC 3412",
+      "name": "FREMONT CA$H SWISS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202606060873",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1qXbf0qWh2WggWwPXBDUZrQHwrqViWEzR5IjzggzqEyM/edit?usp=sharing"
+    },
+    {
+      "date": "JUN 6",
+      "id": "BAC 3411",
+      "name": "FREMONT KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202606060643",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1SH7lntor1WU32kZCQJ-UJlwQkm8m8CDUhkEcoKgpOvs/edit?usp=sharing"
+    },
+    {
+      "date": "JUN 6",
+      "id": "BAC 3410",
+      "name": "FREMONT KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202606060573",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1OnnpVgW8sav7QxyXRZkTcGUnFN6SEMoDig4MdCNuJtE/edit?usp=sharing"
+    },
+    {
+      "date": "JUN 6",
+      "id": "BAC 3409",
+      "name": "FREMONT KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202606060473",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1mTo3ZDw5PrcySgEEuFn4Oje6Rrmjpkkm1M_Ivp67n7o/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 31",
+      "id": "BAC 3408",
+      "name": "SAN JOSE CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202605310303",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1OPJLugMhYX7mXCHyjA1NyyFrC6upOAKUkjMewE16ctU/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 31",
+      "id": "BAC 3407",
+      "name": "SAN JOSE KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605310523",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1SX1j9yPjFEMIa4GQc1953yFrDjBHmI1KYZJLtNhvIDI/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 31",
+      "id": "BAC 3406",
+      "name": "SAN JOSE KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202605310253",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1rv_rnyflyf4N_Uya_hjd1_Gseoihxi0d7uNjkAXcfHE/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 31",
+      "id": "BAC 3405",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605310043",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1N6pr3JnxqD3SFdQuU5Wi-e2_EnUxgOCS9YfCpfB6WxY/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 30",
+      "id": "BAC 3404",
+      "name": "CUPERTINO CA$H SWISS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202605300753",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1AUEP-2n73jlHNB1Zq2YH0XFwdWQB5G-fggMv5VBzMhU/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 30",
+      "id": "BAC 3403",
+      "name": "CUPERTINO KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605300673",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1LOaBHiPaqI_wi-8Lrb5S3-mkt2bhf1yrFhW8wEXa1co/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 30",
+      "id": "BAC 3402",
+      "name": "CUPERTINO KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202605300653",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1Mdf6oYu54N9ejf0-GGWHBCdxz3-xQ1INutXsAcShYCQ/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 30",
+      "id": "BAC 3401",
+      "name": "CUPERTINO KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605300473",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1V_JAxMDk7m0KGhjqtoYcfg7qd_-MsIjJYpBD8kPhHeg/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 25",
+      "id": "BAC 3400",
+      "name": "MEMORIAL DAY OPEN BLITZ",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202605250463",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1rnMXegvGpaeEMBE3vLQTIKSt0MDbEVoTNKzrl0Q11C4/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 22-25",
+      "id": "BAC 3399",
+      "name": "2026 CM & SURAIYA AZHAR MEMORIAL DAY",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202605250443",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1wuyOH3VXzGr8bK_imTf64yXc6RQOErkI5EO2a-dR86Q/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 25",
+      "id": "BAC 3398",
+      "name": "MILPITAS KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605250453",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1Q7gb-JMh2Jf_g49HbpOQH8wp__pTHiUgr9xgk5_VQSA/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 24",
+      "id": "BAC 3397",
+      "name": "MILPITAS KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202605240493",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1yhcO6Dwvp3YgQ6VPT7JYSNFnOB6VtFqESbLb1D5isRY/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 24",
+      "id": "BAC 3396",
+      "name": "MILPITAS KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605240473",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1ho49PlKmiw9kX7w2ihDGJ9MGz0TXsLmFSoQGnE2Rlfs/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 24",
+      "id": "BAC 3395",
+      "name": "MILPITAS KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605240463",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/15D0PQoyYwrwCyXIPzYLqQtLQh0mTvrJyuoF4rs50qFs/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 23",
+      "id": "BAC 3394",
+      "name": "MILPITAS U1200 BLITZ",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605230443",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1OdQGIwft8VWhR1C9i_16XL_z0-vLKGnc5WMRgyWl4uw/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 23",
+      "id": "BAC 3393",
+      "name": "MEMORIAL DAY U1200 CHAMP",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605230453",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/13hUDA9Cz9N9MFxzcFgFSUgY-MLJOp_FrRRknDwu9QrU/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 17",
+      "id": "BAC 3392",
+      "name": "MILPITAS CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202605170853",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1ND36qiuz0jcU8GDkZO0mxUwp3AiR1SxDdz-itOJnybs/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 16-17",
+      "id": "BAC 3391",
+      "name": "2026 CALCHESS GIRLS & BOYS CHAMPIONSHIP",
+      "prizeType": "🏆",
+      "ratingUrl": "https://ratings.uschess.org/event/202605170733",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1x-_VppOX-fNmjRrDtPLfLycxOVHdMgZNlIumTwn8NNU/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 16",
+      "id": "BAC 3390",
+      "name": "MILPITAS OPEN RAPID",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202605161393",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/14KQsmjYhro3qsoDsD7wQLxbxotyvv1Awe-481MpOXgE/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 9-10",
+      "id": "BAC 3389",
+      "name": "2026 CALCHESS ASHLEY QUALIFIER",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202605100193",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1zJrwjqFkC_bG34Q6-bXhR-lfecLnLsCs23dCLn-Dl-o/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 10",
+      "id": "BAC 3388",
+      "name": "SAN JOSE CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202605100103",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1pHcoOPcboRzFw6DtRjU442KIkerP5YjHGpjNrIGJ7Wo/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 9",
+      "id": "BAC 3387",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605091053",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1yVLUWxXU9jBDx3AvWxYZl8nUjHxkAmgkhBzPGjPlvKw/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 9",
+      "id": "BAC 3386",
+      "name": "SAN JOSE KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202605090803",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/14Ej5jK8Y1vXr8JfkBTgBc2B5Plshrf2SQ6ovdF0L61o/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 3",
+      "id": "BAC 3385",
+      "name": "CUPERTINO KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605030533",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1Zhey9s28eMkmBuFsUE_8Fp5OdQphnJRviDjHgK5_AKI/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 3",
+      "id": "BAC 3384",
+      "name": "CUPERTINO KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202605030273",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1ZdEj9_VMhGatMvsdhoL3br2q2F0sEeypurc0MuPKx38/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 3",
+      "id": "BAC 3383",
+      "name": "CUPERTINO KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202605030103",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1SGN018P3PpZlKlzSQ7h0zAJHsZxxv1vUK2cgE4VLihg/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 3",
+      "id": "BAC 3382",
+      "name": "CUPERTINO OPEN BLITZ",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202605030653",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1t-wUlJcTdXtykaXzyJ46r9hBS1_AD8hP4or-j9fwcvM/edit?usp=sharing"
+    },
+    {
+      "date": "MAY 1-3",
+      "id": "BAC 3381",
+      "name": "MAY REAL-FIDE CHAMP",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202605030663?section=0",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1wYIPm0ANPxBkgSrrmhZrVPmlstWsWW-4_A58EmuhXUg/edit?usp=sharing"
+    },
+    {
+      "date": "APR 26",
+      "id": "BAC 3380",
+      "name": "SAN JOSE KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202604260863",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1Id5pEzsA7BthbPfaR4v_bzD4_QiscFqPlSRBjhIZsG0/edit?usp=sharing"
+    },
+    {
+      "date": "APR 26",
+      "id": "BAC 3379",
+      "name": "SAN JOSE KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202604260913",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1Ei6aQB5Cvt9ixG1xKROddgE_uwPH9_k0kc-CxZ_5xBw/edit?usp=sharing"
+    },
+    {
+      "date": "APR 26",
+      "id": "BAC 3378",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202604260853",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1olRNZj1HVvhE7_tW1ZyB4z6ElWZdg-sQvncHkojNhJ0/edit?usp=sharing"
+    },
+    {
+      "date": "APR 26",
+      "id": "BAC 3377",
+      "name": "FREMONT OPEN BLITZ",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202604260893?section=0",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1mdbKV1Sh3-bvJNhRDqJqZy2UCvteC_6sn0r7vOGeB1k/edit?usp=sharing"
+    },
+    {
+      "date": "APR 26-27",
+      "id": "BAC 3376",
+      "name": "2026 CALCHESS DENKER/BARBER/ROCKEFELLER QUALIFIERS",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202604251253?section=0",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1egBscWZQrs1GAhKHHdvXwlotjWgzuH2-auQi3wc9en4/edit?usp=sharing"
+    },
+    {
+      "date": "APR 18",
+      "id": "BAC 3375",
+      "name": "MILPITAS OPEN BLITZ",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202604181833",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1-GTW1hFL4zzzRKxmYMVAaDEtuP05622EMMsVKzcu1Mk/edit?usp=sharing"
+    },
+    {
+      "date": "APR 18",
+      "id": "BAC 3374",
+      "name": "MILPITAS KIDS BLITZ",
+      "prizeType": "4🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202604181843",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1FBdi2l0R30hvSiai5ckA8U91iUuKr8siAmz4VnlTZ4Y/edit?usp=sharing"
+    },
+    {
+      "date": "APR 18-19",
+      "id": "BAC 3373",
+      "name": "2026 CALCHESS K-3 AND K-8 CHAMPIONSHIP",
+      "prizeType": "🏆/🏅",
+      "ratingUrl": "https://ratings.uschess.org/event/202604191073",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1rV5EsSQYeJYvqfx9ie_ROvu260e26mjqOuQuEN08k98/edit?usp=sharing"
+    },
+    {
+      "date": "APR 12",
+      "id": "BAC 3372",
+      "name": "CUPERTINO OPEN BLITZ",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202604120923",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1yhl-Zp_R4XmU0O6WCR8b5eBU_vq_oSBWclj7xuI_jAw/edit?usp=sharing"
+    },
+    {
+      "date": "APR 12",
+      "id": "BAC 3371",
+      "name": "SAN JOSE KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202604120423",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/12OPDhysY7In7A7MLvgrGWXeJ6D3lhr3R5sd6-WMaWWY/edit?usp=sharing"
+    },
+    {
+      "date": "APR 12",
+      "id": "BAC 3370",
+      "name": "SAN JOSE KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202604120123",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1r_j5UsCZ3MMiTL000i7MWKm2vEKhOlgTLyDNbBR1VEE/edit?usp=sharing"
+    },
+    {
+      "date": "APR 12",
+      "id": "BAC 3369",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202604120053",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1AcZzZoY84hkAdmkc3Xt5SB2t9CaIEQtEfRFkLeadjXI/edit?usp=sharing"
+    },
+    {
+      "date": "APR 10-12",
+      "id": "BAC 3368",
+      "name": "APRIL REAL-FIDE CHAMP",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202604120913",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1hmOhC2sI-pfQEv-NjMdltFh4ir8qzY50nsDAF3hJhYA/edit?usp=sharing"
+    },
+    {
+      "date": "APR 5",
+      "id": "BAC 3366",
+      "name": "MOUNTAIN HOUSE KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202604050263",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1wx0-K13jUGAhRpq8XlTdO1daKPkaPHR9GSe0_Zs2RhE/edit?usp=sharing"
+    },
+    {
+      "date": "APR 5",
+      "id": "BAC 3365",
+      "name": "MOUNTAIN HOUSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202604050283",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1pX9fChEFpHRWabVPzBDPHZYBA3srjl74k7VHX81Bu-k/edit?usp=sharing"
+    },
+    {
+      "date": "APR 4",
+      "id": "BAC 3364",
+      "name": "FREMONT CA$H SWISS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202604040693",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1slvtqOBHhTw9sGncdZ5eR_s-hwHjXoSzwUKbF7XtO0U/edit?usp=sharing"
+    },
+    {
+      "date": "APR 4",
+      "id": "BAC 3363",
+      "name": "FREMONT KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202604040743",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1dQGLyplhJcu0pGsIhuUzu5wbXaR_n8zvwoP7BvNFSE4/edit?usp=sharing"
+    },
+    {
+      "date": "APR 4",
+      "id": "BAC 3362",
+      "name": "FREMONT KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202604040273",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1uVvlZWc3kV6dzkC7R9U620nGOO1aoYn-9MObs_RA4IQ/edit?usp=sharing"
+    },
+    {
+      "date": "APR 4",
+      "id": "BAC 3361",
+      "name": "FREMONT KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202604040253",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1P079prWXi1Kl-N1VVpxowZ-W7MGf-zJLkgkSqiDfiUA/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 28-29",
+      "id": "BAC 3360",
+      "name": "26 CALCHESS: KG, K-5, K-12 CHAMPIONSHIP",
+      "prizeType": "🏆/🏅",
+      "ratingUrl": "https://ratings.uschess.org/event/202603290803",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1S-LKUHEoX4-exIJeQNvtFw2zQFl1bdJGhmc7Mm4I-VI/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 28",
+      "id": "BAC 3359",
+      "name": "SANTA CLARA KIDS BLITZ",
+      "prizeType": "4🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603270423",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1z7qupjEw9UDlC_6LZvymWmSAzrasCcPMqrF7JuyIWJc/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 22",
+      "id": "BAC 3358",
+      "name": "SAN JOSE CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202603220653",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1aK2wlVgv_ZgVxHfAYUGpAn8TowxmCcuTLUyvemxLQEM/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 22",
+      "id": "BAC 3357",
+      "name": "SAN JOSE KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603220663",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1F42kqyd9Ld0OT3lV5TWluNVfVffjamNbjqxlW2ck474/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 22",
+      "id": "BAC 3356",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603220133",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1oRJJhQGmq5DeAcWBZXgL47PIFImT5CCIYm2QOIC7G8c/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 21",
+      "id": "BAC 3355",
+      "name": "FREMONT CA$H SWISS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202603211103",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1sxgcUGD3q-IYkk_RlonNhzAl8GsstljZAHbdKiwFiMY/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 21",
+      "id": "BAC 3354",
+      "name": "FREMONT KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603211093",
+      "resultUrl": null
+    },
+    {
+      "date": "MAR 21",
+      "id": "BAC 3353",
+      "name": "FREMONT KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202603211073",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1OPBAh_ta9jKc5KleAtOagF-pvWd6rX73_5es_axT4MQ/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 21",
+      "id": "BAC 3352",
+      "name": "FREMONT KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603210943",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1B9dFIOvbo7EOkSLrUkhNhip4V1IQypdFIqCyjHRnmaA/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 15",
+      "id": "BAC 3351",
+      "name": "CUPERTINO OPEN BLITZ",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202603150903",
+      "resultUrl": null
+    },
+    {
+      "date": "MAR 15",
+      "id": "BAC 3350",
+      "name": "CUPERTINO KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603150893",
+      "resultUrl": null
+    },
+    {
+      "date": "MAR 15",
+      "id": "BAC 3349",
+      "name": "CUPERTINO KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603150123",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1As1LNtT5Hm0BvBdHe5PsjJK0LQ_9i7BKC2-XUuT1nAg/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 14",
+      "id": "BAC 3348",
+      "name": "CUPERTINO KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202603140673",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1BseJUKp-rfqULcGpk5i_FU_ssgZI3pYbnlzsOsxW-NQ/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 14",
+      "id": "BAC 3347",
+      "name": "CUPERTINO KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603140653",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/11I0wBG3ROppAmfOJIg2UF2ll5XQzWcA9KtK0-s8pwzM/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 13-15",
+      "id": "BAC 3346",
+      "name": "MARCH REAL-FIDE CHAMP",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202603150913",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1PfUxB_48spt0OaeEy7kp0jmyJrsbwRuwOTlnm-mwJzQ/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 8",
+      "id": "BAC 3345",
+      "name": "SAN JOSE CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202603080343",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1QHFlkTD2EMOwsDir9eTR9Ie-2M6zYvlHlwY1KBjKH74/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 8",
+      "id": "BAC 3344",
+      "name": "SAN JOSE KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603080463",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1XfYL3N_vyaXplDBDxHfWKrfgY2JBWtwBCDV8RxIic3Y/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 8",
+      "id": "BAC 3343",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603080323",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1rsXP56i2EVsFu8Gu1ZIbqRB6gTY6ce5zjA3zxkEaWTY/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 7",
+      "id": "BAC 3342",
+      "name": "MILPITAS CA$H SWISS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202603070943",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1o3tHh6Ul_XuoTdFfUAWoW2mIiRG7ndS-PvFEWWoUYh8/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 7",
+      "id": "BAC 3341",
+      "name": "MILPITAS KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603070983",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1uXhYkC8fyZswtg5POZglEDbw2xo1lT2YSyN63CQaVgg/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 7",
+      "id": "BAC 3340",
+      "name": "MILPITAS KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202603070973?section=0",
+      "resultUrl": null
+    },
+    {
+      "date": "MAR 7",
+      "id": "BAC 3339",
+      "name": "MILPITAS KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202603070963",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1eLG1C0HZ2_xmVSJwfL9-0MjDjrrbQPlbHafJW-YLLjE/edit?usp=sharing"
+    },
+    {
+      "date": "MAR 1",
+      "id": "BAC 3338",
+      "name": "MILPITAS OPEN RAPID",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202603010833",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/18HIFH3YKLcYwZt6v0Q7jI-i4JauEWYwYcPKyQLLpwkM/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 28-MAR 1",
+      "id": "BAC 3337",
+      "name": "2026 CALCHESS K-12 CHAMPIONSHIP",
+      "prizeType": "🏆/🏅",
+      "ratingUrl": "https://ratings.uschess.org/event/202603010793",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1X5SGOEZeUNKIZs_GJtsPlmC8aBDHd7b54hwJz9Yy0Lc/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 22",
+      "id": "BAC 3336",
+      "name": "FREMONT OPEN BLITZ",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202602220873",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1eTbXgkl-dtG8imj7BiXeq2I07Q6OpUyGeZa9kdpcCmg/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 22",
+      "id": "BAC 3335",
+      "name": "FREMONT KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202602220493",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/18M23Ru3TLugd7Sfxfevkr-J-S86kbmLk65Blup8KG4U/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 22",
+      "id": "BAC 3334",
+      "name": "FREMONT KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202602220303",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1bDQv15csbfQISOr-7K_dovEfvyagTmujisxAyme7ECE/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 20-22",
+      "id": "BAC 3333",
+      "name": "FEBRUARY REAL-FIDE CHAMP",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202602220523",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1DjBb3D_A8Ypk1dJKcBsS_U5MTVBI_xlQnmgPuO-JuyA/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 16",
+      "id": "BAC 3332",
+      "name": "MILPITAS OPEN RAPID",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202602160423",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1uD5pEJInwjnkez-RNoH5Riqfjp_GC219evb1pTZKyL0/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 15",
+      "id": "BAC 3331",
+      "name": "MILPITAS KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202602150403",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/18U5VIUDUzEFS0-Wb5yBJ3W5ZzRJ_oOrOFkRx_bU5FxY/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 14",
+      "id": "BAC 3330",
+      "name": "MILPITAS U1200 RAPID",
+      "prizeType": "🏆",
+      "ratingUrl": "https://ratings.uschess.org/event/202602140843",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/178hKwsEzOQlJG026aIDBXRKOa-C7ihVhDseZf3QxV4c/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 14-16",
+      "id": "BAC 3329",
+      "name": "2026 US AMATEUR TEAM WEST",
+      "prizeType": "🕰️/🏆",
+      "ratingUrl": "https://ratings.uschess.org/event/202602160363",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1RTE0p8oBZkUKs0LxgaM-I3fgmHibepyFyhtn5OleFY8/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 8",
+      "id": "BAC 3328",
+      "name": "SAN JOSE CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202602080283",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1cqU_7QBxRJjiZMZpobgCqjqdg4-9iZphIM065zbpgvM/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 8",
+      "id": "BAC 3327",
+      "name": "SAN JOSE KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202602080463",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1043BoxTb_38a6xSbNPLab9Ny6GTE97OOTs7MfpTQhj8/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 8",
+      "id": "BAC 3326",
+      "name": "SAN JOSE KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202602080213",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1ssOZYWugYrpspkFOuQ_Gy-JnZo_3k9KhpkRup7lCEcg/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 8",
+      "id": "BAC 3325",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202602080053",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/17frMQ9nIQ-oQF7jzmi_lVwAJsaDV5Fnp4EH6UKmm_8g/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 1",
+      "id": "BAC 3324",
+      "name": "SAN JOSE CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202602010303",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1u4vAXOGwLrNjqIGolaightb-iPmzN4qh6fHx71xEltw/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 1",
+      "id": "BAC 3323",
+      "name": "SAN JOSE KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202602010483",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1mdAdkTCeVKwHVg-3JcoaT_rgVQCHrQYGbPBwxRn_b5g/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 1",
+      "id": "BAC 3322",
+      "name": "SAN JOSE KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202602010283",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1yOfIeCB4Xg03OtLptQK4T2AlA3oY8Biw9KMlEr1-sAY/edit?usp=sharing"
+    },
+    {
+      "date": "FEB 1",
+      "id": "BAC 3321",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202602010263",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1UC6IRr1e5tY2Ku5dbZSfG5Xal51D6sJQbr8ccJcYLPs/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 31",
+      "id": "BAC 3320",
+      "name": "FREMONT CA$H SWISS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202601300403",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/166EMaF5u3n8xneMLgigTtCB2P4arUvBk9sz1eOioHrU/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 31",
+      "id": "BAC 3319",
+      "name": "FREMONT KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601310733",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1HQ3GrEIaHqvUstZZqFY1uwVXZ8NYXoVD2e0lGh-ZX0Y/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 31",
+      "id": "BAC 3318",
+      "name": "FREMONT KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202601300353",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1XebbuppzM9b0qdlX7I2JyP_f1nhZv1CskgTbHXzgMbs/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 31",
+      "id": "BAC 3317",
+      "name": "FREMONT KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601300343",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1YpGbZ_MN5msEOnb7xD1cgnFWnYoCAS0qsnDZBXt6EUk/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 25",
+      "id": "BAC 3316",
+      "name": "MILPITAS SUNDAY OPEN BLITZ",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202601250423",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1AOoN0v19b_K9Wb8xle_VJYe5xsMHHjnQVtIuDLms-Sk/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 25",
+      "id": "BAC 3315",
+      "name": "MILPITAS CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202601250413",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1Sz_4Jg7fhEskJIszzFyMR9dkPCWFfbaT-LNWSyb3pfA/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 25",
+      "id": "BAC 3314",
+      "name": "2026 CALCHESS TEAM VS TEAM CHAMPIONSHIP",
+      "prizeType": "🏆",
+      "ratingUrl": "https://ratings.uschess.org/event/202601250403",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/12hQ0TVmOGsWuRjJT2pFLymgJQ2XcLKras_EWQdF-auA/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 24",
+      "id": "BAC 3313",
+      "name": "MILPITAS SATURDAY OPEN BLITZ",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202601241113",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1deDjMiLMgNxzMnfvkRariBGMjzmBk5ffkOyzVkksaME/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 24",
+      "id": "BAC 3312",
+      "name": "2025-26 CALCHESS AGE LEVEL CHAMPIONSHIP",
+      "prizeType": "🏆",
+      "ratingUrl": "https://ratings.uschess.org/event/202601240923",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/10UF2GlFtq20lVqvbgBLD8v1iF9OFT8asdqCc9twZLj8/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 24",
+      "id": "BAC 3311",
+      "name": "MILPITAS KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601240913",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/15f9l1GvLFAvccQViTKzjpBiJjsMzcfOBOIA7dtJdrOs/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 18",
+      "id": "BAC 3310",
+      "name": "SAN JOSE KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202601180783",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1lVo_pL8MpD22FAYrnUyafv8W8jmrEjSqJEeSeODp01s/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 18",
+      "id": "BAC 3309",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601180773",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1zK25RJavDIF60Ubuat2a_lFdMOQJx4vuRT_dy3EJVQw/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 11",
+      "id": "BAC 3308",
+      "name": "SAN JOSE CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202601110423",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1yT9BpjfNRe_9cezElYRMX0lLIhlnX2UejCQSy_xLmxk/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 11",
+      "id": "BAC 3307",
+      "name": "SAN JOSE KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601110553",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1ikr6_54bIBCyeLfWwclup-TtB9WdrwIkccTW2eynVjg/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 11",
+      "id": "BAC 3306",
+      "name": "SAN JOSE KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202601110283",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1DozVWFVRVeKuVDL-lm9tdReimO0EasbzIcehxxcbmkc/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 11",
+      "id": "BAC 3305",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601110093",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1h6IxGY7cyAhEknaE8zFRUm6XIElkM-t2_C4kLmLAH5A/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 10",
+      "id": "BAC 3304",
+      "name": "CUPERTINO CA$H SWISS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202601100923",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1W320xlIDOqLFLDDrJXvhYw5u_roN9QB2RTr8Q9AEQmw/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 10",
+      "id": "BAC 3303",
+      "name": "CUPERTINO KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601100893",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1xZMmFK57uwbMxn4ywIxVzzHI9HJhRFKcDDUZeX4NEi4/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 10",
+      "id": "BAC 3302",
+      "name": "CUPERTINO KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202601100663",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1J4QKF9OhmBCFu-yzEklwjAW8wmOxoxZm5lEI89ui_bQ/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 10",
+      "id": "BAC 3301",
+      "name": "CUPERTINO KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601100213",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1dzZt52p2BznGec1TOjjAgK4cQSGbuB6-FyFb-45vwAM/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 1 - 4",
+      "id": "BAC 3299",
+      "name": "DANIEL NARODITSKY MEMORIAL NEW YEAR OPEN",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202601040503",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1wTs9rgzR3Ls-exd_CnOAGqnaqfxVs9zSRjVFS5yOrv8/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 4",
+      "id": "BAC 3298",
+      "name": "MILPITAS OPEN BLITZ",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202601040493",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/14nEbpsxtUOoUGSZPeX25T3w5dAw-iTGZeXiNpRB5Nh4/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 4",
+      "id": "BAC 3297",
+      "name": "MILPITAS KIDS BLITZ",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601040483",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/16HOalRn_LhOdMrBYfvOCGYuGJg-1RUhKEn5EyHZSMBY/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 4",
+      "id": "BAC 3296",
+      "name": "MILPITAS U1400 CHAMPIONSHIP",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601040473",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1uNSDvyPQvnkLRiiU0GdK5wqUFTta5-G2YlKX5_nCfGo/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 3",
+      "id": "BAC 3295",
+      "name": "MILPITAS KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202601030543",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1YBOoXAhGvgSfox-Kz_Z07i5HNtIfVUQKk4hwAzMMg-I/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 3",
+      "id": "BAC 3294",
+      "name": "MILPITAS KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601030293",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1x_8Kkq0GYyRDAKvqSsfB8PNeoFGlPtYEdjyjHJ6JEcU/edit?usp=sharing"
+    },
+    {
+      "date": "JAN 2",
+      "id": "BAC 3293",
+      "name": "MILPITAS KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202601020203",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1RFrJ4BDruaLRCRLsEFG7wCQxIgx5V6KrUVTSe9Zh5_M/edit?usp=sharing"
+    }
+  ]
+}

@@ -11,6 +11,8 @@ const resourcesRoutes = require("./resourcesRoutes");
 const requestRoutes = require("./requestRoutes");
 const loginRoutes = require("./loginRoutes");
 const enrichmentRoutes = require("./enrichmentRoutes");
+const resultsRoutes = require("./resultsRoutes");
+const faqRoutes = require("./faqRoutes");
 
 const router = express.Router();
 
@@ -26,6 +28,8 @@ router.use("/resources", resourcesRoutes);
 router.use("/request", requestRoutes);
 router.use("/login", loginRoutes);
 router.use("/enrichment", enrichmentRoutes);
+router.use("/results", resultsRoutes);
+router.use("/faq", faqRoutes);
 
 router.get("/health", (_req, res) => {
   res.json({ ok: true });

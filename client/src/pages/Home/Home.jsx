@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="landing-section constrain">
+      <section className="landing-section landing-section--pale constrain">
         <p className="landing-section-label">What we offer</p>
         <h2 className="landing-section-title">Programs for every player</h2>
         <div className="landing-offerings-grid">
@@ -75,37 +75,6 @@ export default function Home() {
               )}
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="landing-membership constrain">
-        <div>
-          <p className="landing-section-label">{data.membership.title}</p>
-          <ul className="landing-membership-points">
-            {data.membership.perks.map((perk) => (
-              <li key={perk} className="landing-membership-point">
-                <span className="landing-membership-point-icon">✓</span>
-                {perk}
-              </li>
-            ))}
-          </ul>
-          <a className="landing-btn-primary" href={data.membership.cta.href} target="_blank" rel="noreferrer">
-            {data.membership.cta.label}
-          </a>
-        </div>
-        <div className="landing-membership-card">
-          <p className="landing-membership-eyebrow">{data.bacoin.title}</p>
-          <h3>{data.bacoin.title}</h3>
-          <p className="landing-membership-card-sub">{data.bacoin.description}</p>
-          <Link className="landing-offer-link" to={data.bacoin.cta.path}>
-            {data.bacoin.cta.label}
-          </Link>
-        </div>
-      </section>
-
-      <section className="landing-donate-strip">
-        <div className="constrain">
-          Support Bay Area Chess — <Link to="/contact">contact us</Link> to learn more.
         </div>
       </section>
     </main>

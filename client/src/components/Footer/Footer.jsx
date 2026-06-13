@@ -10,9 +10,7 @@ export default function Footer() {
             <a href="https://bayareachess.com/events/tournament-list/" target="_blank" rel="noreferrer">
               Calendar
             </a>
-            <a href="https://bayareachess.com/results/" target="_blank" rel="noreferrer">
-              Ratings & results
-            </a>
+            <Link to="/results">Ratings & results</Link>
             <a href="https://bayareachess.com/policy/" target="_blank" rel="noreferrer">
               BAC policies
             </a>

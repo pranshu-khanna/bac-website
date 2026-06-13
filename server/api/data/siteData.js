@@ -110,4 +110,31 @@ module.exports = {
   chessRosterBase: "https://chessroster.com",
   chessRosterOrganizerId: "A6027746",
   tournamentsPath: "/tournaments",
+  googleSheetsBase:
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKKswJ_9d3ORBHxFet3QM3UwqK40UOeNmd0lmJfT62S_lm-zHVufhQb9HIcfriiQQrBKXfqcwhck9",
+  resultsSheetGid: "1642745431",
+  resultsRefreshMs: 12 * 60 * 60 * 1000,
+  resultsArchiveTabs: [
+    {
+      label: "2026 Results",
+      active: true,
+    },
+    {
+      label: "2025 Results",
+      href:
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRVmh-jSdAQNmWZGjq8z8QSJQLADa4ggisnkoy08WxceIiZh_2o4yz-FKwNynlnF_UoVO6jPXSVm71I/pubhtml?gid=0&single=true",
+      external: true,
+    },
+    {
+      label: "2024 Results",
+      href:
+        "https://docs.google.com/spreadsheets/d/1VUe7S-D5dXLvcfJkXRnJgCbbbhsbUQCUY7HnBnRj5Cw/pubhtml?gid=0&single=true",
+      external: true,
+    },
+    {
+      label: "Before 2024 Results",
+      href: "https://bayareachess.com/results/past/",
+      external: true,
+    },
+  ],
 };

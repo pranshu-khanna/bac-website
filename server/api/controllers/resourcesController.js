@@ -8,9 +8,9 @@ exports.getResources = (_req, res) => {
       },
       {
         label: "Results & ratings",
-        href: "https://bayareachess.com/results/",
+        path: "/results",
       },
-      { label: "FAQ", href: "https://bayareachess.com/faq/" },
+      { label: "FAQ", path: "/faq" },
       { label: "BAC policies", href: "https://bayareachess.com/policy/" },
       { label: "BACoin leaderboard", path: "/leaderboard" },
       {

@@ -13,6 +13,8 @@ import Request from "./pages/Request/Request";
 import Login from "./pages/Login/Login";
 import Enrichment from "./pages/Enrichment/Enrichment";
 import EnrichmentLaunch from "./pages/Enrichment/EnrichmentLaunch";
+import Results from "./pages/Results/Results";
+import Faq from "./pages/Faq/Faq";
 import NotFound from "./pages/NotFound/NotFound";
 
 export default function App() {
@@ -32,6 +34,8 @@ export default function App() {
         <Route path="login" element={<Login />} />
         <Route path="enrichment" element={<Enrichment />} />
         <Route path="enrichment/launch/:slug" element={<EnrichmentLaunch />} />
+        <Route path="results" element={<Results />} />
+        <Route path="faq" element={<Faq />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

@@ -4,6 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const apiRoutes = require("./routes");
+const { startResultsRefreshScheduler } = require("./services/resultsFetcher");
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -29,4 +30,5 @@ if (process.env.NODE_ENV === "production") {
 
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`API running on http://0.0.0.0:${PORT}`);
+  startResultsRefreshScheduler();
 });

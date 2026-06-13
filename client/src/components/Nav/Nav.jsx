@@ -16,12 +16,12 @@ export default function Nav() {
       <NavLink to="/enrichment" className={navClass}>
         Enrichment
       </NavLink>
-      <a href="https://bayareachess.com/results/" target="_blank" rel="noreferrer">
+      <NavLink to="/results" className={navClass}>
         Results
-      </a>
-      <a href="https://bayareachess.com/faq/" target="_blank" rel="noreferrer">
+      </NavLink>
+      <NavLink to="/faq" className={navClass}>
         FAQ
-      </a>
+      </NavLink>
       <NavLink to="/about" className={navClass}>
         About
       </NavLink>
