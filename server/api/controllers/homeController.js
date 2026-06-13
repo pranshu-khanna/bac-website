@@ -2,8 +2,8 @@ exports.getHome = (_req, res) => {
   res.json({
     hero: {
       badge: "USCF Chess Club of the Year 2018",
-      title: "Chess for Every",
-      titleEm: "Level, Every Age",
+      title: "Transforming Lives",
+      titleEm: "Through Chess",
       description:
         "From first-timers to rated competitors, Bay Area Chess brings coaching, tournaments, and enrichment programs across the Bay.",
       primaryCta: { label: "View tournaments", path: "/tournaments" },
@@ -40,22 +40,5 @@ exports.getHome = (_req, res) => {
         linkLabel: "Team info",
       },
     ],
-    membership: {
-      title: "BAC Membership Benefits",
-      perks: [
-        "Required for all USCF-rated tournaments",
-        "Member discounts on tournament entry fees",
-        "Access to member-only camps and events",
-      ],
-      cta: {
-        label: "Get / Renew USCF Membership",
-        href: "https://bayareachess.com/my/memberships",
-      },
-    },
-    bacoin: {
-      title: "BACoin Rewards Program",
-      description: "Earn BACoins at camps, clubs, and tournaments.",
-      cta: { label: "View BACoin leaderboard", path: "/leaderboard" },
-    },
   });
 };

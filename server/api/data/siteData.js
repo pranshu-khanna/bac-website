@@ -108,5 +108,6 @@ module.exports = {
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.7240394352752!2d-121.89222868469325!3d37.39635797983009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcc1d51f9e605%3A0x809c41183cfff792!2s2050+Concourse+Dr%2C+San+Jose%2C+CA+95131%2C+USA!5e0!3m2!1sen!2s!4v1456727721339",
   chessRosterBase: "https://chessroster.com",
+  chessRosterOrganizerId: "A6027746",
   tournamentsPath: "/tournaments",
 };

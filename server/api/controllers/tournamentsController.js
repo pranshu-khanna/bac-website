@@ -1,11 +1,7 @@
 const siteData = require("../data/siteData");
 
 exports.getTournaments = (_req, res) => {
-  const params = new URLSearchParams({
-    status: "Upcoming",
-    organizer: "BAY AREA CHESS",
-  });
-  const embedUrl = `${siteData.chessRosterBase}${siteData.tournamentsPath}?${params}`;
+  const embedUrl = `${siteData.chessRosterBase}/organizers/${siteData.chessRosterOrganizerId}`;
 
   res.json({
     title: "Upcoming tournaments",
