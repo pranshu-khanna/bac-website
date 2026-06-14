@@ -60,8 +60,8 @@
       "rank": 9,
       "name": "Sainika Basu",
       "earned": 461,
-      "balance": 314,
-      "redeemed": 147
+      "balance": 305,
+      "redeemed": 156
     },
     {
       "rank": 10,
@@ -137,8 +137,8 @@
       "rank": 20,
       "name": "Liana Jasmine Farvine Manikandan",
       "earned": 386,
-      "balance": 241,
-      "redeemed": 145
+      "balance": 41,
+      "redeemed": 345
     },
     {
       "rank": 21,
@@ -11090,7 +11090,7 @@
     },
     {
       "rank": 1585,
-      "name": "Saathvik Koo",
+      "name": "Saathvik Kooturu",
       "earned": 24,
       "balance": 24,
       "redeemed": 0
@@ -23054,5 +23054,5 @@
   ],
   "totalPlayers": 3293,
   "displayLimit": 25,
-  "fetchedAt": "2026-06-13T23:02:45.863Z"
+  "fetchedAt": "2026-06-14T06:34:03.869Z"
 }
