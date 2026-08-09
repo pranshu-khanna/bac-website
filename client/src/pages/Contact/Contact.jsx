@@ -1,20 +1,27 @@
 import { useEffect, useState } from "react";
 import api from "../../axios";
+import PageFrame from "../../components/PageFrame/PageFrame";
 import LeftBar from "../../components/LeftBar/LeftBar";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import "./Contact.scss";
 
-export default function Contact() {
+export default function Contact({ embedded = false }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     api.get("/contact").then((res) => setData(res.data));
   }, []);
 
-  if (!data) return <main className="content-main constrain"><p className="muted">Loading…</p></main>;
+  if (!data) {
+    return (
+      <PageFrame embedded={embedded} className="content-main constrain">
+        <p className="muted">Loading…</p>
+      </PageFrame>
+    );
+  }
 
   return (
-    <main className="content-main contact-page-full constrain">
+    <PageFrame embedded={embedded} className="content-main contact-page-full constrain">
       <div className="contact-layout">
         <LeftBar title="Quick links" links={data.sidebarLinks} />
 
@@ -39,6 +46,6 @@ export default function Contact() {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </section>
-    </main>
+    </PageFrame>
   );
 }

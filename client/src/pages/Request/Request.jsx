@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import api from "../../axios";
+import SectionLink from "../../components/SectionLink/SectionLink";
 import "./Request.scss";
 
 export default function Request() {
@@ -12,6 +12,10 @@ export default function Request() {
 
   if (!data) return <main className="content-main constrain"><p className="muted">Loading…</p></main>;
 
+  const contactSection = data.contactPath?.startsWith("/#")
+    ? data.contactPath.slice(2)
+    : "contact";
+
   return (
     <main className="content-main constrain request-page">
       <h1>{data.title}</h1>
@@ -19,7 +23,7 @@ export default function Request() {
       <div className="panel">
         <p>
           Email <a href={`mailto:${data.contactEmail}`}>{data.contactEmail}</a> or use our{" "}
-          <Link to={data.contactPath}>contact form</Link>.
+          <SectionLink section={contactSection}>contact form</SectionLink>.
         </p>
       </div>
     </main>

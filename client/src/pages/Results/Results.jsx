@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../../axios";
+import PageFrame from "../../components/PageFrame/PageFrame";
 import RichText from "../../components/RichText/RichText";
 import "./Results.scss";
 
@@ -14,7 +15,7 @@ function formatFetchedAt(value) {
   });
 }
 
-export default function Results() {
+export default function Results({ embedded = false }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -23,16 +24,16 @@ export default function Results() {
 
   if (!data) {
     return (
-      <main className="content-main constrain">
+      <PageFrame embedded={embedded} className="content-main constrain">
         <p className="muted">Loading…</p>
-      </main>
+      </PageFrame>
     );
   }
 
   const updatedLabel = formatFetchedAt(data.fetchedAt);
 
   return (
-    <main className="content-main results-page constrain">
+    <PageFrame embedded={embedded} className="content-main results-page constrain">
       <header className="results-hero">
         <h1>{data.title}</h1>
         <p className="results-sheet-title">{data.sheetTitle}</p>
@@ -116,6 +117,6 @@ export default function Results() {
           </tbody>
         </table>
       </div>
-    </main>
+    </PageFrame>
   );
 }

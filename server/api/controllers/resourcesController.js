@@ -8,11 +8,11 @@ exports.getResources = (_req, res) => {
       },
       {
         label: "Results & ratings",
-        path: "/results",
+        path: "/#results",
       },
-      { label: "FAQ", path: "/faq" },
+      { label: "FAQ", path: "/#faq" },
       { label: "BAC policies", href: "https://bayareachess.com/policy/" },
-      { label: "BACoin leaderboard", path: "/leaderboard" },
+      { label: "BACoin leaderboard", path: "/#leaderboard" },
       {
         label: "Enrichment programs",
         href: "https://enrichment.bayareachess.com/",

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import api from "../../axios";
+import SectionLink from "../../components/SectionLink/SectionLink";
 import EnrichmentReturnBar from "./EnrichmentReturnBar";
 import "./Enrichment.scss";
 
@@ -51,9 +52,9 @@ export default function EnrichmentLaunch() {
         <div className="content-main constrain enrichment-launch">
           <h1>Program not found</h1>
           <p className="muted">That enrichment link is not available.</p>
-          <Link to="/enrichment" className="btn primary">
+          <SectionLink section="enrichment" className="btn primary">
             Back to enrichment hub
-          </Link>
+          </SectionLink>
         </div>
       </main>
     );
@@ -94,9 +95,9 @@ export default function EnrichmentLaunch() {
           )}
         </div>
 
-        <Link to="/enrichment" className="enrichment-launch-back">
+        <SectionLink section="enrichment" className="enrichment-launch-back">
           ← Back to enrichment hub
-        </Link>
+        </SectionLink>
       </div>
     </main>
   );

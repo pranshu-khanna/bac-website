@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import api from "../../axios";
+import PageFrame from "../../components/PageFrame/PageFrame";
 import RichText from "../../components/RichText/RichText";
 import "./Faq.scss";
 
-export default function Faq() {
+export default function Faq({ embedded = false }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -12,14 +13,14 @@ export default function Faq() {
 
   if (!data) {
     return (
-      <main className="content-main constrain">
+      <PageFrame embedded={embedded} className="content-main constrain">
         <p className="muted">Loading…</p>
-      </main>
+      </PageFrame>
     );
   }
 
   return (
-    <main className="content-main faq-page constrain">
+    <PageFrame embedded={embedded} className="content-main faq-page constrain">
       <header className="faq-hero">
         <p className="faq-kicker">{data.kicker}</p>
         <h1>{data.title}</h1>
@@ -44,6 +45,6 @@ export default function Faq() {
           </article>
         ))}
       </div>
-    </main>
+    </PageFrame>
   );
 }

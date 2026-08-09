@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../../axios";
+import SectionLink from "../../components/SectionLink/SectionLink";
 import "./Resources.scss";
 
 export default function Resources() {
@@ -18,7 +19,9 @@ export default function Resources() {
       <ul className="resources-list">
         {data.links.map((link) => (
           <li key={link.label}>
-            {link.path ? (
+            {link.path?.startsWith("/#") ? (
+              <SectionLink section={link.path.slice(2)}>{link.label}</SectionLink>
+            ) : link.path ? (
               <Link to={link.path}>{link.label}</Link>
             ) : (
               <a href={link.href} target="_blank" rel="noreferrer">

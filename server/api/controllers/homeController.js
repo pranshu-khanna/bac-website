@@ -15,7 +15,7 @@ exports.getHome = (_req, res) => {
       {
         title: "Rated Tournaments",
         description: "Weekly USCF-rated events for scholastic and adult players.",
-        path: "/tournaments",
+        path: "/#tournaments",
         linkLabel: "Browse tournaments",
       },
       {

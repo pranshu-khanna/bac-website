@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import api from "../../axios";
+import PageFrame from "../../components/PageFrame/PageFrame";
 import "./Leaderboard.scss";
 
 function PodiumSlot({ entry, variant }) {
@@ -77,7 +78,7 @@ function BacoinInfoPanel({ info }) {
   );
 }
 
-export default function Leaderboard() {
+export default function Leaderboard({ embedded = false }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [query, setQuery] = useState("");
@@ -112,26 +113,26 @@ export default function Leaderboard() {
 
   if (error) {
     return (
-      <main className="leaderboard-page">
+      <PageFrame embedded={embedded} className="leaderboard-page">
         <div className="constrain lb-body">
           <p className="lb-alert">{error}</p>
         </div>
-      </main>
+      </PageFrame>
     );
   }
 
   if (!data) {
     return (
-      <main className="leaderboard-page">
+      <PageFrame embedded={embedded} className="leaderboard-page">
         <div className="constrain lb-body">
           <p className="lb-loading">Loading leaderboard…</p>
         </div>
-      </main>
+      </PageFrame>
     );
   }
 
   return (
-    <main className="leaderboard-page">
+    <PageFrame embedded={embedded} className="leaderboard-page">
       <section className="lb-hero">
         <div className="constrain lb-hero-grid">
           <div>
@@ -211,6 +212,6 @@ export default function Leaderboard() {
           </div>
         </section>
       </div>
-    </main>
+    </PageFrame>
   );
 }

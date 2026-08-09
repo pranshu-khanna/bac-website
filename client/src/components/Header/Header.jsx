@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
 import { useTheme } from "../../context/ThemeContext";
@@ -6,6 +6,15 @@ import "./Header.scss";
 
 export default function Header() {
   const { toggleTheme, isDark } = useTheme();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const goHomeTop = (event) => {
+    if (pathname !== "/") return;
+    event.preventDefault();
+    navigate("/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <header className="header">
@@ -26,7 +35,7 @@ export default function Header() {
       </div>
 
       <div className="header-main constrain">
-        <Link to="/" className="logo-link">
+        <Link to="/" className="logo-link" onClick={goHomeTop}>
           <Logo />
         </Link>
         <Nav />

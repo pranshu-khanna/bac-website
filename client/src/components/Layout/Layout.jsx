@@ -1,13 +1,16 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 export default function Layout() {
+  const { pathname } = useLocation();
+  const hideFooter = pathname === "/";
+
   return (
     <div className="site">
       <Header />
       <Outlet />
-      <Footer />
+      {!hideFooter ? <Footer /> : null}
     </div>
   );
 }

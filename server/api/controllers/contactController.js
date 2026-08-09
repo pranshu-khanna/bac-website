@@ -7,7 +7,7 @@ exports.getContact = (_req, res) => {
     contactEmail: siteData.contactEmail,
     hours: "Office hours vary — email ask@bayareachess.com for scheduling.",
     sidebarLinks: [
-      { label: "Tournaments", path: "/tournaments" },
+      { label: "Tournaments", path: "/#tournaments" },
       { label: "Membership", path: "/membership" },
       { label: "Resources", path: "/resources" },
     ],

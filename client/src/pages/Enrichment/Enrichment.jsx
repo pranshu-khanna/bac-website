@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../../axios";
-import EnrichmentReturnBar from "./EnrichmentReturnBar";
+import PageFrame from "../../components/PageFrame/PageFrame";
 import "./Enrichment.scss";
 
-export default function Enrichment() {
+export default function Enrichment({ embedded = false }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -13,15 +13,14 @@ export default function Enrichment() {
 
   if (!data) {
     return (
-      <main className="content-main constrain enrichment-page">
+      <PageFrame embedded={embedded} className="content-main constrain enrichment-page">
         <p className="muted">Loading…</p>
-      </main>
+      </PageFrame>
     );
   }
 
   return (
-    <main className="enrichment-page">
-      <EnrichmentReturnBar />
+    <PageFrame embedded={embedded} className="enrichment-page">
       <div className="content-main constrain">
         <h1>{data.title}</h1>
         <p className="enrichment-intro">{data.intro}</p>
@@ -29,7 +28,7 @@ export default function Enrichment() {
         <div className="enrichment-notice">
           <strong>Returning here:</strong> program links open{" "}
           <code>enrichment.bayareachess.com</code> in a new tab. Keep this tab open, or use the
-          bar above to get back to the main website.
+          browser back button to return to this page.
         </div>
 
         <div className="home-pillar-grid">
@@ -51,6 +50,6 @@ export default function Enrichment() {
           <Link to="/enrichment/launch/home">the full enrichment site</Link> directly.
         </p>
       </div>
-    </main>
+    </PageFrame>
   );
 }

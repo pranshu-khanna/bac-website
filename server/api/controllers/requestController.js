@@ -6,6 +6,6 @@ exports.getRequest = (_req, res) => {
     intro:
       "Use this page to reach the BAC team for program requests, partnership inquiries, or general questions.",
     contactEmail: siteData.contactEmail,
-    contactPath: "/contact",
+    contactPath: "/#contact",
   });
 };

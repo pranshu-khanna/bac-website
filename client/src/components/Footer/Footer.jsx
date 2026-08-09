@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SectionLink from "../SectionLink/SectionLink";
 
 export default function Footer() {
   return (
@@ -10,24 +11,24 @@ export default function Footer() {
             <a href="https://bayareachess.com/events/tournament-list/" target="_blank" rel="noreferrer">
               Calendar
             </a>
-            <Link to="/results">Ratings & results</Link>
+            <SectionLink section="results">Ratings & results</SectionLink>
             <a href="https://bayareachess.com/policy/" target="_blank" rel="noreferrer">
               BAC policies
             </a>
-            <Link to="/leaderboard">BACoin leaderboard</Link>
+            <SectionLink section="leaderboard">BACoin leaderboard</SectionLink>
             <Link to="/resources">Resources</Link>
           </div>
           <div className="footer-col">
             <h4>Enrichment</h4>
-            <Link to="/enrichment">Enrichment hub</Link>
+            <SectionLink section="enrichment">Enrichment hub</SectionLink>
             <Link to="/enrichment/launch/weekend-clubs">Weekend clubs</Link>
             <Link to="/enrichment/launch/camps">Chess camps</Link>
             <Link to="/enrichment/launch/rising-stars">Rising Stars</Link>
           </div>
           <div className="footer-col">
             <h4>Organization</h4>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact us</Link>
+            <SectionLink section="about">About</SectionLink>
+            <SectionLink section="contact">Contact us</SectionLink>
             <Link to="/request">Requests</Link>
             <Link to="/membership">Membership</Link>
             <a href="https://bayareachess.com/payhere" target="_blank" rel="noreferrer">
@@ -36,8 +37,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-copy">
-          © 2006–2026 Bay Area Chess ·{" "}
-          <Link to="/contact">contact us</Link>
+          © 2006–2026 Bay Area Chess · <SectionLink section="contact">contact us</SectionLink>
         </div>
       </div>
     </footer>

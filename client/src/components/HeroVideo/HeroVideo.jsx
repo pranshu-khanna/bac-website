@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./HeroVideo.scss";
 
-export default function HeroVideo() {
+export default function HeroVideo({ fullBleed = false }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function HeroVideo() {
   }, []);
 
   return (
-    <div className="hero-video-wrap" aria-hidden>
+    <div className={`hero-video-wrap${fullBleed ? " hero-video-wrap--full" : ""}`} aria-hidden>
       <video
         ref={videoRef}
         className="hero-video"

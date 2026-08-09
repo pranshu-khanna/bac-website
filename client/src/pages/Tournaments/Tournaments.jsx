@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
 import api from "../../axios";
+import PageFrame from "../../components/PageFrame/PageFrame";
 import "./Tournaments.scss";
 
-export default function Tournaments() {
+export default function Tournaments({ embedded = false }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     api.get("/tournaments").then((res) => setData(res.data));
   }, []);
 
-  if (!data) return <main className="content-main constrain"><p className="muted">Loading…</p></main>;
+  if (!data) {
+    return (
+      <PageFrame embedded={embedded} className="content-main constrain">
+        <p className="muted">Loading…</p>
+      </PageFrame>
+    );
+  }
 
   return (
-    <main className="tournaments-page">
+    <PageFrame embedded={embedded} className="tournaments-page">
       <section className="home-events" aria-labelledby="tournaments-heading">
         <div className="constrain">
           <h1 id="tournaments-heading" className="home-events-title">
@@ -33,6 +40,6 @@ export default function Tournaments() {
           />
         </div>
       </section>
-    </main>
+    </PageFrame>
   );
 }
