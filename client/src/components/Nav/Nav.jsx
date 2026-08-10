@@ -3,7 +3,7 @@ import SectionLink from "../SectionLink/SectionLink";
 
 const LINKS = [
   { id: "tournaments", label: "Tournaments" },
-  { id: "leaderboard", label: "Leaderboard" },
+  { id: "leaderboard", label: "BA€OINS" },
   { id: "enrichment", label: "Enrichment" },
   { id: "results", label: "Results" },
   { id: "faq", label: "FAQ" },

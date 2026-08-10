@@ -1,12 +1,12 @@
 /** Content sourced from https://bayareachess.com/events/bacoin/ */
 module.exports = {
-  title: "BACoins Information, Exchange Rates, and Balances",
+  title: "Information, Exchange Rates, and Balances",
   intro:
-    "To promote delayed gratification and reduce contact during the tournaments, you will earn BACoin (BA€) for scholastic tournaments. You can redeem these BACoins for trophies, medals, and other prizes.",
+    "To promote delayed gratification and reduce contact during the tournaments, you will earn BA€OINS (BA€) for scholastic tournaments. You can redeem these BA€ for trophies, medals, and other prizes.",
   sections: [
     {
       id: "earning",
-      heading: "Earn BACoins",
+      heading: "Earn BA€OINS",
       body: "For signature tournaments, you will earn 6 BA€ per point (minimum 3, maximum 24 BA€ per tournament).",
     },
   ],
@@ -19,8 +19,6 @@ module.exports = {
     { coins: 200, prize: "Giant 3-Post Trophy" },
     { coins: 300, prize: "Giant 4-Post Trophy" },
   ],
-  balanceNote:
-    "To check your BA€ balance at any time, see the leaderboard below or on the official BACoin page.",
   redeem: {
     heading: "Schedule an Appointment to Redeem BA€",
     body:

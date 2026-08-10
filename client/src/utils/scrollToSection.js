@@ -9,12 +9,22 @@ export function scrollToSection(id, { behavior = "smooth" } = {}) {
   const el = document.getElementById(id);
   if (!el) return false;
 
-  // Desktop snap mode listens for this and animates panel-to-panel.
-  window.dispatchEvent(new CustomEvent("home:goto-section", { detail: { id } }));
-
   const snapping = document.documentElement.classList.contains("home-snap");
   const desktop = window.matchMedia("(min-width: 901px)").matches;
-  if (snapping && desktop) return true;
+
+  if (snapping && desktop) {
+    window.dispatchEvent(new CustomEvent("home:goto-section", { detail: { id } }));
+    // Fallback if the snap listener isn't ready yet.
+    window.setTimeout(() => {
+      const stillOff =
+        Math.abs(el.getBoundingClientRect().top - headerOffset()) > 24;
+      if (stillOff) {
+        const top = el.getBoundingClientRect().top + window.scrollY - headerOffset() - 8;
+        window.scrollTo({ top: Math.max(0, top), behavior });
+      }
+    }, 100);
+    return true;
+  }
 
   const top = el.getBoundingClientRect().top + window.scrollY - headerOffset() - 8;
   window.scrollTo({ top: Math.max(0, top), behavior });

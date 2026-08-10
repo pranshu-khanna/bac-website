@@ -110,6 +110,29 @@ export function useHomeScroll(enabled) {
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const canSnap = () => desktopQuery.matches && !motionQuery.matches;
 
+    const clearEdgeHints = () => {
+      getSnapSections().forEach((section) => {
+        section.classList.remove("is-near-end", "is-active-panel");
+      });
+    };
+
+    const syncEdgeHint = (section, { draggingDown = false } = {}) => {
+      clearEdgeHints();
+      if (!section) return;
+      section.classList.add("is-active-panel");
+
+      const port = scrollPort(section);
+      if (!port) {
+        // Short panels: only show the strip while pulling hard toward the next section.
+        if (draggingDown) section.classList.remove("is-near-end");
+        return;
+      }
+
+      const max = port.scrollHeight - port.clientHeight;
+      const nearBottom = max <= 2 ? false : port.scrollTop >= max - 48;
+      section.classList.toggle("is-near-end", nearBottom);
+    };
+
     const clearPull = () => {
       getSnapSections().forEach((section) => {
         section.style.transform = "";
@@ -117,14 +140,17 @@ export function useHomeScroll(enabled) {
       root.style.setProperty("--home-drag", "0");
     };
 
-    const goToSnap = (index) => {
+    const goToSnap = (index, { force = false } = {}) => {
       const sections = getSnapSections();
-      if (!sections.length || animatingRef.current) return;
+      if (!sections.length) return;
+      if (animatingRef.current && !force) return;
 
       const next = Math.max(0, Math.min(sections.length - 1, index));
       const target = sections[next];
       const prev = sections[sectionIndex(sections)];
 
+      // Allow menu clicks to interrupt an in-flight snap.
+      gsap.killTweensOf(window);
       animatingRef.current = true;
       wheelDeltaRef.current = 0;
       root.classList.add("home-snapping");
@@ -132,18 +158,21 @@ export function useHomeScroll(enabled) {
 
       if (prev && prev !== target) resetStats(prev);
       resetStats(target);
+      clearEdgeHints();
 
       const port = scrollPort(target);
       if (port) port.scrollTop = 0;
 
       gsap.to(window, {
-        duration: ANIM_DURATION,
+        duration: force ? Math.min(ANIM_DURATION, 0.95) : ANIM_DURATION,
         scrollTo: { y: target, offsetY: headerOffset(), autoKill: false },
         ease: "power3.inOut",
+        overwrite: true,
         onComplete: () => {
           animatingRef.current = false;
           root.classList.remove("home-snapping");
           playStatNumbers(target);
+          syncEdgeHint(target);
         },
       });
     };
@@ -151,13 +180,12 @@ export function useHomeScroll(enabled) {
     const goToSectionId = (id) => {
       const sections = getSnapSections();
       const idx = sections.findIndex((section) => section.id === id);
-      if (idx >= 0) goToSnap(idx);
+      if (idx >= 0) goToSnap(idx, { force: true });
     };
 
     const onGotoSection = (event) => {
       const id = event?.detail?.id;
       if (!id) return;
-      if (!canSnap()) return;
       goToSectionId(id);
     };
 
@@ -181,6 +209,7 @@ export function useHomeScroll(enabled) {
           event.preventDefault();
           wheelDeltaRef.current = 0;
           clearPull();
+          syncEdgeHint(current);
           return;
         }
       }
@@ -190,8 +219,9 @@ export function useHomeScroll(enabled) {
 
       const drag = Math.min(1, Math.abs(wheelDeltaRef.current) / WHEEL_THRESHOLD);
       const pull = (wheelDeltaRef.current > 0 ? -1 : 1) * drag * PULL_MAX;
-      root.style.setProperty("--home-drag", String(drag));
+      root.style.setProperty("--home-drag", String(dir > 0 ? drag : 0));
       if (current) current.style.transform = `translate3d(0, ${pull}px, 0)`;
+      syncEdgeHint(current, { draggingDown: dir > 0 });
 
       // Preview the neighboring section with a slight counter-pull.
       const neighbor = sections[idx + dir];
@@ -203,6 +233,7 @@ export function useHomeScroll(enabled) {
 
       wheelDeltaRef.current = 0;
       clearPull();
+      clearEdgeHints();
       goToSnap(idx + dir);
     };
 
@@ -260,8 +291,12 @@ export function useHomeScroll(enabled) {
     window.addEventListener("keydown", onKeyDown);
     window.addEventListener("home:goto-section", onGotoSection);
 
+    const sections = getSnapSections();
+    if (sections[0]) syncEdgeHint(sections[sectionIndex(sections)]);
+
     return () => {
       gsap.killTweensOf(window);
+      clearEdgeHints();
       root.classList.remove("home-snap", "home-snapping", "home-free-scroll");
       document.body.classList.remove("home-scroll-lock");
       root.style.removeProperty("--header-offset");

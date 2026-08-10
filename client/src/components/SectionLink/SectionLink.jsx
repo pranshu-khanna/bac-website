@@ -8,11 +8,13 @@ export default function SectionLink({ section, children, className, ...rest }) {
   const to = `/#${section}`;
 
   const onClick = (event) => {
-    if (pathname !== "/") return;
     event.preventDefault();
-    navigate(to);
-    // Wait a tick so the section is in the DOM / layout is stable.
-    requestAnimationFrame(() => scrollToSection(section));
+    if (pathname !== "/") {
+      navigate(to);
+      return;
+    }
+    navigate(to, { replace: true });
+    scrollToSection(section);
   };
 
   return (

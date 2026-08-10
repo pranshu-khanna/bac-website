@@ -41,13 +41,10 @@ export default function Home() {
     const hash = (location.hash || "").replace(/^#/, "");
     if (!hash || !HOME_SECTIONS.includes(hash)) return undefined;
 
+    // Initial load / hard navigation to a hash — menu clicks scroll themselves.
     const run = () => scrollToSection(hash, { behavior: "smooth" });
-    const t1 = window.setTimeout(run, 80);
-    const t2 = window.setTimeout(run, 320);
-    return () => {
-      window.clearTimeout(t1);
-      window.clearTimeout(t2);
-    };
+    const t = window.setTimeout(run, 50);
+    return () => window.clearTimeout(t);
   }, [data, location.hash]);
 
   if (!data) {

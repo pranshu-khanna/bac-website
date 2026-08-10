@@ -45,6 +45,25 @@ body.home-scroll-lock {
     );
   box-shadow: 0 -1px 0 rgba(8, 18, 32, 0.12);
   pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+/* Reveal only when pulling toward the next section, or scrolled to the panel bottom */
+.landing-home > .home-panel--snap.is-near-end:not(:last-child)::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.home-snap .landing-home > .home-panel--snap.is-active-panel:not(:last-child)::after {
+  opacity: clamp(0, calc((var(--home-drag, 0) - 0.55) / 0.3), 1);
+  transform: translateY(calc((1 - clamp(0, calc((var(--home-drag, 0) - 0.55) / 0.3), 1)) * 4px));
+}
+
+html.home-snap .landing-home > .home-panel--snap.is-active-panel.is-near-end:not(:last-child)::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .home-panel-scroll {

@@ -12,7 +12,7 @@ exports.getResources = (_req, res) => {
       },
       { label: "FAQ", path: "/#faq" },
       { label: "BAC policies", href: "https://bayareachess.com/policy/" },
-      { label: "BACoin leaderboard", path: "/#leaderboard" },
+      { label: "BA€OINS", path: "/#leaderboard" },
       {
         label: "Enrichment programs",
         href: "https://enrichment.bayareachess.com/",

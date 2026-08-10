@@ -15,7 +15,7 @@ export default function Footer() {
             <a href="https://bayareachess.com/policy/" target="_blank" rel="noreferrer">
               BAC policies
             </a>
-            <SectionLink section="leaderboard">BACoin leaderboard</SectionLink>
+            <SectionLink section="leaderboard">BA€OINS</SectionLink>
             <Link to="/resources">Resources</Link>
           </div>
           <div className="footer-col">
