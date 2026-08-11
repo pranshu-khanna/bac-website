@@ -121,7 +121,9 @@ module.exports = {
   resultsArchiveTabs: [
     {
       label: "2026 Results",
-      active: true,
+      href:
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKKswJ_9d3ORBHxFet3QM3UwqK40UOeNmd0lmJfT62S_lm-zHVufhQb9HIcfriiQQrBKXfqcwhck9/pubhtml?gid=1642745431&single=true",
+      external: true,
     },
     {
       label: "2025 Results",

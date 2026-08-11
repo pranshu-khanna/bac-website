@@ -22,11 +22,27 @@
   font-size: 0.95rem;
 }
 
+.lb-bacoin-carousel {
+  margin-top: 1.25rem;
+}
+
 .lb-bacoin-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
-  margin-top: 1.25rem;
+}
+
+.lb-bacoin-arrow,
+.lb-bacoin-dots {
+  display: none;
+}
+
+.lb-bacoin-slide {
+  min-width: 0;
+}
+
+.lb-bacoin-slide .lb-bacoin-card {
+  height: 100%;
 }
 
 .lb-bacoin-card {
@@ -88,6 +104,20 @@
   margin-top: 0.85rem;
 }
 
+.lb-balance-search {
+  margin-top: 1.35rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(39, 115, 174, 0.14);
+}
+
+.lb-bacoin-info .lb-balance-search .lb-section-title {
+  margin: 0;
+}
+
+.lb-bacoin-info .lb-table-wrap {
+  margin-top: 0.75rem;
+}
+
 .lb-bacoin-balance-note {
   margin: 1rem 0 0;
   font-size: 0.92rem;
@@ -95,9 +125,90 @@
   color: var(--warm-gray);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 901px) {
   .lb-bacoin-card--rates {
-    grid-column: span 2;
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .lb-bacoin-row {
+    display: grid;
+    grid-template-columns: 2.4rem minmax(0, 1fr) 2.4rem;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .lb-bacoin-viewport {
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  .lb-bacoin-grid {
+    display: flex;
+    gap: 0;
+    transform: translateX(calc(var(--bacoin-index, 0) * -100%));
+    transition: transform 0.35s ease;
+  }
+
+  .lb-bacoin-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .lb-bacoin-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    padding: 0;
+    border: 1px solid rgba(39, 115, 174, 0.28);
+    border-radius: 999px;
+    background: var(--cream);
+    color: var(--ink);
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .lb-bacoin-arrow span {
+    font-size: 1.85rem;
+    line-height: 1;
+    margin-top: -0.12em;
+  }
+
+  .lb-bacoin-arrow:active {
+    background: var(--ink-pale);
+  }
+
+  .lb-bacoin-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.45rem;
+    margin-top: 0.85rem;
+  }
+
+  .lb-bacoin-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(39, 115, 174, 0.28);
+    cursor: pointer;
+  }
+
+  .lb-bacoin-dot.is-active {
+    background: var(--ink);
+    transform: scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lb-bacoin-grid {
+    transition: none;
   }
 }
 

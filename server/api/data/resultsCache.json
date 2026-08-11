@@ -1,8 +1,72 @@
 {
-  "fetchedAt": "2026-08-09T20:46:14.003Z",
+  "fetchedAt": "2026-08-11T16:40:15.576Z",
   "entries": [
     {
-      "date": "JULY 26",
+      "date": "AUG 2",
+      "id": "BAC 3477",
+      "name": "SAN JOSE CA$H QUADS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202608020183",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1_xLRNk-X1eJb0MaAHpw0Tw68kVUXGsyfmOOTEZrJhUk/edit?usp=sharing"
+    },
+    {
+      "date": "AUG 2",
+      "id": "BAC 3476",
+      "name": "SAN JOSE KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202608020243",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1xpTgyE_6fHEqUOc21MqKgPVnWNJb3XQP_7QtWuaapaQ/edit?usp=sharing"
+    },
+    {
+      "date": "AUG 2",
+      "id": "BAC 3475",
+      "name": "SAN JOSE KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202608020193",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1F1o2GV3uiuNwfh6Tc6Iki6Go-x_wQmXn5AYjkbi6Ls4/edit?usp=sharing"
+    },
+    {
+      "date": "AUG 2",
+      "id": "BAC 3474",
+      "name": "SAN JOSE KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202608020253",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1Y7_Pv1KCYjfcKgOriHTxIrARTT_WAlyZPGNN_ji9DLI/edit?usp=sharing"
+    },
+    {
+      "date": "AUG 1",
+      "id": "BAC 3473",
+      "name": "MILPITAS CA$H SWISS60",
+      "prizeType": "💲",
+      "ratingUrl": "https://ratings.uschess.org/event/202608010883",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1lgXKvaPaujkU86IfPH9wXiBpgk--2uaR3s83uDEmLUo/edit?usp=sharing"
+    },
+    {
+      "date": "AUG 1",
+      "id": "BAC 3472",
+      "name": "MILPITAS KIDS SWISS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202608010873",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1Uw60augf_UVUsxAkXCwS0DaVH_4mHzoos9SwLM69CHo/edit?usp=sharing"
+    },
+    {
+      "date": "AUG 1",
+      "id": "BAC 3471",
+      "name": "MILPITAS KIDS CHESS4LESS",
+      "prizeType": "❌",
+      "ratingUrl": "https://ratings.uschess.org/event/202608010563",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1d0W5Kgym7WzalLQ1l-X1ecdq9ndlRhMddqlCzbnH1zA/edit?usp=sharing"
+    },
+    {
+      "date": "AUG 1",
+      "id": "BAC 3470",
+      "name": "MILPITAS KIDS QUADS",
+      "prizeType": "🪙",
+      "ratingUrl": "https://ratings.uschess.org/event/202608010863",
+      "resultUrl": "https://docs.google.com/spreadsheets/d/1dLnTfD8j1o1tVg6UbCk6nrKBnwYDAh5vgd62S5ZBHRU/edit?usp=sharing"
+    },
+    {
+      "date": "JUL 26",
       "id": "BAC 3467",
       "name": "MOUNTAIN HOUSE CA$H QUADS60",
       "prizeType": "💲",
@@ -10,7 +74,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1U2RNkCwFQW1fbDJlzHTj6lCrmxVh2DYVyS8wr2LtXZw/edit?usp=sharing"
     },
     {
-      "date": "JULY 26",
+      "date": "JUL 26",
       "id": "BAC 3466",
       "name": "MOUNTAIN HOUSE KIDS SWISS",
       "prizeType": "🪙",
@@ -18,7 +82,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1tJYmD5MDZj6UF1bCzYEZ9Ut-LNynAEZWzaxKOvIcyi4/edit?usp=sharing"
     },
     {
-      "date": "JULY 26",
+      "date": "JUL 26",
       "id": "BAC 3465",
       "name": "MOUNTAIN HOUSE KIDS QUADS",
       "prizeType": "🪙",
@@ -26,7 +90,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1ClxrIXMb0484o-G-E8iLl2WoKR_4IaJE5sO-NKLcjek/edit?usp=sharing"
     },
     {
-      "date": "JULY 25",
+      "date": "JUL 25",
       "id": "BAC 3464",
       "name": "CUPERTINO CA$H QUADS60",
       "prizeType": "💲",
@@ -34,7 +98,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1BSC0qJx8j5mllZNV--OgLjyevg6Wni6n2gGnEoXvQEk/edit?usp=sharing"
     },
     {
-      "date": "JULY 25",
+      "date": "JUL 25",
       "id": "BAC 3463",
       "name": "CUPERTINO KIDS SWISS",
       "prizeType": "🪙",
@@ -42,7 +106,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1vZTqHyhGpwtVTp0xAIdTJexxl7o4eFWZCOw2S-ihrxI/edit?usp=sharing"
     },
     {
-      "date": "JULY 25",
+      "date": "JUL 25",
       "id": "BAC 3462",
       "name": "CUPERTINO KIDS CHESS4LESS",
       "prizeType": "❌",
@@ -50,7 +114,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/10VdwveSETQOVnNIVv4gjgMV4ItGEv-osVyzpokOTOvk/edit?usp=sharing"
     },
     {
-      "date": "JULY 25",
+      "date": "JUL 25",
       "id": "BAC 3461",
       "name": "CUPERTINO KIDS QUADS",
       "prizeType": "🪙",
@@ -58,7 +122,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1Rjv4irP1Swm5HFWrIH4OoMoUy6gcwD89Kj49z_rl-Io/edit?usp=sharing"
     },
     {
-      "date": "JULY 19",
+      "date": "JUL 19",
       "id": "BAC 3459",
       "name": "SUNNYVALE OPEN BLITZ",
       "prizeType": "💲",
@@ -66,7 +130,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/17Z5P0soAebT-MDh3frIYicsxajQQzKtsBBi5sq6F0lQ/edit?usp=sharing"
     },
     {
-      "date": "JULY 19",
+      "date": "JUL 19",
       "id": "BAC 3458",
       "name": "SUNNYVALE KIDS SWISS",
       "prizeType": "🪙",
@@ -74,7 +138,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1tfWMt8tFqGeICnztTcPcS9VQXlyrlWuXJVZ7dn87BM0/edit?usp=sharing"
     },
     {
-      "date": "JULY 19",
+      "date": "JUL 19",
       "id": "BAC 3457",
       "name": "SUNNYVALE KIDS CHESS4LESS",
       "prizeType": "❌",
@@ -82,7 +146,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1vG3Yr4H6xiLB69D8Rg2Fn4HQOOWTow_Z8SbF1Gq8Msk/edit?usp=sharing"
     },
     {
-      "date": "JULY 19",
+      "date": "JUL 19",
       "id": "BAC 3456",
       "name": "SUNNYVALE KIDS QUADS",
       "prizeType": "🪙",
@@ -90,7 +154,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1eMbf1MfZnBObzwivgDwc72toc3tc8DBYSVM7OaF2JQ0/edit?usp=sharing"
     },
     {
-      "date": "JULY 17-19",
+      "date": "JUL 17-19",
       "id": "BAC 3455",
       "name": "JULY REAL-FIDE CHAMP",
       "prizeType": "💲",
@@ -98,7 +162,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1_wy-s6OKeUFwMxoAuZKd_6aj8ihhmETkrpuobv4FegY/edit?usp=sharing"
     },
     {
-      "date": "JULY 12",
+      "date": "JUL 12",
       "id": "BAC 3454",
       "name": "SAN JOSE CA$H QUADS60",
       "prizeType": "💲",
@@ -106,7 +170,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1uAvvZO-ioe5UDP5QLsAZtHZpj08Nb_DrDm5qoDw5lNE/edit?usp=sharing"
     },
     {
-      "date": "JULY 12",
+      "date": "JUL 12",
       "id": "BAC 3453",
       "name": "SAN JOSE KIDS SWISS",
       "prizeType": "🪙",
@@ -114,7 +178,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1v4kcB7Q-xxNo7PJ5TbBNGDldbigv-fJosm4y9C30peM/edit?usp=sharing"
     },
     {
-      "date": "JULY 12",
+      "date": "JUL 12",
       "id": "BAC 3452",
       "name": "SAN JOSE KIDS CHESS4LESS",
       "prizeType": "❌",
@@ -122,7 +186,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1aG3wHO9SsddG9f6IjkbuUcvlCPuvv0So8rgYWl41LpI/edit?usp=sharing"
     },
     {
-      "date": "JULY 12",
+      "date": "JUL 12",
       "id": "BAC 3451",
       "name": "SAN JOSE KIDS QUADS",
       "prizeType": "🪙",
@@ -130,7 +194,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1vSl8LNHz_6ib5ryNsPIuI9bN_PFDCucuvKbJCkU1_F4/edit?usp=sharing"
     },
     {
-      "date": "JULY 11",
+      "date": "JUL 11",
       "id": "BAC 3450",
       "name": "MILPITAS CA$H SWISS60",
       "prizeType": "💲",
@@ -138,7 +202,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1eg4tIkW8AL-liJVFqHbGt7x-EVTjfajSoXDp6SlTnnk/edit?usp=sharing"
     },
     {
-      "date": "JULY 11",
+      "date": "JUL 11",
       "id": "BAC 3449",
       "name": "MILPITAS KIDS SWISS",
       "prizeType": "🪙",
@@ -146,7 +210,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1GhWJXRLgYUgcORKCJI5grGfhSw-CXhDe-1beYFkHDbw/edit?usp=sharing"
     },
     {
-      "date": "JULY 11",
+      "date": "JUL 11",
       "id": "BAC 3448",
       "name": "MILPITAS KIDS CHESS4LESS",
       "prizeType": "❌",
@@ -154,7 +218,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1snY3YLTPaTBXZTpibOi81jxJRrd0YDQ5t_QvkRC3gXg/edit?usp=sharing"
     },
     {
-      "date": "JULY 11",
+      "date": "JUL 11",
       "id": "BAC 3447",
       "name": "MILPITAS KIDS QUADS",
       "prizeType": "🪙",
@@ -162,7 +226,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1fUX9fIlL8Q9mKzo1wdDJ9CV8iI_69eTcOJRTi0d6cI8/edit?usp=sharing"
     },
     {
-      "date": "JULY 5",
+      "date": "JUL 5",
       "id": "BAC 3446",
       "name": "SAN JOSE CA$H QUADS60",
       "prizeType": "💲",
@@ -170,7 +234,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1JyaspsBgi-56EAGZub4xgaXFe5KbLDqQc4HCjijracA/edit?usp=sharing"
     },
     {
-      "date": "JULY 5",
+      "date": "JUL 5",
       "id": "BAC 3445",
       "name": "SAN JOSE KIDS SWISS",
       "prizeType": "🪙",
@@ -178,7 +242,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1S5SluS2YB65K-7KeBKWIlBj-4M7NUprgfi4YqPofwdk/edit?usp=sharing"
     },
     {
-      "date": "JULY 5",
+      "date": "JUL 5",
       "id": "BAC 3444",
       "name": "SAN JOSE KIDS CHESS4LESS",
       "prizeType": "❌",
@@ -186,7 +250,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1oyeiySdd-7bSSs-B3xZdBQhMMBKGV0chbLy7Rn5HAxY/edit?usp=sharing"
     },
     {
-      "date": "JULY 5",
+      "date": "JUL 5",
       "id": "BAC 3443",
       "name": "SAN JOSE KIDS QUADS",
       "prizeType": "🪙",
@@ -194,7 +258,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1SurxK_V4jESqyX8qe2iAH3Ix3i4pAGxXvKsM8vVt-Io/edit?usp=sharing"
     },
     {
-      "date": "JULY 4",
+      "date": "JUL 4",
       "id": "BAC 3442",
       "name": "FREMONT CA$H SWISS60",
       "prizeType": "💲",
@@ -202,7 +266,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1BGLhEGebRKJhrooemsdSqcihisk4TrveU4ybgWzErhI/edit?usp=sharing"
     },
     {
-      "date": "JULY 4",
+      "date": "JUL 4",
       "id": "BAC 3441",
       "name": "FREMONT KIDS SWISS",
       "prizeType": "🪙",
@@ -210,7 +274,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1-CmlYwKhzQOYbSs6f3Vc3f20vNWuY0GNFUZFJFgwYkA/edit?usp=sharing"
     },
     {
-      "date": "JULY 4",
+      "date": "JUL 4",
       "id": "BAC 3440",
       "name": "FREMONT KIDS CHESS4LESS",
       "prizeType": "❌",
@@ -218,7 +282,7 @@
       "resultUrl": "https://docs.google.com/spreadsheets/d/1igls2bZ1dwjy-gAS8fm38wIxur1-7cwQSI69GSeNUR0/edit?usp=sharing"
     },
     {
-      "date": "JULY 4",
+      "date": "JUL 4",
       "id": "BAC 3439",
       "name": "FREMONT KIDS QUADS",
       "prizeType": "🪙",

@@ -204,6 +204,11 @@ html.home-snap .landing-home > .home-panel--snap.is-active-panel.is-near-end:not
   font-size: 0.84rem;
 }
 
+.landing-offerings-arrow,
+.landing-offerings-dots {
+  display: none;
+}
+
 .home-page-section.home-panel--snap {
   justify-content: flex-start;
   padding: 0;
@@ -265,6 +270,81 @@ html.home-snapping .landing-home > .home-panel--snap {
   .landing-hero-copy-block {
     max-width: 100%;
   }
+
+  .landing-offerings-row {
+    display: grid;
+    grid-template-columns: 2.4rem minmax(0, 1fr) 2.4rem;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .landing-offerings-viewport {
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  .landing-offerings-grid {
+    display: flex !important;
+    gap: 0;
+    background: transparent;
+    border: none;
+    transform: translateX(calc(var(--offer-index, 0) * -100%));
+    transition: transform 0.35s ease;
+  }
+
+  .landing-offerings-grid .landing-offer-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .landing-offerings-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    padding: 0;
+    border: 1px solid rgba(39, 115, 174, 0.28);
+    border-radius: 999px;
+    background: var(--cream);
+    color: var(--ink);
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .landing-offerings-arrow span {
+    font-size: 1.85rem;
+    line-height: 1;
+    margin-top: -0.12em;
+  }
+
+  .landing-offerings-arrow:active {
+    background: var(--ink-pale);
+  }
+
+  .landing-offerings-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.45rem;
+    margin-top: 0.85rem;
+  }
+
+  .landing-offerings-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(39, 115, 174, 0.28);
+    cursor: pointer;
+  }
+
+  .landing-offerings-dot.is-active {
+    background: var(--ink);
+    transform: scale(1.15);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -275,6 +355,10 @@ html.home-snapping .landing-home > .home-panel--snap {
   .landing-home > .home-panel--snap {
     height: auto;
     transform: none !important;
+  }
+
+  .landing-offerings-grid {
+    transition: none;
   }
 }
 

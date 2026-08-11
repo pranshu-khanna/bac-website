@@ -4,7 +4,6 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const apiRoutes = require("./routes");
-const { startResultsRefreshScheduler } = require("./services/resultsFetcher");
 const { startLeaderboardRefreshScheduler } = require("./services/leaderboardFetcher");
 
 const app = express();
@@ -22,15 +21,16 @@ app.use(express.json());
 app.use("/api", apiRoutes);
 
 if (process.env.NODE_ENV === "production") {
-  const clientBuild = path.join(__dirname, "../../client/build");
+  // Vite build output lives in client/dist (not create-react-app's client/build)
+  const clientBuild = path.join(__dirname, "../../client/dist");
   app.use(express.static(clientBuild));
-  app.get("*", (_req, res) => {
+  app.get("*", (req, res, next) => {
+    if (req.path.startsWith("/api")) return next();
     res.sendFile(path.join(clientBuild, "index.html"));
   });
 }
 
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`API running on http://0.0.0.0:${PORT}`);
-  startResultsRefreshScheduler();
   startLeaderboardRefreshScheduler();
 });
