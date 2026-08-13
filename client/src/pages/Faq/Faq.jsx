@@ -1,8 +1,41 @@
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import api from "../../axios";
 import PageFrame from "../../components/PageFrame/PageFrame";
 import RichText from "../../components/RichText/RichText";
 import "./Faq.scss";
+
+function FaqItem({ item }) {
+  const [open, setOpen] = useState(false);
+  const panelId = useId();
+
+  return (
+    <article className={`faq-item${open ? " is-open" : ""}`}>
+      <h2 className="faq-question-heading">
+        <button
+          type="button"
+          className="faq-question"
+          aria-expanded={open}
+          aria-controls={panelId}
+          onClick={() => setOpen((current) => !current)}
+        >
+          <span className="faq-question-text">
+            <span className="faq-label">Q</span>
+            {item.q}
+          </span>
+          <span className="faq-chevron" aria-hidden />
+        </button>
+      </h2>
+      <div className="faq-answer-wrap" id={panelId} hidden={!open}>
+        <div className="faq-answer">
+          <span className="faq-label">A</span>
+          <p>
+            <RichText text={item.a} />
+          </p>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export default function Faq({ embedded = false }) {
   const [data, setData] = useState(null);
@@ -31,18 +64,7 @@ export default function Faq({ embedded = false }) {
 
       <div className="faq-list">
         {data.items.map((item) => (
-          <article key={item.q} className="faq-item">
-            <h2 className="faq-question">
-              <span className="faq-label">Q</span>
-              {item.q}
-            </h2>
-            <div className="faq-answer">
-              <span className="faq-label">A</span>
-              <p>
-                <RichText text={item.a} />
-              </p>
-            </div>
-          </article>
+          <FaqItem key={item.q} item={item} />
         ))}
       </div>
     </PageFrame>

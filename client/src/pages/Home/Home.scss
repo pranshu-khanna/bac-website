@@ -241,6 +241,21 @@ html.home-snapping .landing-home > .home-panel--snap {
     overflow: visible;
   }
 
+  .landing-home .constrain {
+    padding-left: max(1.75rem, env(safe-area-inset-left));
+    padding-right: max(1.75rem, env(safe-area-inset-right));
+  }
+
+  .home-page-section .home-panel-scroll {
+    padding-top: 1.75rem;
+    padding-bottom: 2.25rem;
+  }
+
+  #leaderboard ~ .home-page-section .home-panel-scroll {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
   .landing-stats--inline {
     padding-top: 2rem;
   }
