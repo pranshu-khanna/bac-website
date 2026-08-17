@@ -21,19 +21,19 @@ exports.getHome = (_req, res) => {
       {
         title: "Chess Camps",
         description: "Holiday and summer camps for beginners through advanced.",
-        href: "https://enrichment.bayareachess.com/camps/all",
+        path: "/enrichment#camps",
         linkLabel: "View camps",
       },
       {
         title: "After-School Programs",
         description: "School enrichment and weekend clubs across the region.",
-        href: "https://enrichment.bayareachess.com/enrichment",
+        path: "/enrichment#afterschool",
         linkLabel: "Learn more",
       },
       {
         title: "Tournament Team",
         description: "Team events and coordinated competitive opportunities.",
-        href: "https://enrichment.bayareachess.com/event/bac-tournament-team-person",
+        path: "/enrichment#teams",
         linkLabel: "Team info",
       },
     ],

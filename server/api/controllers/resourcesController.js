@@ -15,7 +15,7 @@ exports.getResources = (_req, res) => {
       { label: "BA€OINS", path: "/#leaderboard" },
       {
         label: "Enrichment programs",
-        href: "https://enrichment.bayareachess.com/",
+        path: "/enrichment",
       },
     ],
   });

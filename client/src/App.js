@@ -7,6 +7,7 @@ import Membership from "./pages/Membership/Membership";
 import Resources from "./pages/Resources/Resources";
 import Request from "./pages/Request/Request";
 import Login from "./pages/Login/Login";
+import EnrichmentHome from "./pages/Enrichment/EnrichmentHome";
 import EnrichmentLaunch from "./pages/Enrichment/EnrichmentLaunch";
 import NotFound from "./pages/NotFound/NotFound";
 
@@ -19,7 +20,7 @@ export default function App() {
         {/* Legacy page routes → home sections */}
         <Route path="tournaments" element={<HomeSectionRedirect section="tournaments" />} />
         <Route path="leaderboard" element={<HomeSectionRedirect section="leaderboard" />} />
-        <Route path="enrichment" element={<HomeSectionRedirect section="enrichment" />} />
+        <Route path="enrichment" element={<EnrichmentHome />} />
         <Route path="results" element={<HomeSectionRedirect section="results" />} />
         <Route path="faq" element={<HomeSectionRedirect section="faq" />} />
         <Route path="about" element={<HomeSectionRedirect section="about" />} />

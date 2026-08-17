@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 
 export default function Layout() {
   const { pathname } = useLocation();
-  const hideFooter = pathname === "/";
+  const hideFooter = pathname === "/" || pathname === "/enrichment";
 
   return (
     <div className="site">

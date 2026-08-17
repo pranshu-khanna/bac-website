@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import SectionLink from "../../components/SectionLink/SectionLink";
 
 export default function EnrichmentReturnBar() {
   return (
@@ -7,9 +6,9 @@ export default function EnrichmentReturnBar() {
       <Link to="/" className="enrichment-return-link enrichment-return-link--primary">
         ← Bay Area Chess home
       </Link>
-      <SectionLink section="enrichment" className="enrichment-return-link">
-        Enrichment hub
-      </SectionLink>
+      <Link to="/enrichment" className="enrichment-return-link">
+        Enrichment home
+      </Link>
     </div>
   );
 }

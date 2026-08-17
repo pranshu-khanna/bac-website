@@ -53,8 +53,8 @@
       "rank": 8,
       "name": "Sainika Basu",
       "earned": 461,
-      "balance": 305,
-      "redeemed": 156
+      "balance": 30,
+      "redeemed": 431
     },
     {
       "rank": 9,
@@ -900,8 +900,8 @@
       "rank": 129,
       "name": "Alvin Wang",
       "earned": 210,
-      "balance": 210,
-      "redeemed": 0
+      "balance": 10,
+      "redeemed": 200
     },
     {
       "rank": 130,
@@ -7137,8 +7137,8 @@
       "rank": 1020,
       "name": "Austin Zhang",
       "earned": 48,
-      "balance": 39,
-      "redeemed": 9
+      "balance": 3,
+      "redeemed": 45
     },
     {
       "rank": 1021,
@@ -14403,8 +14403,8 @@
       "rank": 2058,
       "name": "Lynthia Li Chen",
       "earned": 18,
-      "balance": 18,
-      "redeemed": 0
+      "balance": 0,
+      "redeemed": 18
     },
     {
       "rank": 2059,
@@ -24251,5 +24251,5 @@
   ],
   "totalPlayers": 3464,
   "displayLimit": 25,
-  "fetchedAt": "2026-08-12T21:00:57.377Z"
+  "fetchedAt": "2026-08-17T07:21:02.703Z"
 }

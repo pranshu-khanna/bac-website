@@ -20,10 +20,10 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>Enrichment</h4>
-            <SectionLink section="enrichment">Enrichment hub</SectionLink>
-            <Link to="/enrichment/launch/weekend-clubs">Weekend clubs</Link>
-            <Link to="/enrichment/launch/camps">Chess camps</Link>
-            <Link to="/enrichment/launch/rising-stars">Rising Stars</Link>
+            <Link to="/enrichment">Enrichment home</Link>
+            <Link to="/enrichment#clubs">Weekend clubs</Link>
+            <Link to="/enrichment#camps">Chess camps</Link>
+            <Link to="/enrichment#rising-star">Rising Stars</Link>
           </div>
           <div className="footer-col">
             <h4>Organization</h4>
