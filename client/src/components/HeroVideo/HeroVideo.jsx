@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./HeroVideo.scss";
 
-export default function HeroVideo({ fullBleed = false }) {
+export default function HeroVideo({ fullBleed = false, src = "/videos/hero-clip.mp4" }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -23,14 +23,15 @@ export default function HeroVideo({ fullBleed = false }) {
     }
 
     return () => video.removeEventListener("canplay", play);
-  }, []);
+  }, [src]);
 
   return (
     <div className={`hero-video-wrap${fullBleed ? " hero-video-wrap--full" : ""}`} aria-hidden>
       <video
         ref={videoRef}
         className="hero-video"
-        src="/videos/hero-clip.mp4"
+        src={src}
+        key={src}
         autoPlay
         playsInline
         loop

@@ -130,7 +130,7 @@ export default function EnrichmentHome() {
     <main className="landing-home enrichment-home">
       <section id="top" className="landing-hero home-panel home-panel--snap" data-entered="1">
         <div className="landing-hero-media" aria-hidden>
-          <HeroVideo fullBleed />
+          <HeroVideo fullBleed src="/videos/enrichment-clip.mp4" />
           <div className="landing-hero-scrim" />
         </div>
         <div className="constrain landing-hero-content">

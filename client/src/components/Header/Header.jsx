@@ -9,13 +9,13 @@ export default function Header() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const enrichment = pathname === "/enrichment" || pathname.startsWith("/enrichment/");
-  const homePath = enrichment ? "/enrichment" : "/";
 
   const goHomeTop = (event) => {
-    if (pathname !== homePath) return;
     event.preventDefault();
-    navigate(homePath);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/");
+    if (pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
@@ -53,8 +53,8 @@ export default function Header() {
       </div>
 
       <div className="header-main constrain">
-        <Link to={homePath} className="logo-link" onClick={goHomeTop}>
-          <Logo variant={enrichment ? "enrichment" : "main"} />
+        <Link to="/" className="logo-link" onClick={goHomeTop}>
+          <Logo />
         </Link>
         <Nav />
       </div>

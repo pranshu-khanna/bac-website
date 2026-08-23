@@ -37,7 +37,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-copy">
-          © 2006–2026 Bay Area Chess · <SectionLink section="contact">contact us</SectionLink>
+          © 2006–2026 Bay Area Chess · Designed by{" "}
+          <a href="https://studiva.org" target="_blank" rel="noreferrer">
+            Studiva
+          </a>
         </div>
       </div>
     </footer>
