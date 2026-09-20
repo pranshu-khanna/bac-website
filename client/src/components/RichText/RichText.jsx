@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-const MD_LINK_RE = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
 const URL_RE = /(https?:\/\/[^\s]+|bayareachess\.com\/[^\s.,;:!?)]+)/gi;
+const MD_HREF_RE = /^https?:\/\/[^)\s]+$/;
 
 const INTERNAL_PATHS = {
   "bayareachess.com/bacoins": "/leaderboard",
@@ -28,24 +28,55 @@ function parseUrls(text) {
   return parts.length ? parts : [{ type: "text", value: text }];
 }
 
+function findBalancedBracket(text, openIndex) {
+  let depth = 0;
+  for (let i = openIndex; i < text.length; i += 1) {
+    const ch = text[i];
+    if (ch === "[") depth += 1;
+    else if (ch === "]") {
+      depth -= 1;
+      if (depth === 0) return i;
+    }
+  }
+  return -1;
+}
+
 function parseText(text) {
   const parts = [];
-  let lastIndex = 0;
-  let match;
+  let i = 0;
 
-  while ((match = MD_LINK_RE.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(...parseUrls(text.slice(lastIndex, match.index)));
+  while (i < text.length) {
+    const open = text.indexOf("[", i);
+    if (open === -1) {
+      parts.push(...parseUrls(text.slice(i)));
+      break;
     }
-    parts.push({ type: "link", value: match[1], href: match[2] });
-    lastIndex = match.index + match[0].length;
+
+    const close = findBalancedBracket(text, open);
+    const label = close === -1 ? "" : text.slice(open + 1, close);
+    const hrefStart = close + 2;
+    const hrefEnd = close === -1 ? -1 : text.indexOf(")", hrefStart);
+    const href = hrefEnd === -1 ? "" : text.slice(hrefStart, hrefEnd);
+    const isMdLink =
+      close !== -1 &&
+      label.length > 0 &&
+      text[close + 1] === "(" &&
+      hrefEnd !== -1 &&
+      MD_HREF_RE.test(href);
+
+    if (!isMdLink) {
+      parts.push(...parseUrls(text.slice(i, open + 1)));
+      i = open + 1;
+      continue;
+    }
+
+    if (open > i) {
+      parts.push(...parseUrls(text.slice(i, open)));
+    }
+    parts.push({ type: "link", value: label, href });
+    i = hrefEnd + 1;
   }
 
-  if (lastIndex < text.length) {
-    parts.push(...parseUrls(text.slice(lastIndex)));
-  }
-
-  MD_LINK_RE.lastIndex = 0;
   return parts.length ? parts : [{ type: "text", value: text }];
 }
 

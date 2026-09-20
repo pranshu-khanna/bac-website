@@ -115,14 +115,17 @@ function ConnectCard({ link }) {
   );
 }
 
-function ConnectCarousel({ links }) {
+function ConnectCarousel({ links = [] }) {
   const [index, setIndex] = useState(0);
   const touchX = useRef(null);
   const count = links.length;
 
   const go = (dir) => {
+    if (!count) return;
     setIndex((current) => (current + dir + count) % count);
   };
+
+  if (!count) return null;
 
   return (
     <div className="contact-connect">
