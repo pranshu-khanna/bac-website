@@ -14,7 +14,6 @@ exports.getAbout = (_req, res) => {
     president: siteData.president,
     staff: siteData.staff,
     board: siteData.board,
-    socialLinks: siteData.socialLinks,
     testimonials: siteData.testimonials,
     testimonialsUrl: "https://bayareachess.com/about/testimonials/",
     commitments: [

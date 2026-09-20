@@ -6,6 +6,10 @@ module.exports = {
   "faqFormUrl": "https://bayareachess.com/faqform",
   "items": [
     {
+      "q": "What is Bay Area Chess Events Policy",
+      "a": "See [Here](https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKKswJ_9d3ORBHxFet3QM3UwqK40UOeNmd0lmJfT62S_lm-zHVufhQb9HIcfriiQQrBKXfqcwhck9/pubhtml?gid=623684976&single=true)"
+    },
+    {
       "q": "What's the difference between Econ and Regular?",
       "a": "If a player wins a prize, players that register Econ will receive 50% of the calculated prize (in exchange for the lower entry fee), while players that register Regular will get 100% of the calculated prize."
     },

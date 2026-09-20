@@ -39,7 +39,7 @@ module.exports = {
     },
     {
       title: "Teams",
-      description: "In-person tournament team training for rated players.",
+      description: "Advanced Training from GM/IM for Rated players",
       section: "teams",
       linkLabel: "Team info",
     },
@@ -209,6 +209,34 @@ module.exports = {
       ctaHref: `${ENRICHMENT_BASE}/RisingStars`,
     },
   ],
+  faq: {
+    kicker: "ASK BAC",
+    title: "Enrichment FAQ",
+    intro:
+      "Common questions about classes, camps, after-school programs, and clubs. For rated tournament questions, use FAQ on the Tournaments site.",
+    items: [
+      {
+        q: "What will my child learn?",
+        a: "We teach chess as a healthy academic game — patience, planning, and decision-making. We also teach the value of losing, learning from mistakes, and sportsmanship.",
+      },
+      {
+        q: "How do rewards work?",
+        a: "Students earn enrichment points for learning and behavior, then collect rewards, trophies, and medals. Points are cumulative year after year.",
+      },
+      {
+        q: "Do weekend clubs require registration?",
+        a: "No. Clubs are pay-at-the-door. Bundles can be purchased on-site with the coach and last 12 months.",
+      },
+      {
+        q: "Late pick-up?",
+        a: "0–10 min no charge. 10–20 min $20. 20–30 min $40. 30–60 min $80. Fees go to the coach, not BAC.",
+      },
+      {
+        q: "Cancellation / refund?",
+        a: "Refund before the first class minus a $25 fee. After the first class but before the second: prorated minus one class and $25. No refunds after the second class.",
+      },
+    ],
+  },
   contact: {
     kicker: "Two sites",
     title: "Contact enrichment",

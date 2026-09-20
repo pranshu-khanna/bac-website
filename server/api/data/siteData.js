@@ -7,7 +7,7 @@ module.exports = {
         "Tournaments, classes, photos, and updates — like us on Facebook.",
     },
     {
-      label: "Twitter",
+      label: "X",
       href: "https://twitter.com/bayareachess",
       description: "News about upcoming tournaments and classes.",
     },

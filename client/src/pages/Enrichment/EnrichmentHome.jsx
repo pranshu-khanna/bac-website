@@ -4,6 +4,7 @@ import api from "../../axios";
 import Footer from "../../components/Footer/Footer";
 import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import OfferingsCarousel from "../../components/OfferingsCarousel/OfferingsCarousel";
+import Contact from "../Contact/Contact";
 import { ENRICHMENT_SECTIONS, scrollToSection } from "../../utils/scrollToSection";
 import { useHomeScroll } from "../Home/useHomeScroll";
 import "../Home/Home.scss";
@@ -171,27 +172,26 @@ export default function EnrichmentHome() {
         </section>
       ))}
 
+      {data.faq ? (
+        <section id="faq" className="home-page-section home-panel home-panel--snap">
+          <div className="home-panel-scroll">
+            <div className="content-main constrain enr-program">
+              <p className="landing-section-label">{data.faq.kicker}</p>
+              <h1>{data.faq.title}</h1>
+              <p className="enr-intro">{data.faq.intro}</p>
+              <div className="enr-faq-list">
+                {data.faq.items.map((item) => (
+                  <AccordionItem key={item.q} item={item} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section id="contact" className="home-page-section home-panel home-panel--snap">
         <div className="home-panel-scroll">
-          <div className="content-main constrain enr-program">
-            <p className="landing-section-label">{data.contact.kicker}</p>
-            <h1>{data.contact.title}</h1>
-            <p className="enr-intro">{data.contact.intro}</p>
-            <ul className="enr-points">
-              {data.contact.notes.map((note) => (
-                <li key={note}>{note}</li>
-              ))}
-            </ul>
-            <a className="enr-cta" href={`mailto:${data.contact.email}`}>
-              Email {data.contact.email}
-            </a>
-            <p className="enr-body">
-              Prefer the original enrichment portal?{" "}
-              <a href={data.externalHome} target="_blank" rel="noreferrer">
-                enrichment.bayareachess.com
-              </a>
-            </p>
-          </div>
+          <Contact embedded />
           <Footer />
         </div>
       </section>

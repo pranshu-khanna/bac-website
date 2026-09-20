@@ -22,11 +22,6 @@ export default function Header() {
     <header className="header">
       <div className="header-top">
         <div className="header-top-inner constrain">
-          {enrichment ? (
-            <Link className="header-top-link" to="/">
-              Tournament site
-            </Link>
-          ) : null}
           <button
             type="button"
             className="header-top-btn theme-toggle"

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../../axios";
 import PageFrame from "../../components/PageFrame/PageFrame";
-import RightBar from "../../components/RightBar/RightBar";
 import "./About.scss";
 
 function TeamCard({ member }) {
@@ -93,26 +92,6 @@ export default function About({ embedded = false }) {
               </a>
             </p>
           </section>
-        </div>
-
-        <div className="about-layout-aside">
-          <RightBar title="Connect with BayAreaChess">
-            <ul className="about-social-list">
-              {data.socialLinks.map((link) => (
-                <li key={link.label}>
-                  <a className="about-social-link" href={link.href} target="_blank" rel="noreferrer">
-                    <span className="about-social-icon" aria-hidden>
-                      @
-                    </span>
-                    <span className="about-social-text">
-                      <span className="about-social-name">{link.label}</span>
-                      <span className="about-social-desc">{link.description}</span>
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </RightBar>
         </div>
       </div>
     </PageFrame>

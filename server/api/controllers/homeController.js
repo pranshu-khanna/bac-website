@@ -1,7 +1,7 @@
 exports.getHome = (_req, res) => {
   res.json({
     hero: {
-      badge: "USCF Chess Club of the Year 2018",
+      badge: "USCF awarded chess club",
       title: "Transforming Lives",
       titleEm: "Through Chess",
       description:
@@ -14,7 +14,7 @@ exports.getHome = (_req, res) => {
     pillars: [
       {
         title: "Rated Tournaments",
-        description: "Weekly USCF-rated events for scholastic and adult players.",
+        description: "Play nationally and internationally rated tournaments.",
         path: "/#tournaments",
         linkLabel: "Browse tournaments",
       },

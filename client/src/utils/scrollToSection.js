@@ -47,5 +47,6 @@ export const ENRICHMENT_SECTIONS = [
   "clubs",
   "teams",
   "rising-star",
+  "faq",
   "contact",
 ];

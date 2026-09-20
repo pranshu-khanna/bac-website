@@ -6,10 +6,21 @@ exports.getContact = (_req, res) => {
     mapEmbedUrl: siteData.mapEmbedUrl,
     contactEmail: siteData.contactEmail,
     hours: "Office hours vary — email ask@bayareachess.com for scheduling.",
-    sidebarLinks: [
-      { label: "Tournaments", path: "/#tournaments" },
-      { label: "Membership", path: "/membership" },
-      { label: "Resources", path: "/resources" },
+    connectLinks: [
+      {
+        label: "Request form",
+        href: "https://bayareachess.com/request",
+      },
+      {
+        label: "Email",
+        description: "events@bayareachess.com",
+        href: "mailto:events@bayareachess.com",
+      },
+      {
+        label: "WhatsApp",
+        href: "https://bayareachess.com/askbac",
+      },
+      ...siteData.socialLinks,
     ],
   });
 };

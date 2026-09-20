@@ -63,7 +63,7 @@ export default function Home() {
 
         <div className="constrain landing-hero-content">
           <div className="landing-hero-copy-block">
-            <div className="landing-hero-award">USCF Chess Club of the Year 2018</div>
+            <div className="landing-hero-award">USCF awarded chess club</div>
             <h1 className="landing-hero-title">
               {data.hero.title} <em>{data.hero.titleEm}</em>
             </h1>

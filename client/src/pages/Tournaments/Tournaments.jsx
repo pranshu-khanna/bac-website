@@ -21,23 +21,18 @@ export default function Tournaments({ embedded = false }) {
   return (
     <PageFrame embedded={embedded} className="tournaments-page">
       <section className="home-events" aria-labelledby="tournaments-heading">
-        <div className="constrain">
+        <div className="constrain tournaments-cta-panel">
           <h1 id="tournaments-heading" className="home-events-title">
             {data.title}
           </h1>
-          <p className="home-events-sub">
-            <a href={data.embedUrl} target="_blank" rel="noreferrer">
-              {data.fullPageLabel}
-            </a>
-          </p>
-        </div>
-        <div className="chessroster-embed-wrap constrain">
-          <iframe
-            className="chessroster-embed"
-            src={data.embedUrl}
-            title="Bay Area Chess upcoming tournaments on ChessRoster"
-            loading="lazy"
-          />
+          <a
+            className="tournaments-cta"
+            href={data.registerUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {data.ctaLabel}
+          </a>
         </div>
       </section>
     </PageFrame>

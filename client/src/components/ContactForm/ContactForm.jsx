@@ -1,25 +1,11 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import api from "../../axios";
-
-const CHARSET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-
-function randomChallenge() {
-  let out = "";
-  for (let i = 0; i < 5; i += 1) {
-    out += CHARSET[Math.floor(Math.random() * CHARSET.length)];
-  }
-  return out;
-}
 
 export default function ContactForm({ contactEmail = "ask@bayareachess.com" }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [captchaInput, setCaptchaInput] = useState("");
-  const [challenge, setChallenge] = useState(randomChallenge);
   const [error, setError] = useState(null);
-
-  const captchaCanvas = useMemo(() => challenge, [challenge]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,12 +17,6 @@ export default function ContactForm({ contactEmail = "ask@bayareachess.com" }) {
     }
     if (!message.trim()) {
       setError("Message is required.");
-      return;
-    }
-    if (captchaInput.trim().toUpperCase() !== challenge) {
-      setError("Captcha does not match. Please try again.");
-      setChallenge(randomChallenge());
-      setCaptchaInput("");
       return;
     }
 
@@ -99,35 +79,6 @@ export default function ContactForm({ contactEmail = "ask@bayareachess.com" }) {
           required
         />
         <p className="contact-char-count">{message.length}/500</p>
-      </div>
-
-      <div className="contact-captcha">
-        <div className="contact-captcha-row">
-          <div className="contact-captcha-canvas" aria-hidden>
-            {captchaCanvas}
-          </div>
-        </div>
-        <button
-          type="button"
-          className="contact-captcha-refresh"
-          onClick={() => {
-            setChallenge(randomChallenge());
-            setCaptchaInput("");
-          }}
-        >
-          Refresh captcha
-        </button>
-        <div className="contact-control">
-          <label className="contact-label" htmlFor="contact-captcha">
-            ENTER CAPTCHA
-          </label>
-          <input
-            id="contact-captcha"
-            className="contact-input"
-            value={captchaInput}
-            onChange={(e) => setCaptchaInput(e.target.value)}
-          />
-        </div>
       </div>
 
       <div className="contact-form-actions">

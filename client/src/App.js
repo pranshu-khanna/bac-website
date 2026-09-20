@@ -3,9 +3,6 @@ import Layout from "./components/Layout/Layout";
 import HomeSectionRedirect from "./components/HomeSectionRedirect";
 import Home from "./pages/Home/Home";
 import Events from "./pages/Events/Events";
-import Membership from "./pages/Membership/Membership";
-import Resources from "./pages/Resources/Resources";
-import Request from "./pages/Request/Request";
 import Login from "./pages/Login/Login";
 import EnrichmentHome from "./pages/Enrichment/EnrichmentHome";
 import EnrichmentLaunch from "./pages/Enrichment/EnrichmentLaunch";
@@ -28,9 +25,6 @@ export default function App() {
 
         {/* Standalone pages (not in primary nav) */}
         <Route path="events" element={<Events />} />
-        <Route path="membership" element={<Membership />} />
-        <Route path="resources" element={<Resources />} />
-        <Route path="request" element={<Request />} />
         <Route path="login" element={<Login />} />
         <Route path="enrichment/launch/:slug" element={<EnrichmentLaunch />} />
         <Route path="*" element={<NotFound />} />

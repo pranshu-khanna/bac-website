@@ -16,7 +16,6 @@ export default function Footer() {
               BAC policies
             </a>
             <SectionLink section="leaderboard">BA€OINS</SectionLink>
-            <Link to="/resources">Resources</Link>
           </div>
           <div className="footer-col">
             <h4>Enrichment</h4>
@@ -29,8 +28,9 @@ export default function Footer() {
             <h4>Organization</h4>
             <SectionLink section="about">About</SectionLink>
             <SectionLink section="contact">Contact us</SectionLink>
-            <Link to="/request">Requests</Link>
-            <Link to="/membership">Membership</Link>
+            <a href="https://bayareachess.com/request" target="_blank" rel="noreferrer">
+              Requests
+            </a>
             <a href="https://bayareachess.com/payhere" target="_blank" rel="noreferrer">
               Pay here
             </a>
