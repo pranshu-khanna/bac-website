@@ -147,6 +147,18 @@ html.home-snap .landing-home > .home-panel--snap.is-active-panel.is-near-end:not
   background: var(--cream);
 }
 
+/* Offerings is shorter than the viewport — don't force a full-screen empty gap. */
+#offerings.home-panel--snap {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+#offerings .home-panel-scroll {
+  flex: none;
+  overflow: visible;
+}
+
 .landing-stats--inline {
   margin-bottom: 2.25rem;
   padding-top: 2.5rem;

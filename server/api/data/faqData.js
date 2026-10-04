@@ -6,6 +6,10 @@ module.exports = {
   "faqFormUrl": "https://bayareachess.com/faqform",
   "items": [
     {
+      "q": "Where can I lookup results of past tournaments",
+      "a": "Past tournament results are available by year:\n\n• [2026 Results](https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKKswJ_9d3ORBHxFet3QM3UwqK40UOeNmd0lmJfT62S_lm-zHVufhQb9HIcfriiQQrBKXfqcwhck9/pubhtml?gid=1642745431&single=true)\n• [2025 Results](https://docs.google.com/spreadsheets/d/e/2PACX-1vRVmh-jSdAQNmWZGjq8z8QSJQLADa4ggisnkoy08WxceIiZh_2o4yz-FKwNynlnF_UoVO6jPXSVm71I/pubhtml?gid=0&single=true)\n• [2024 Results](https://docs.google.com/spreadsheets/d/1VUe7S-D5dXLvcfJkXRnJgCbbbhsbUQCUY7HnBnRj5Cw/pubhtml?gid=0&single=true)\n• [Before 2024 Results](https://bayareachess.com/results/past/)"
+    },
+    {
       "q": "What is Bay Area Chess Events Policy",
       "a": "See [Here](https://docs.google.com/spreadsheets/d/e/2PACX-1vTfKKswJ_9d3ORBHxFet3QM3UwqK40UOeNmd0lmJfT62S_lm-zHVufhQb9HIcfriiQQrBKXfqcwhck9/pubhtml?gid=623684976&single=true)"
     },

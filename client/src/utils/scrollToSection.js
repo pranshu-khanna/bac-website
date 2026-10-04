@@ -34,19 +34,20 @@ export function scrollToSection(id, { behavior = "smooth" } = {}) {
 export const HOME_SECTIONS = [
   "tournaments",
   "leaderboard",
-  "results",
   "faq",
   "about",
   "contact",
 ];
 
 export const ENRICHMENT_SECTIONS = [
+  "calendar",
   "classes",
   "camps",
   "afterschool",
   "clubs",
   "teams",
   "rising-star",
+  "resources",
   "faq",
   "contact",
 ];

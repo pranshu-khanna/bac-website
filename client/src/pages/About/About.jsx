@@ -86,11 +86,6 @@ export default function About({ embedded = false }) {
                 </blockquote>
               ))}
             </div>
-            <p className="about-testimonials-more">
-              <a href={data.testimonialsUrl} target="_blank" rel="noreferrer">
-                Read all testimonials on bayareachess.com
-              </a>
-            </p>
           </section>
         </div>
       </div>

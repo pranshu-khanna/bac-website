@@ -259,6 +259,16 @@ export function useHomeScroll(enabled) {
 
     const onKeyDown = (event) => {
       if (!canSnap() || animatingRef.current) return;
+
+      const target = event.target;
+      if (
+        target instanceof HTMLElement &&
+        (target.isContentEditable ||
+          target.closest("input, textarea, select, [contenteditable='true']"))
+      ) {
+        return;
+      }
+
       const sections = getSnapSections();
       const idx = sectionIndex(sections);
 

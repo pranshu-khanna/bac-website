@@ -8,7 +8,6 @@ import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Faq from "../Faq/Faq";
 import Leaderboard from "../Leaderboard/Leaderboard";
-import Results from "../Results/Results";
 import Tournaments from "../Tournaments/Tournaments";
 import { HOME_SECTIONS, scrollToSection } from "../../utils/scrollToSection";
 import { useHomeScroll } from "./useHomeScroll";
@@ -17,7 +16,6 @@ import "./Home.scss";
 const SECTION_COMPONENTS = [
   { id: "tournaments", Component: Tournaments },
   { id: "leaderboard", Component: Leaderboard },
-  { id: "results", Component: Results },
   { id: "faq", Component: Faq },
   { id: "about", Component: About },
   { id: "contact", Component: Contact },

@@ -1,7 +1,10 @@
 exports.getTournaments = (_req, res) => {
+  const embedUrl = "https://bayareachess.chessroster.com/tournaments";
+
   res.json({
     title: "Upcoming tournaments",
-    registerUrl: "https://bayareachess.chessroster.com/",
-    ctaLabel: "Register for Upcoming Rated Tournaments",
+    embedUrl,
+    openUrl: embedUrl,
+    openLabel: "Click here to open directly in ChessRoster",
   });
 };

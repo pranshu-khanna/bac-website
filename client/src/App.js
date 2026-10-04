@@ -6,6 +6,7 @@ import Events from "./pages/Events/Events";
 import Login from "./pages/Login/Login";
 import EnrichmentHome from "./pages/Enrichment/EnrichmentHome";
 import EnrichmentLaunch from "./pages/Enrichment/EnrichmentLaunch";
+import EnrichmentPage from "./pages/Enrichment/EnrichmentPage";
 import NotFound from "./pages/NotFound/NotFound";
 
 export default function App() {
@@ -18,7 +19,9 @@ export default function App() {
         <Route path="tournaments" element={<HomeSectionRedirect section="tournaments" />} />
         <Route path="leaderboard" element={<HomeSectionRedirect section="leaderboard" />} />
         <Route path="enrichment" element={<EnrichmentHome />} />
-        <Route path="results" element={<HomeSectionRedirect section="results" />} />
+        <Route path="enrichment/launch/:slug" element={<EnrichmentLaunch />} />
+        <Route path="enrichment/:slug" element={<EnrichmentPage />} />
+        <Route path="results" element={<HomeSectionRedirect section="faq" />} />
         <Route path="faq" element={<HomeSectionRedirect section="faq" />} />
         <Route path="about" element={<HomeSectionRedirect section="about" />} />
         <Route path="contact" element={<HomeSectionRedirect section="contact" />} />
@@ -26,7 +29,6 @@ export default function App() {
         {/* Standalone pages (not in primary nav) */}
         <Route path="events" element={<Events />} />
         <Route path="login" element={<Login />} />
-        <Route path="enrichment/launch/:slug" element={<EnrichmentLaunch />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

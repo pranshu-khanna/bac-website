@@ -72,13 +72,25 @@ function IconForm() {
   );
 }
 
-function ConnectIcon({ label }) {
-  if (label === "WhatsApp") return <IconWhatsApp />;
-  if (label === "Email") return <IconEmail />;
-  if (label === "X") return <IconX />;
-  if (label === "Instagram") return <IconInstagram />;
-  if (label === "Facebook") return <IconFacebook />;
-  if (label === "Request form") return <IconForm />;
+function IconPhone() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M6.62 10.79a15.15 15.15 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"
+      />
+    </svg>
+  );
+}
+
+function ConnectIcon({ name }) {
+  if (name === "WhatsApp") return <IconWhatsApp />;
+  if (name === "Email") return <IconEmail />;
+  if (name === "Phone") return <IconPhone />;
+  if (name === "X") return <IconX />;
+  if (name === "Instagram") return <IconInstagram />;
+  if (name === "Facebook") return <IconFacebook />;
+  if (name === "Request form") return <IconForm />;
   return <span>@</span>;
 }
 
@@ -86,11 +98,12 @@ function ConnectCard({ link }) {
   const body = (
     <>
       <span className="about-social-icon" aria-hidden>
-        <ConnectIcon label={link.label} />
+        <ConnectIcon name={link.icon || link.label} />
       </span>
       <span className="about-social-text">
         <span className="about-social-name">{link.label}</span>
         {link.description ? <span className="about-social-desc">{link.description}</span> : null}
+        {link.detail ? <span className="about-social-detail">{link.detail}</span> : null}
       </span>
     </>
   );
@@ -103,12 +116,16 @@ function ConnectCard({ link }) {
     );
   }
 
-  const isMail = link.href?.startsWith("mailto:");
+  if (!link.href) {
+    return <div className="about-social-link about-social-link--static">{body}</div>;
+  }
+
+  const isLocal = link.href.startsWith("mailto:") || link.href.startsWith("tel:");
   return (
     <a
       className="about-social-link"
       href={link.href}
-      {...(isMail ? {} : { target: "_blank", rel: "noreferrer" })}
+      {...(isLocal ? {} : { target: "_blank", rel: "noreferrer" })}
     >
       {body}
     </a>
@@ -212,7 +229,7 @@ export default function Contact({ embedded = false }) {
 
         <div className="contact-form-area">
           <h1 className="contact-form-heading">Contact us</h1>
-          <ContactForm contactEmail={data.contactEmail} />
+          <ContactForm />
         </div>
       </div>
 

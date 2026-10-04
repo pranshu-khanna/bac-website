@@ -5,7 +5,7 @@
 }
 
 .tournaments-page .home-events-title {
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.75rem;
   font-family: var(--font-condensed);
   font-size: clamp(1.85rem, 4vw, 2.6rem);
   font-weight: 700;
@@ -15,39 +15,76 @@
   color: var(--ink);
 }
 
-.tournaments-cta-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-bottom: 2rem;
+.tournaments-page .home-events-sub {
+  margin: 0 0 1.5rem;
+  font-size: 1.05rem;
 }
 
-.tournaments-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.95rem 1.5rem;
-  border-radius: 8px;
-  background: var(--ink-dark);
-  color: #fff !important;
-  font-family: var(--font-condensed);
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  transition: background 0.15s ease;
+.tournaments-page .home-events-sub a {
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.tournaments-cta:hover {
-  background: var(--ink);
+.tournaments-page .home-events-sub a:hover {
+  text-decoration: underline;
 }
 
-[data-theme="dark"] .tournaments-cta {
-  background: var(--ink);
-  color: #152a3d !important;
+.chessroster-embed-wrap {
+  --chessroster-frame-height: min(720px, 85vh);
+  /* ChessRoster lays out at 90% of the frame, then we scale up to fill. */
+  --chessroster-layout: 0.9;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  height: var(--chessroster-frame-height);
+  padding-left: 0;
+  padding-right: 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  background: #fff;
 }
 
-[data-theme="dark"] .tournaments-cta:hover {
-  background: var(--gold);
+/*
+  ChessRoster is cross-origin, so we can't scroll or style its DOM.
+  Crop the left drawer and hero above "USCF Membership Requirement".
+  Layout at 90% width so the content column fills the frame when scaled up.
+*/
+.chessroster-embed {
+  --chessroster-nav-crop: 270px;
+  --chessroster-top-crop: 620px;
+  --chessroster-zoom: calc(1 / var(--chessroster-layout));
+  display: block;
+  width: calc(100% * var(--chessroster-layout) + var(--chessroster-nav-crop));
+  max-width: none;
+  height: calc(
+    var(--chessroster-frame-height) * var(--chessroster-layout) + var(--chessroster-top-crop)
+  );
+  margin-left: calc(-1 * var(--chessroster-nav-crop) / var(--chessroster-layout));
+  margin-top: calc(-1 * var(--chessroster-top-crop) / var(--chessroster-layout));
+  border: 0;
+  background: #fff;
+  transform: scale(var(--chessroster-zoom));
+  transform-origin: 0 0;
+}
+
+@media (max-width: 1100px) {
+  .chessroster-embed {
+    --chessroster-top-crop: 580px;
+  }
+}
+
+@media (max-width: 900px) {
+  .chessroster-embed {
+    --chessroster-nav-crop: 0px;
+    --chessroster-top-crop: 520px;
+  }
+}
+
+[data-theme="dark"] .chessroster-embed-wrap {
+  border-color: rgba(91, 163, 217, 0.22);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .chessroster-embed {
+  background: rgba(255, 255, 255, 0.04);
 }
