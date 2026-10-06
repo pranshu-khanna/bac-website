@@ -4,11 +4,15 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const apiRoutes = require("./routes");
+const { getDb } = require("./db/database");
 const { startLeaderboardRefreshScheduler } = require("./services/leaderboardFetcher");
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:3000";
+
+// Ensure local auth database + tables exist on boot.
+getDb();
 
 app.use(
   cors({

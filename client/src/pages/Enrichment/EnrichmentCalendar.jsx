@@ -33,6 +33,10 @@ function isLocalHref(href) {
   return typeof href === "string" && href.startsWith("/") && !href.startsWith("//");
 }
 
+function categorySlug(category) {
+  return category.toLowerCase().replace(/\s+/g, "-");
+}
+
 function EventLink({ event }) {
   if (!event.href) {
     return <span className="enr-cal-event-title">{event.title}</span>;
@@ -125,12 +129,7 @@ export default function EnrichmentCalendar() {
     <section id="calendar" className="landing-section landing-section--pale home-panel home-panel--snap">
       <div className="home-panel-scroll">
         <div className="constrain home-panel-inner enr-cal">
-          <p className="landing-section-label">All programs</p>
-          <h2 className="enr-cal-title">Enrichment calendar</h2>
-          <p className="enr-cal-intro">
-            After-school, clubs, camps, online classes, tournament team, and Rising Star — one view.
-            Filters are optional.
-          </p>
+          <h2 className="enr-cal-title">Calendar - All Programs</h2>
 
           <div className="enr-cal-filters" role="group" aria-label="Calendar filters">
             <label className="enr-cal-filter">
@@ -184,6 +183,15 @@ export default function EnrichmentCalendar() {
             {filtered.length} session{filtered.length === 1 ? "" : "s"} in {monthLabel(month)}
           </p>
 
+          <ul className="enr-cal-legend" aria-label="Program type colors">
+            {(payload.filters.categories || []).map((value) => (
+              <li key={value} className="enr-cal-legend-item">
+                <span className={`enr-cal-dot enr-cal-dot--${categorySlug(value)}`} aria-hidden />
+                <span>{value}</span>
+              </li>
+            ))}
+          </ul>
+
           <div className="enr-cal-layout">
             <div className="enr-cal-grid" role="grid" aria-label={monthLabel(month)}>
               {WEEKDAYS.map((day) => (
@@ -213,7 +221,7 @@ export default function EnrichmentCalendar() {
                         {events.slice(0, 3).map((event) => (
                           <span
                             key={event.id}
-                            className={`enr-cal-dot enr-cal-dot--${event.category.toLowerCase().replace(/\s+/g, "-")}`}
+                            className={`enr-cal-dot enr-cal-dot--${categorySlug(event.category)}`}
                           />
                         ))}
                         {events.length > 3 ? <span className="enr-cal-more">+{events.length - 3}</span> : null}
@@ -243,7 +251,7 @@ export default function EnrichmentCalendar() {
                 <ul className="enr-cal-event-list">
                   {dayEvents.map((event) => (
                     <li key={event.id} className="enr-cal-event">
-                      <span className={`enr-cal-cat enr-cal-cat--${event.category.toLowerCase().replace(/\s+/g, "-")}`}>
+                      <span className={`enr-cal-cat enr-cal-cat--${categorySlug(event.category)}`}>
                         {event.category}
                       </span>
                       <EventLink event={event} />

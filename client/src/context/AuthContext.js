@@ -1,31 +1,74 @@
-import { createContext, useContext, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import api from "../axios";
 
 const AuthContext = createContext(null);
+const USER_KEY = "bac-user";
+const TOKEN_KEY = "bac-token";
+
+function readStoredUser() {
+  try {
+    const raw = localStorage.getItem(USER_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(() => {
-    const raw = localStorage.getItem("bac-user");
-    return raw ? JSON.parse(raw) : null;
-  });
+  const [user, setUser] = useState(() => readStoredUser());
+  const [token, setToken] = useState(() => localStorage.getItem(TOKEN_KEY));
 
-  const login = (nextUser) => {
+  useEffect(() => {
+    if (!token) return undefined;
+    let cancelled = false;
+    api
+      .get("/login/me")
+      .then((res) => {
+        if (cancelled) return;
+        setUser(res.data.user);
+        localStorage.setItem(USER_KEY, JSON.stringify(res.data.user));
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setUser(null);
+        setToken(null);
+        localStorage.removeItem(USER_KEY);
+        localStorage.removeItem(TOKEN_KEY);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [token]);
+
+  const login = (nextUser, nextToken) => {
     setUser(nextUser);
-    localStorage.setItem("bac-user", JSON.stringify(nextUser));
+    setToken(nextToken || null);
+    localStorage.setItem(USER_KEY, JSON.stringify(nextUser));
+    if (nextToken) localStorage.setItem(TOKEN_KEY, nextToken);
+    else localStorage.removeItem(TOKEN_KEY);
   };
 
-  const logout = () => {
+  const logout = async () => {
+    try {
+      await api.post("/login/logout");
+    } catch {
+      // Local sign-out still proceeds if the API call fails.
+    }
     setUser(null);
-    localStorage.removeItem("bac-user");
+    setToken(null);
+    localStorage.removeItem(USER_KEY);
+    localStorage.removeItem(TOKEN_KEY);
   };
 
   const value = useMemo(
     () => ({
       user,
-      isAuthenticated: Boolean(user),
+      token,
+      isAuthenticated: Boolean(user && token),
       login,
       logout,
     }),
-    [user],
+    [user, token],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

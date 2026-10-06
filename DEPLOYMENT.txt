@@ -1,0 +1,367 @@
+BAC Website — Auth & Google Login Deployment Notes
+==================================================
+
+This file documents the local member authentication system and Google OAuth
+setup added to this project (no dependency on bayareachess.com account portal).
+
+
+1) What was built
+-----------------
+- Local auth API under /api/login*
+- Local SQLite database for users, sessions, password resets, OAuth state
+- Login page flows:
+  - Sign in (email/password)
+  - Create account
+  - Forgot password / reset password
+  - Continue with Google / Sign up with Google
+- Header account control:
+  - Person icon when signed out
+  - First name when signed in
+
+Key code locations:
+- server/api/db/database.js
+- server/api/services/authService.js
+- server/api/controllers/loginController.js
+- server/api/routes/loginRoutes.js
+- client/src/pages/Login/Login.jsx
+- client/src/context/AuthContext.js
+- client/src/components/Header/Header.jsx
+
+
+2) Local database
+-----------------
+Default file:
+  server/api/data/auth.sqlite
+
+Created automatically on API startup.
+
+Tables:
+  - users            (email, password_hash, name, google_id, ...)
+  - sessions         (token, user_id, expires_at)
+  - password_resets  (token, user_id, expires_at, used_at)
+  - oauth_states     (state, expires_at)
+
+Notes:
+  - SQLite DB files are gitignored (*.sqlite / *.sqlite-*)
+  - Optional override: AUTH_DB_PATH=/absolute/path/to/auth.sqlite
+  - First Google sign-in creates the local user automatically
+    (no separate "create Google account" step on this site)
+
+
+3) Environment file (secrets)
+-----------------------------
+Create / update:
+  server/api/.env
+
+Use server/api/.env.example as a template.
+
+Required for Google login:
+  GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
+  GOOGLE_CLIENT_SECRET=your-client-secret
+  CLIENT_URL=http://localhost:3000
+  GOOGLE_REDIRECT_URI=http://localhost:5001/api/login/google/callback
+
+
+Optional / related:
+  PORT=5001
+  AUTH_DB_PATH=...
+  CONTACT_TO_EMAIL=...
+  SMTP_HOST=...
+  SMTP_PORT=587
+  SMTP_USER=...
+  SMTP_PASS=...
+  SMTP_FROM=...
+
+Security:
+  - Never commit server/api/.env
+  - .env is already listed in .gitignore
+  - Rotate Google client secret if it was ever exposed
+
+
+4) Google Cloud Console setup (OAuth)
+-------------------------------------
+1. Open Google Cloud Console:
+   https://console.cloud.google.com/
+
+2. Create or select a project.
+
+3. Configure OAuth consent screen (External or Internal as appropriate).
+   Add test users if the app is in Testing mode.
+
+4. APIs & Services → Credentials → Create credentials → OAuth client ID
+   Application type: Web application
+
+5. Authorized JavaScript origins (local):
+   http://localhost:3000
+
+6. Authorized redirect URIs (local) — must match EXACTLY:
+   http://localhost:5001/api/login/google/callback
+
+7. Copy Client ID and Client Secret into server/api/.env
+   as GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET.
+
+8. Set:
+   CLIENT_URL=http://localhost:3000
+   GOOGLE_REDIRECT_URI=http://localhost:5001/api/login/google/callback
+
+
+
+5) Production / deployed environment values
+-------------------------------------------
+Replace localhost values with real public URLs.
+
+Example:
+  CLIENT_URL=https://your-frontend-domain.example
+  GOOGLE_REDIRECT_URI=https://your-api-domain.example/api/login/google/callback
+  GOOGLE_CLIENT_ID=...
+  GOOGLE_CLIENT_SECRET=...
+
+Also add the same production URLs in Google Cloud Console:
+  - Authorized JavaScript origins = CLIENT_URL origin
+  - Authorized redirect URIs = GOOGLE_REDIRECT_URI exactly
+
+
+6) Run locally
+--------------
+Terminal A — API (default port 5001):
+  cd server/api
+  npm install
+  npm run dev
+
+Terminal B — client (default port 3000, proxies /api → 5001):
+  cd client
+  npm install
+  npm run dev
+
+Open:
+  http://localhost:3000/login
+
+
+7) Auth API endpoints
+---------------------
+  GET  /api/login
+  POST /api/login                  (email/password sign-in)
+  POST /api/login/signup
+  POST /api/login/forgot-password
+  POST /api/login/reset-password
+  POST /api/login/logout
+  GET  /api/login/me
+  GET  /api/login/google           (starts Google OAuth redirect)
+  GET  /api/login/google/callback  (Google returns here)
+
+
+8) Google sign-in flow (what happens)
+-------------------------------------
+1. User clicks Continue with Google / Sign up with Google
+2. Browser goes to /api/login/google
+3. API redirects to Google consent screen
+4. Google redirects to /api/login/google/callback?code=...&state=...
+5. API exchanges code for tokens, reads Google profile
+6. API creates or links local user (by google_id / email)
+7. API creates a session token
+8. API redirects to:
+     CLIENT_URL/login?auth=<session-token>
+9. Login page stores token and completes signed-in state
+10. Header shows first name
+
+
+
+9) Password reset notes
+-----------------------
+- Forgot-password creates a reset token in SQLite
+- If SMTP is configured, email is sent with reset link
+- If SMTP is not configured and NODE_ENV is not production,
+  API may return devResetUrl in the JSON response for local testing
+- Reset link format:
+  CLIENT_URL/login?mode=reset&token=<reset-token>
+
+
+10) Common issues
+-----------------
+A) Error: listen EADDRINUSE ... 0.0.0.0:5001
+   Cause: previous API process still running
+   Fix:
+     lsof -nP -iTCP:5001 -sTCP:LISTEN
+     kill <PID>
+     cd server/api && npm run dev
+
+B) Google button returns to login but not signed in
+   - Confirm GOOGLE_* env vars loaded (restart API after editing .env)
+   - Confirm redirect URI in Google Console matches GOOGLE_REDIRECT_URI exactly
+   - Confirm CLIENT_URL points to the running frontend
+   - Check browser URL after callback for ?auth=... or ?error=...
+
+C) redirect_uri_mismatch from Google
+   - Google Cloud redirect URI must exactly equal GOOGLE_REDIRECT_URI
+   - Local expected value:
+     http://localhost:5001/api/login/google/callback
+
+D) Port / proxy reminder
+   - Frontend: http://localhost:3000
+   - API: http://localhost:5001
+   - Vite proxies /api → http://localhost:5001
+
+
+11) Deploy checklist
+--------------------
+[ ] server/api/.env created on the host (not committed)
+[ ] GOOGLE_CLIENT_ID set
+[ ] GOOGLE_CLIENT_SECRET set
+[ ] CLIENT_URL set to public frontend URL
+[ ] GOOGLE_REDIRECT_URI set to public API callback URL
+[ ] Same URLs added in Google Cloud OAuth client
+[ ] OAuth consent screen configured (and test users if Testing)
+[ ] API can write to auth SQLite path (or AUTH_DB_PATH)
+[ ] SMTP configured if password-reset emails are required in production
+[ ] API restarted after env changes
+[ ] Test: email/password signup + sign-in
+[ ] Test: Google sign-in creates/links user and shows first name in header
+[ ] Test: sign out
+
+
+12) Quick verification commands
+-------------------------------
+Is API listening?
+  lsof -nP -iTCP:5001 -sTCP:LISTEN
+
+Does Google start redirect?
+  curl -sI http://localhost:5001/api/login/google
+
+Inspect local users (no secrets printed beyond emails already stored):
+  cd server/api
+  node -e "const {getDb}=require('./db/database'); console.log(getDb().prepare('SELECT id,email,name,google_id FROM users').all())"
+
+
+13) Production deploy on AWS EC2 (GitHub sync)
+---------------------------------------------
+Target pattern:
+  - App code is pulled/synced from GitHub onto an EC2 instance
+  - Secrets stay ONLY on the EC2 host (or AWS Secrets Manager)
+  - .env is NEVER committed to GitHub
+
+A) What goes in GitHub
+  - Application source code
+  - server/api/.env.example  (placeholders only)
+  - DEPLOYMENT.txt
+  - Do NOT commit:
+      server/api/.env
+      server/api/data/*.sqlite
+      node_modules/
+      real Google/SMTP secrets
+
+B) Recommended EC2 layout
+  /home/ubuntu/bac-website/                 # git clone / pull target
+  /home/ubuntu/bac-website/server/api/.env  # secrets file created on server
+  /var/lib/bac-website/auth.sqlite          # optional durable DB path
+
+C) One-time EC2 setup
+  1. Launch EC2 (Amazon Linux 2023 or Ubuntu).
+  2. Open security group ports as needed:
+       22  (SSH)
+       80  (HTTP)
+       443 (HTTPS)
+  3. Install Node.js (LTS), git, and a process manager (pm2) or systemd.
+  4. Clone the repo:
+       git clone <your-github-repo-url> /home/ubuntu/bac-website
+  5. Create production env file ON THE SERVER (not from git):
+       cd /home/ubuntu/bac-website/server/api
+       nano .env
+
+     Example production values:
+       NODE_ENV=production
+       PORT=5001
+       CLIENT_URL=https://your-domain.example
+       GOOGLE_CLIENT_ID=...
+       GOOGLE_CLIENT_SECRET=...
+       GOOGLE_REDIRECT_URI=https://your-domain.example/api/login/google/callback
+       AUTH_DB_PATH=/var/lib/bac-website/auth.sqlite
+       # optional SMTP for password reset emails
+       SMTP_HOST=...
+       SMTP_PORT=587
+       SMTP_USER=...
+       SMTP_PASS=...
+       CONTACT_TO_EMAIL=...
+
+  6. Lock down permissions:
+       chmod 600 /home/ubuntu/bac-website/server/api/.env
+       sudo mkdir -p /var/lib/bac-website
+       sudo chown ubuntu:ubuntu /var/lib/bac-website
+
+  7. Install dependencies + build client:
+       cd /home/ubuntu/bac-website/server/api && npm ci
+       cd /home/ubuntu/bac-website/client && npm ci && npm run build
+
+  8. Run API in production mode (serves built client from client/dist):
+       cd /home/ubuntu/bac-website/server/api
+       NODE_ENV=production node server.js
+     Prefer pm2/systemd so it survives reboot:
+       pm2 start server.js --name bac-api
+       pm2 save
+       pm2 startup
+
+  9. Put Nginx (or Caddy) in front for HTTPS:
+       - Proxy https://your-domain.example/api → http://127.0.0.1:5001/api
+       - Proxy https://your-domain.example/    → http://127.0.0.1:5001/
+         (API already serves client/dist when NODE_ENV=production)
+       - Use Let's Encrypt for TLS certificates
+
+  10. Update Google Cloud OAuth client for production:
+       Authorized JavaScript origins:
+         https://your-domain.example
+       Authorized redirect URIs:
+         https://your-domain.example/api/login/google/callback
+
+
+D) Handling secrets on EC2 (choose one)
+  Option 1 — simplest (good starting point)
+    - Keep production secrets in /home/ubuntu/bac-website/server/api/.env
+    - chmod 600
+    - Never copy .env into git commits/PRs
+    - After git pull, .env remains because it is gitignored
+
+  Option 2 — better for production
+    - Store secrets in AWS Secrets Manager or SSM Parameter Store
+    - On boot/deploy, fetch secrets and export env vars / write .env
+    - Restrict IAM role on the EC2 instance to read only those secrets
+    - Rotate secrets in AWS, then restart the API process
+
+  Do not:
+    - Commit .env "just for convenience"
+    - Put secrets in GitHub Actions logs
+    - Bake secrets into an AMI unless encrypted and tightly controlled
+
+E) Ongoing deploy from GitHub → EC2
+  Typical update flow on EC2:
+    cd /home/ubuntu/bac-website
+    git pull
+    cd server/api && npm ci
+    cd ../../client && npm ci && npm run build
+    cd ../server/api && pm2 restart bac-api
+
+  Important:
+    - git pull updates code only
+    - .env is untouched (gitignored)
+    - SQLite DB outside the repo (AUTH_DB_PATH) is safer so deploys
+      never accidentally wipe users/sessions
+
+F) Backup / persistence
+  - Back up AUTH_DB_PATH (SQLite file) regularly
+  - If using EC2 only local disk, snapshots/EBS backups matter
+  - For stronger production later, consider Postgres/RDS instead of SQLite
+
+G) EC2 deploy checklist
+  [ ] Repo cloned on EC2
+  [ ] server/api/.env created on EC2 with production values
+  [ ] .env permissions are 600
+  [ ] AUTH_DB_PATH points to durable path outside git tree
+  [ ] Google OAuth production origin + redirect URI updated
+  [ ] CLIENT_URL / GOOGLE_REDIRECT_URI use https domain
+  [ ] Client built (client/dist)
+  [ ] API running under pm2/systemd with NODE_ENV=production
+  [ ] Nginx/Caddy TLS proxy configured
+  [ ] Security group allows 80/443 (and 22 for admin)
+  [ ] Test signup/login and Google login on production domain
+  [ ] Confirm git pull does not overwrite .env
+
+
+End of file

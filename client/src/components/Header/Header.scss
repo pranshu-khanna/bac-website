@@ -53,6 +53,34 @@
   text-decoration: none;
 }
 
+.header-account-link {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+}
+
+.header-account-link.is-signed-in {
+  width: auto;
+  height: auto;
+  max-width: 12rem;
+}
+
+.header-account-icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+}
+
+.header-account-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
 .header-main {
   display: flex;
   align-items: center;

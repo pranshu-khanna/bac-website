@@ -40,4 +40,25 @@ async function sendContactMessage({ name, email, message }) {
   return { to };
 }
 
-module.exports = { sendContactMessage };
+async function sendPasswordResetEmail({ to, resetUrl }) {
+  const from = process.env.SMTP_FROM || process.env.SMTP_USER;
+  const transport = getTransport();
+
+  await transport.sendMail({
+    from,
+    to,
+    subject: "Reset your Bay Area Chess password",
+    text: [
+      "We received a request to reset your Bay Area Chess password.",
+      "",
+      `Open this link to choose a new password:`,
+      resetUrl,
+      "",
+      "This link expires in 2 hours. If you did not request a reset, you can ignore this email.",
+    ].join("\n"),
+  });
+
+  return { to };
+}
+
+module.exports = { sendContactMessage, sendPasswordResetEmail };
