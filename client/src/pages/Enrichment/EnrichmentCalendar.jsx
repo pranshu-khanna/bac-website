@@ -55,6 +55,8 @@ function EventLink({ event }) {
   );
 }
 
+const PAGE_SIZE = 3;
+
 export default function EnrichmentCalendar() {
   const [payload, setPayload] = useState(null);
   const [error, setError] = useState(null);
@@ -63,6 +65,7 @@ export default function EnrichmentCalendar() {
   const [timeOfDay, setTimeOfDay] = useState("");
   const [category, setCategory] = useState("");
   const [selectedDate, setSelectedDate] = useState(null);
+  const [detailPage, setDetailPage] = useState(0);
 
   useEffect(() => {
     api
@@ -100,6 +103,16 @@ export default function EnrichmentCalendar() {
   const cells = useMemo(() => (month ? daysInMonth(month) : []), [month]);
 
   const dayEvents = selectedDate ? byDate.get(selectedDate) || [] : [];
+  const detailPageCount = Math.max(1, Math.ceil(dayEvents.length / PAGE_SIZE));
+  const safeDetailPage = Math.min(detailPage, detailPageCount - 1);
+  const pagedEvents = dayEvents.slice(
+    safeDetailPage * PAGE_SIZE,
+    safeDetailPage * PAGE_SIZE + PAGE_SIZE,
+  );
+
+  useEffect(() => {
+    setDetailPage(0);
+  }, [selectedDate, rating, timeOfDay, category, month]);
 
   if (error) {
     return (
@@ -248,20 +261,48 @@ export default function EnrichmentCalendar() {
               ) : dayEvents.length === 0 ? (
                 <p className="enr-cal-detail-empty">No programs match the filters for this day.</p>
               ) : (
-                <ul className="enr-cal-event-list">
-                  {dayEvents.map((event) => (
-                    <li key={event.id} className="enr-cal-event">
-                      <span className={`enr-cal-cat enr-cal-cat--${categorySlug(event.category)}`}>
-                        {event.category}
-                      </span>
-                      <EventLink event={event} />
-                      <p className="enr-cal-event-meta">
-                        {[event.timeLabel, event.location, event.rating].filter(Boolean).join(" · ")}
+                <>
+                  <ul className="enr-cal-event-list">
+                    {pagedEvents.map((event) => (
+                      <li key={event.id} className="enr-cal-event">
+                        <span className={`enr-cal-cat enr-cal-cat--${categorySlug(event.category)}`}>
+                          {event.category}
+                        </span>
+                        <EventLink event={event} />
+                        <p className="enr-cal-event-meta">
+                          {[event.timeLabel, event.location, event.rating].filter(Boolean).join(" · ")}
+                        </p>
+                        {event.detail ? <p className="enr-cal-event-detail">{event.detail}</p> : null}
+                      </li>
+                    ))}
+                  </ul>
+                  {dayEvents.length > PAGE_SIZE ? (
+                    <div className="enr-cal-pager" role="navigation" aria-label="Program list pages">
+                      <button
+                        type="button"
+                        className="enr-cal-pager-btn"
+                        onClick={() => setDetailPage((page) => Math.max(0, page - 1))}
+                        disabled={safeDetailPage <= 0}
+                        aria-label="Previous programs"
+                      >
+                        <span aria-hidden>‹</span>
+                      </button>
+                      <p className="enr-cal-pager-status">
+                        {safeDetailPage * PAGE_SIZE + 1}–
+                        {Math.min((safeDetailPage + 1) * PAGE_SIZE, dayEvents.length)} of {dayEvents.length}
                       </p>
-                      {event.detail ? <p className="enr-cal-event-detail">{event.detail}</p> : null}
-                    </li>
-                  ))}
-                </ul>
+                      <button
+                        type="button"
+                        className="enr-cal-pager-btn"
+                        onClick={() => setDetailPage((page) => Math.min(detailPageCount - 1, page + 1))}
+                        disabled={safeDetailPage >= detailPageCount - 1}
+                        aria-label="Next programs"
+                      >
+                        <span aria-hidden>›</span>
+                      </button>
+                    </div>
+                  ) : null}
+                </>
               )}
             </aside>
           </div>

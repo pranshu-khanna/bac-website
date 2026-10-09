@@ -210,7 +210,7 @@ function buildOnlineEventPage({ session, slug }) {
     ctaLabel: "Register",
     ctaHref: "/login",
     links: [
-      { label: "All online classes", href: "/enrichment/online" },
+      { label: "All online classes", href: "/enrichment#classes" },
       { label: "Online FAQ", href: "/enrichment/faq-online" },
       { label: "Skill levels", href: "/enrichment/skill-levels" },
     ],
@@ -273,7 +273,7 @@ function buildOnlineEventFallback(slug) {
     ctaLabel: "Register",
     ctaHref: "/login",
     links: [
-      { label: "All online classes", href: "/enrichment/online" },
+      { label: "All online classes", href: "/enrichment#classes" },
       { label: "Online FAQ", href: "/enrichment/faq-online" },
     ],
   };

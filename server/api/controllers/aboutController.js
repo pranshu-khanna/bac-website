@@ -6,7 +6,7 @@ exports.getAbout = (_req, res) => {
       tag: "About us",
       title: "Bay Area Chess",
       missionLead:
-        "We bring coaching and events to your area at times convenient for you.",
+        "To introduce children of all ages to everything that Chess has to offer, socially and academically, in the Bay Area and Beyond!",
       missionText:
         "Bay Area Chess is a nonprofit organization dedicated to promoting chess education and competition throughout the San Francisco Bay Area. We host tournaments, run enrichment programs, and support players of all ages and skill levels.",
       welcome: "Welcome to our community.",

@@ -7809,7 +7809,7 @@ module.exports = {
       },
       {
         "label": "Online classes",
-        "href": "/enrichment/online"
+        "href": "/enrichment#classes"
       },
       {
         "label": "Online FAQ",
@@ -7900,7 +7900,7 @@ module.exports = {
       },
       {
         "label": "Online classes",
-        "href": "/enrichment/online"
+        "href": "/enrichment#classes"
       },
       {
         "label": "Online FAQ",
@@ -7996,7 +7996,7 @@ module.exports = {
       },
       {
         "label": "Online classes",
-        "href": "/enrichment/online"
+        "href": "/enrichment#classes"
       },
       {
         "label": "Online FAQ",
@@ -8091,7 +8091,7 @@ module.exports = {
       },
       {
         "label": "Online classes",
-        "href": "/enrichment/online"
+        "href": "/enrichment#classes"
       },
       {
         "label": "Online FAQ",
@@ -8657,5 +8657,382 @@ module.exports = {
       }
     ],
     "notice": "The live enrichment registration page for this session is currently closed/unavailable. Program details below match the same camp series on the enrichment site."
+  },
+  "event/26-level-2-4-beginner-advanced-i-wednesdays-515-615-pm-pst-1028-1216": {
+    "slug": "event/26-level-2-4-beginner-advanced-i-wednesdays-515-615-pm-pst-1028-1216",
+    "sourceUrl": "https://enrichment.bayareachess.com/event/26-level-2-4-beginner-advanced-i-wednesdays-515-615-pm-pst-1028-1216",
+    "kicker": "Online class",
+    "title": "'26 LEVEL 2-4--BEGINNER-ADVANCED I-Wednesdays@ 5:15-6:15 PM PST (10/28-12/16)",
+    "intro": "ONLINE",
+    "highlight": {
+      "when": "Wed, Oct 28, 2026 – Wed, Dec 16, 2026 · 5:15 pm – 6:15 pm",
+      "where": "ONLINE",
+      "cost": "$159",
+      "detail": ""
+    },
+    "fields": [
+      {
+        "label": "Event Type",
+        "value": "Afterschool"
+      },
+      {
+        "label": "Day(s) of Week",
+        "value": "Wednesday"
+      },
+      {
+        "label": "Start Date",
+        "value": "Wed, Oct 28, 2026"
+      },
+      {
+        "label": "End Date",
+        "value": "Wed, Dec 16, 2026"
+      },
+      {
+        "label": "Dates without Classes",
+        "value": "Wed, Nov 25, 2026"
+      },
+      {
+        "label": "Start Time",
+        "value": "5:15 pm"
+      },
+      {
+        "label": "End Time",
+        "value": "6:15 pm"
+      },
+      {
+        "label": "Registration Fee",
+        "value": "$159"
+      },
+      {
+        "label": "Lead Coach",
+        "value": "Coach Andrew"
+      },
+      {
+        "label": "School / Venue",
+        "value": "ONLINE"
+      }
+    ],
+    "paragraphs": [
+      "'26 Online Track A5!",
+      "LEVELS 2-4 COMBO, Beginner to Advanced",
+      "Wednesdays 10/28-12/16, 2026 @ 5:15-6:15pm (PST)",
+      "This Course is designed for : Levels 2-4: Beginner to Advanced",
+      "BAC Online Courses: One 60-minute weekly class, via Zoom, which will combine instructive lessons and practice/competitive gaming. Students should be logged in to their BAC Chesskid account each session. There will also be a free unrated Online Tournament at the end of the term. Zoom Credentials will generally be emailed to you ~24 hours before the course is set to start. Please note the HOMEWORK curriculum in the orientation (and below).",
+      "ChessKid.com: If you are not already in the BAC Club on Chesskid, you will receive a 1-year Gold Membership to www.Chesskid.com and will use this platform for games, practice, homework, extra lessons, videos, puzzles and tournaments with unlimited access. New members will receive this account a few days before the Course is set to start.",
+      "Make-Up Class: If you have to miss a class, one make-up session is permitted per course using our one-hour drop-in online clubs. We can organize one for you in the 2nd half of the term (to allow time to collect students for a viable class). Make-up classes cannot carry over to a new Term.",
+      "Discount: 10% Sibling discounts are accounted for automatically by the system if purchased in the same transaction. No manual discounts will be considered.",
+      "Ratio: We try to keep Coach ratios at 10:1. Larger classes may have multiple coaches and make use of Zoom Break-out Rooms to optimize Learning Groups.",
+      "Homework: Use the Homework outlined in the course Orientation email for weekly practice.",
+      "Default expectations on Chesskid.com:",
+      "• 1-2 Animated Lessons/Quizzes per week (Lessons Tab).",
+      "• Play 2-4 Games per week (outside of our sessions) with a 10 or 15 minute timer in the 'Play-Vs-Kid' Section (live games/tournaments). Players may also Challenge BOTS (start at the beginner levels and work upward!).",
+      "• Complete 5-7 Puzzles per week in the Puzzle Section (Goal: \"Find Best Move\").",
+      "• There are important End-Game lessons called 'Workouts' under the Learn-Tab in the account. We recommend 2-4 of them per 7-week term, in order, until they are completed.",
+      "Questions? Check our Online Course FAQ Page. We can also be reached at Enrich@bayareachess.com",
+      "Invite your Friends and Family, we would love to have them join us at BAC-online!",
+      "Stay Safe! Have Fun! Learn Chess!",
+      "Reminder: All Times use Pacific Standard Time (California). See Time Zones"
+    ],
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
+    "links": [
+      {
+        "label": "Back to enrichment calendar",
+        "href": "/enrichment#calendar"
+      },
+      {
+        "label": "Online classes",
+        "href": "/enrichment#classes"
+      },
+      {
+        "label": "Online FAQ",
+        "href": "/enrichment/faq-online"
+      }
+    ]
+  },
+  "event/26-level-115-absolute-beginnerbeginner-thursdays-515-615pm-pst-1029-1217": {
+    "slug": "event/26-level-115-absolute-beginnerbeginner-thursdays-515-615pm-pst-1029-1217",
+    "sourceUrl": "https://enrichment.bayareachess.com/event/26-level-115-absolute-beginnerbeginner-thursdays-515-615pm-pst-1029-1217",
+    "kicker": "Online class",
+    "title": "'26 LEVEL 1+1.5 -ABSOLUTE BEGINNER+BEGINNER-Thursdays @ 5:15-6:15PM PST (10/29-12/17)",
+    "intro": "ONLINE",
+    "highlight": {
+      "when": "Thu, Oct 29, 2026 – Thu, Dec 17, 2026 · 5:15 pm – 6:15 pm",
+      "where": "ONLINE",
+      "cost": "$159",
+      "detail": ""
+    },
+    "fields": [
+      {
+        "label": "Event Type",
+        "value": "Afterschool"
+      },
+      {
+        "label": "Day(s) of Week",
+        "value": "Thursday"
+      },
+      {
+        "label": "Start Date",
+        "value": "Thu, Oct 29, 2026"
+      },
+      {
+        "label": "End Date",
+        "value": "Thu, Dec 17, 2026"
+      },
+      {
+        "label": "Dates without Classes",
+        "value": "Thu, Nov 26, 2026"
+      },
+      {
+        "label": "Start Time",
+        "value": "5:15 pm"
+      },
+      {
+        "label": "End Time",
+        "value": "6:15 pm"
+      },
+      {
+        "label": "Registration Fee",
+        "value": "$159"
+      },
+      {
+        "label": "Lead Coach",
+        "value": "Chris Martin"
+      },
+      {
+        "label": "Third Coach",
+        "value": "Alan Hung"
+      },
+      {
+        "label": "School / Venue",
+        "value": "ONLINE"
+      }
+    ],
+    "paragraphs": [
+      "'26 Online Track A5 for Brand New (Level 1) Players!",
+      "10/29-12/17, 2026",
+      "THURSDAYS @ 5:15-6:15PM PST",
+      "This Course is designed for : Level 1 / 1.5: Absolute Beginner + Low Beginner",
+      "BAC Online Courses: One 60-minute weekly class, via Zoom, which will combine instructive lessons and practice/competitive gaming. Students should be logged in to their BAC Chesskid account each session. There will also be a free unrated Online Tournament at the end of the term. Zoom Credentials will generally be emailed to you ~24 hours before the course is set to start. Please note the HOMEWORK curriculum in the orientation (and below).",
+      "ChessKid.com: If you are not already in the BAC Club on Chesskid, you will receive a 1-year Gold Membership to www.Chesskid.com and will use this platform for games, practice, homework, extra lessons, videos, puzzles and tournaments with unlimited access. New members will receive this account a few days before the Course is set to start.",
+      "Make-Up Class: If you have to miss a class, one make-up session is permitted per course using our one-hour drop-in online clubs. We can organize one for you in the 2nd half of the term (to allow time to collect students for a viable class). Make-up classes cannot carry over to a new Term.",
+      "Discount: 10% Sibling discounts are accounted for automatically by the system if purchased in the same transaction. No manual discounts will be considered.",
+      "Ratio: We try to keep Coach ratios at 10:1. Larger classes may have multiple coaches and make use of Zoom Break-out Rooms to optimize Learning Groups.",
+      "Homework: Use the Homework outlined in the course Orientation email for weekly practice.",
+      "Default expectations on Chesskid.com:",
+      "• 1-3 Animated Lessons/Quizzes per week (Lessons Tab). BRAND New Players should complete the first 6-8 lessons on the first week of class to ensure proficiency of the basic moves.",
+      "• Play 2-5 Games per week (outside of our sessions) with a 10 or 15 minute timer in the 'Play-Vs-Kid' Section (live games/tournaments). Players may also Challenge BOTS (start at the beginner levels and work upward!).",
+      "• Complete 5-7 Puzzles per week in the Puzzle Section (Goal: \"Find Best Move\").",
+      "• There are important End-Game lessons called 'Workouts' under the Learn-Tab in the account. We recommend 2-4 of them per 7-week term, in order, until they are completed.",
+      "Questions? Check our Online Course FAQ Page. We can also be reached at Enrich@bayareachess.com",
+      "Invite your Friends and Family, we would love to have them join us at BAC-online!",
+      "Stay Safe! Have Fun! Learn Chess!",
+      "Reminder: All Times use Pacific Standard Time (California). See Time Zones"
+    ],
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
+    "links": [
+      {
+        "label": "Back to enrichment calendar",
+        "href": "/enrichment#calendar"
+      },
+      {
+        "label": "Online classes",
+        "href": "/enrichment#classes"
+      },
+      {
+        "label": "Online FAQ",
+        "href": "/enrichment/faq-online"
+      }
+    ]
+  },
+  "event/26-level-23-beginner-intermediate-thursdays-515-615-pm-pst-1029-1217": {
+    "slug": "event/26-level-23-beginner-intermediate-thursdays-515-615-pm-pst-1029-1217",
+    "sourceUrl": "https://enrichment.bayareachess.com/event/26-level-23-beginner-intermediate-thursdays-515-615-pm-pst-1029-1217",
+    "kicker": "Online class",
+    "title": "'26 LEVEL 2+3--BEGINNER TO INTERMEDIATE-Thursdays @ 5:15-6:15 PM PST (10/29-12/17)",
+    "intro": "ONLINE",
+    "highlight": {
+      "when": "Thu, Oct 29, 2026 – Thu, Dec 17, 2026 · 5:15 pm – 6:15 pm",
+      "where": "ONLINE",
+      "cost": "$159",
+      "detail": ""
+    },
+    "fields": [
+      {
+        "label": "Event Type",
+        "value": "Afterschool"
+      },
+      {
+        "label": "Day(s) of Week",
+        "value": "Thursday"
+      },
+      {
+        "label": "Start Date",
+        "value": "Thu, Oct 29, 2026"
+      },
+      {
+        "label": "End Date",
+        "value": "Thu, Dec 17, 2026"
+      },
+      {
+        "label": "Start Time",
+        "value": "5:15 pm"
+      },
+      {
+        "label": "End Time",
+        "value": "6:15 pm"
+      },
+      {
+        "label": "Registration Fee",
+        "value": "$159"
+      },
+      {
+        "label": "Lead Coach",
+        "value": "Chris Martin"
+      },
+      {
+        "label": "Second Coach",
+        "value": "WFM Bada Norovsambuu"
+      },
+      {
+        "label": "School / Venue",
+        "value": "ONLINE"
+      }
+    ],
+    "paragraphs": [
+      "'26 Online Track A5!",
+      "LEVELS 2+3, Beginner To Intermediate",
+      "Thursdays 10/29-12/17, 2026 @ 5:15-6:15pm (PST)",
+      "This Course is designed for : Level 2+3:Beginner to Intermediate",
+      "BAC Online Courses: One 60-minute weekly class, via Zoom, which will combine instructive lessons and practice/competitive gaming. Students should be logged in to their BAC Chesskid account each session. There will also be a free unrated Online Tournament at the end of the term. Zoom Credentials will generally be emailed to you ~24 hours before the course is set to start. Please note the HOMEWORK curriculum in the orientation (and below).",
+      "ChessKid.com: If you are not already in the BAC Club on Chesskid, you will receive a 1-year Gold Membership to www.Chesskid.com and will use this platform for games, practice, homework, extra lessons, videos, puzzles and tournaments with unlimited access. New members will receive this account a few days before the Course is set to start.",
+      "Make-Up Class: If you have to miss a class, one make-up session is permitted per course using our one-hour drop-in online clubs. We can organize one for you in the 2nd half of the term (to allow time to collect students for a viable class). Make-up classes cannot carry over to a new Term.",
+      "Discount: 10% Sibling discounts are accounted for automatically by the system if purchased in the same transaction. No manual discounts will be considered.",
+      "Ratio: We try to keep Coach ratios at 10:1. Larger classes may have multiple coaches and make use of Zoom Break-out Rooms to optimize Learning Groups.",
+      "Homework: Use the Homework outlined in the course Orientation email for weekly practice.",
+      "Default expectations on Chesskid.com:",
+      "• 1-3 Animated Lessons/Quizzes per week (Lessons Tab).",
+      "• Play 2-5 Games per week (outside of our sessions) with a 10 or 15 minute timer in the 'Play-Vs-Kid' Section (live games/tournaments). Players may also Challenge BOTS (start at the beginner levels and work upward!).",
+      "• Complete 5-7 Puzzles per week in the Puzzle Section (Goal: \"Find Best Move\").",
+      "• There are important End-Game lessons called 'Workouts' under the Learn-Tab in the account. We recommend 2-4 of them per 7-week term, in order, until they are completed.",
+      "Questions? Check our Online Course FAQ Page. We can also be reached at Enrich@bayareachess.com",
+      "Invite your Friends and Family, we would love to have them join us at BAC-online!",
+      "Stay Safe! Have Fun! Learn Chess!",
+      "Reminder: All Times use Pacific Standard Time (California). See Time Zones"
+    ],
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
+    "links": [
+      {
+        "label": "Back to enrichment calendar",
+        "href": "/enrichment#calendar"
+      },
+      {
+        "label": "Online classes",
+        "href": "/enrichment#classes"
+      },
+      {
+        "label": "Online FAQ",
+        "href": "/enrichment/faq-online"
+      }
+    ]
+  },
+  "event/26-level-2-5-beginneradvanced-2-fridays-515-615-pm-pst-1030-1218": {
+    "slug": "event/26-level-2-5-beginneradvanced-2-fridays-515-615-pm-pst-1030-1218",
+    "sourceUrl": "https://enrichment.bayareachess.com/event/26-level-2-5-beginneradvanced-2-fridays-515-615-pm-pst-1030-1218",
+    "kicker": "Online class",
+    "title": "'26 LEVEL 2-5-BEGINNER+ADVANCED 2-Fridays@ 5:15-6:15 PM PST (10/30-12/18)",
+    "intro": "ONLINE",
+    "highlight": {
+      "when": "Fri, Oct 30, 2026 – Fri, Dec 18, 2026 · 5:15 pm – 6:15 pm",
+      "where": "ONLINE",
+      "cost": "$159",
+      "detail": ""
+    },
+    "fields": [
+      {
+        "label": "Event Type",
+        "value": "Afterschool"
+      },
+      {
+        "label": "Day(s) of Week",
+        "value": "Friday"
+      },
+      {
+        "label": "Start Date",
+        "value": "Fri, Oct 30, 2026"
+      },
+      {
+        "label": "End Date",
+        "value": "Fri, Dec 18, 2026"
+      },
+      {
+        "label": "Dates without Classes",
+        "value": "Fri, Nov 27, 2026"
+      },
+      {
+        "label": "Start Time",
+        "value": "5:15 pm"
+      },
+      {
+        "label": "End Time",
+        "value": "6:15 pm"
+      },
+      {
+        "label": "Registration Fee",
+        "value": "$159"
+      },
+      {
+        "label": "Lead Coach",
+        "value": "Chris Martin"
+      },
+      {
+        "label": "Second Coach",
+        "value": "GM Atanas Kolev"
+      },
+      {
+        "label": "School / Venue",
+        "value": "ONLINE"
+      }
+    ],
+    "paragraphs": [
+      "'26 Online Track A5!",
+      "LEVELS 2-5 COMBO, Beginner to Advanced II",
+      "Skill-Splits will use Zoom Breakout to optimize learning groups.",
+      "Fridays 10/30-12/18, 2026 @ 5:15-6:15pm (PST)",
+      "This Course is designed for : Levels 2-5: Beginner to Advanced 2",
+      "BAC Online Courses: One 60-minute weekly class, via Zoom, which will combine instructive lessons and practice/competitive gaming. Students should be logged in to their BAC Chesskid account each session. There will also be a free unrated Online Tournament at the end of the term. Zoom Credentials will generally be emailed to you ~24 hours before the course is set to start. Please note the HOMEWORK curriculum in the orientation (and below).",
+      "ChessKid.com: If you are not already in the BAC Club on Chesskid, you will receive a 1-year Gold Membership to www.Chesskid.com and will use this platform for games, practice, homework, extra lessons, videos, puzzles and tournaments with unlimited access. New members will receive this account a few days before the Course is set to start.",
+      "Make-Up Class: If you have to miss a class, one make-up session is permitted per course using our one-hour drop-in online clubs. We can organize one for you in the 2nd half of the term (to allow time to collect students for a viable class). Make-up classes cannot carry over to a new Term.",
+      "Discount: 10% Sibling discounts are accounted for automatically by the system if purchased in the same transaction. No manual discounts will be considered.",
+      "Ratio: We try to keep Coach ratios at 10:1. Larger classes may have multiple coaches and make use of Zoom Break-out Rooms to optimize Learning Groups.",
+      "Homework: Use the Homework outlined in the course Orientation email for weekly practice.",
+      "Default expectations on Chesskid.com:",
+      "• 1-3 Animated Lessons/Quizzes per week (Lessons Tab).",
+      "• Play 2-5 Games per week (outside of our sessions) with a 10 or 15 minute timer in the 'Play-Vs-Kid' Section (live games/tournaments). Players may also Challenge BOTS (start at the beginner levels and work upward!).",
+      "• Complete 5-7 Puzzles per week in the Puzzle Section (Goal: \"Find Best Move\").",
+      "• There are important End-Game lessons called 'Workouts' under the Learn-Tab in the account. We recommend 2-4 of them per 7-week term, in order, until they are completed.",
+      "Questions? Check our Online Course FAQ Page. We can also be reached at Enrich@bayareachess.com",
+      "Invite your Friends and Family, we would love to have them join us at BAC-online!",
+      "Stay Safe! Have Fun! Learn Chess!",
+      "Reminder: All Times use Pacific Standard Time (California). See Time Zones"
+    ],
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
+    "links": [
+      {
+        "label": "Back to enrichment calendar",
+        "href": "/enrichment#calendar"
+      },
+      {
+        "label": "Online classes",
+        "href": "/enrichment#classes"
+      },
+      {
+        "label": "Online FAQ",
+        "href": "/enrichment/faq-online"
+      }
+    ]
   }
 };

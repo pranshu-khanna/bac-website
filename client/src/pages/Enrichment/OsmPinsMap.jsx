@@ -166,3 +166,11 @@ export function osmSearchUrl({ lat, lng, name, address, city }) {
   const q = encodeURIComponent([address, name, city, "CA"].filter(Boolean).join(", "));
   return `https://www.openstreetmap.org/search?query=${q}`;
 }
+
+export function googleMapsUrl({ lat, lng, name, address, city }) {
+  if (lat != null && lng != null) {
+    return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+  }
+  const q = encodeURIComponent([address, name, city, "CA"].filter(Boolean).join(", "));
+  return `https://www.google.com/maps/search/?api=1&query=${q}`;
+}

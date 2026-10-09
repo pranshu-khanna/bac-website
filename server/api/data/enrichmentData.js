@@ -57,7 +57,7 @@ module.exports = {
       detail: "Zoom & ChessKid · late enrollment prorated. Next term starts late October.",
       when: "Wed / Thu / Fri · 5:15–6:15 PM PST",
       ctaLabel: "Class list",
-      ctaHref: "/enrichment/online",
+      ctaHref: "/enrichment#classes",
       section: "classes",
     },
     {
@@ -77,13 +77,15 @@ module.exports = {
     title: "Online chess classes",
     intro:
       "60-minute live sessions once per week via Zoom and ChessKid. Lessons and gameplay in one class; larger groups use Zoom breakouts. New online students receive a ChessKid Gold membership (if not already in the BAC club).",
-    notice: "Current term still open · Late enrollment prorated · Next Track A term starts late October",
+    notice:
+      "Current term still open · Late enrollment prorated · Upcoming Track A5 · Oct 28 – Dec 18, 2026 · Pacific Standard Time",
     points: [
       "Track A: 7-week terms with a championship on the final class",
       "Track S (summer): 6-week sessions with multi-class bundle options",
       "Register for as many classes as you like — 10% off extra items in the same checkout",
       "Target coach ratio 10:1 or better · Orientations/Zoom links ~24 hours before first session",
       "ChessKid memberships emailed a few days before the course starts",
+      "Absolute beginners: Level 1–1.5. Older new players may join Level 2 on Thu/Fri",
     ],
     currentSessions: [
       {
@@ -106,19 +108,19 @@ module.exports = {
     upcomingSessions: [
       {
         label: "Wednesdays — Beginner to Advanced I · 5:15–6:15 PM (10/28–12/16)",
-        href: "/enrichment/online",
+        href: EVENT("26-level-2-4-beginner-advanced-i-wednesdays-515-615-pm-pst-1028-1216"),
       },
       {
         label: "Thursdays — Absolute Beginner / Beginner · 5:15–6:15 PM (10/29–12/17)",
-        href: "/enrichment/online",
+        href: EVENT("26-level-115-absolute-beginnerbeginner-thursdays-515-615pm-pst-1029-1217"),
       },
       {
         label: "Thursdays — Beginner to Intermediate · 5:15–6:15 PM (10/29–12/17)",
-        href: "/enrichment/online",
+        href: EVENT("26-level-23-beginner-intermediate-thursdays-515-615-pm-pst-1029-1217"),
       },
       {
         label: "Fridays — Beginner to Advanced II · 5:15–6:15 PM (10/30–12/18)",
-        href: "/enrichment/online",
+        href: EVENT("26-level-2-5-beginneradvanced-2-fridays-515-615-pm-pst-1030-1218"),
       },
     ],
     skillLevels: [
@@ -129,6 +131,10 @@ module.exports = {
       { level: "5", name: "Advanced II", detail: "~1200–1500 USCF / ChessKid 1600+. Higher: ask about teams." },
     ],
     faqs: [
+      {
+        q: "What is the difference between Track A and Track S?",
+        a: "Track A regular terms are 7 weeks with a championship on the final class. Track S summer sessions are 6 weeks and may offer multi-class bundles. Curriculum and format are otherwise the same.",
+      },
       {
         q: "When do I get Zoom / ChessKid info?",
         a: "ChessKid memberships are emailed a few days before the course starts. Orientations with schedule and Zoom links go out ~24 hours before the first session. Late registrants receive info as soon as we process the order. Check spam (especially Hotmail) before emailing enrich@bayareachess.com.",
@@ -141,9 +147,17 @@ module.exports = {
         q: "Are there trial classes?",
         a: "We do not offer term trials. Occasional single-session online options may be posted separately.",
       },
+      {
+        q: "Do I have to pay with PayPal?",
+        a: "Most registrants use PayPal’s Guest Payment option for debit/credit without a PayPal login. Look for the guest link under the PayPal button.",
+      },
+      {
+        q: "Can I choose my coach in advance?",
+        a: "Staffing can change through the course start date as some courses do not run and others need multiple coaches. Mentorship preferences are noted when possible but are not guaranteed.",
+      },
     ],
-    ctaLabel: "Online classes guide",
-    ctaHref: "/enrichment/online",
+    ctaLabel: "",
+    ctaHref: "",
     links: [
       { label: "Online FAQ", href: "/enrichment/faq-online" },
       { label: "Skill levels", href: "/enrichment/skill-levels" },
@@ -311,8 +325,8 @@ module.exports = {
         a: "Before first class: refund minus $25. After first but before second: prorated minus one class and $25. No refunds after the second class.",
       },
     ],
-    ctaLabel: "School programs",
-    ctaHref: "/enrichment/schools",
+    ctaLabel: "Find a school",
+    ctaHref: "/enrichment#afterschool",
     links: [
       { label: "Afterschool FAQ & info", href: "/enrichment/afterschool-info" },
       { label: "Lunchtime chess", href: "/enrichment/lunchtime" },

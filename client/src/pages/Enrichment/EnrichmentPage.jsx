@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
 import api from "../../axios";
 import PageFrame from "../../components/PageFrame/PageFrame";
 import EnrichmentReturnBar from "./EnrichmentReturnBar";
+import { formatProgramPage } from "./formatProgramPage";
 import "./Enrichment.scss";
 
 function isLocalHref(href) {
@@ -44,6 +45,48 @@ function AccordionItem({ item }) {
   );
 }
 
+function FactsCard({ facts }) {
+  if (!facts?.length) return null;
+  return (
+    <section className="enr-facts" aria-label="Program details">
+      <div className="enr-facts-grid">
+        {facts.map((fact) => (
+          <div key={`${fact.label}-${fact.value}`} className="enr-fact">
+            <span className="enr-fact-label">{fact.label}</span>
+            {fact.href ? (
+              <a className="enr-fact-value" href={fact.href} target="_blank" rel="noreferrer">
+                {fact.label === "Flyer" ? "Download PDF" : fact.value}
+              </a>
+            ) : (
+              <span className="enr-fact-value">{fact.value}</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ContentSection({ section }) {
+  return (
+    <section className="enr-content-section">
+      <h2 className="enr-content-heading">{section.title}</h2>
+      {section.blocks.map((block) => (
+        <p key={block.slice(0, 48)} className="enr-body">
+          {block}
+        </p>
+      ))}
+      {section.bullets?.length ? (
+        <ul className="enr-content-list">
+          {section.bullets.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      ) : null}
+    </section>
+  );
+}
+
 export default function EnrichmentPage() {
   const { slug } = useParams();
   const { pathname } = useLocation();
@@ -61,6 +104,8 @@ export default function EnrichmentPage() {
       .catch(() => setError(true));
   }, [pagePath]);
 
+  const view = useMemo(() => formatProgramPage(page), [page]);
+
   if (error) {
     return (
       <PageFrame className="enrichment-subpage">
@@ -76,7 +121,7 @@ export default function EnrichmentPage() {
     );
   }
 
-  if (!page) {
+  if (!page || !view) {
     return (
       <PageFrame className="enrichment-subpage">
         <EnrichmentReturnBar />
@@ -87,79 +132,67 @@ export default function EnrichmentPage() {
     );
   }
 
-  const rawCtaHref = page.ctaHref || "";
+  const rawCtaHref = view.ctaHref || "";
   const ctaHref = rawCtaHref.includes("enrichment.bayareachess.com") ? "/login" : rawCtaHref;
   const ctaLabel = rawCtaHref.includes("enrichment.bayareachess.com")
-    ? (page.ctaLabel || "Register")
+    ? (view.ctaLabel || "Register")
         .replace(/\s*on enrichment site/i, "")
         .replace(/\s*\(enrichment site\)/i, "")
         .trim() || "Register"
-    : page.ctaLabel || "Continue";
+    : view.ctaLabel || "Continue";
   const externalCta = ctaHref && !isLocalHref(ctaHref);
 
   return (
     <PageFrame className="enrichment-subpage">
       <EnrichmentReturnBar />
       <div className="content-main constrain enr-program enr-subpage-body">
-        {page.kicker ? <p className="landing-section-label">{page.kicker}</p> : null}
-        <h1>{page.title}</h1>
-        {page.intro ? <p className="enr-intro">{page.intro}</p> : null}
+        {view.kicker ? <p className="landing-section-label">{view.kicker}</p> : null}
+        <h1>{view.title}</h1>
+        {view.intro ? <p className="enr-intro">{view.intro}</p> : null}
 
-        {page.highlight && (page.highlight.when || page.highlight.where || page.highlight.cost || page.highlight.detail) ? (
-          <div className="enr-highlight">
-            {page.highlight.when ? (
-              <p>
-                <strong>{page.highlight.when}</strong>
+        <FactsCard facts={view.facts} />
+
+        {view.notices?.length ? (
+          <div className="enr-notice-stack">
+            {view.notices.map((notice) => (
+              <p key={notice.slice(0, 64)} className="enr-notice">
+                {notice}
               </p>
-            ) : null}
-            {page.highlight.where ? <p>{page.highlight.where}</p> : null}
-            {page.highlight.cost ? <p>{page.highlight.cost}</p> : null}
-            {page.highlight.detail ? <p>{page.highlight.detail}</p> : null}
+            ))}
           </div>
+        ) : view.notice ? (
+          <p className="enr-notice">{view.notice}</p>
         ) : null}
 
-        {page.notice ? <p className="enr-notice">{page.notice}</p> : null}
-
-        {page.points?.length ? (
+        {view.points?.length ? (
           <ul className="enr-points">
-            {page.points.map((point) => (
+            {view.points.map((point) => (
               <li key={point}>{point}</li>
             ))}
           </ul>
         ) : null}
 
-        {page.paragraphs?.length ? (
-          <div className="enr-body-blocks">
-            {page.paragraphs.map((p, idx) => (
-              <p key={`${idx}-${p.slice(0, 32)}`} className="enr-body">
+        {view.overview?.length ? (
+          <div className="enr-overview">
+            {view.overview.map((p) => (
+              <p key={p.slice(0, 48)} className="enr-body">
                 {p}
               </p>
             ))}
           </div>
         ) : null}
 
-        {page.fields?.length ? (
-          <dl className="enr-field-list">
-            {page.fields.map((field) => (
-              <div key={`${field.label}-${field.value}`} className="enr-field-row">
-                <dt>{field.label}</dt>
-                <dd>
-                  {field.href ? (
-                    <a href={field.href} target="_blank" rel="noreferrer">
-                      {field.label === "Flyer" ? "Download PDF" : field.value}
-                    </a>
-                  ) : (
-                    field.value
-                  )}
-                </dd>
-              </div>
+        {view.sections?.length ? (
+          <div className="enr-content-sections">
+            {view.sections.map((section) => (
+              <ContentSection key={section.title} section={section} />
             ))}
-          </dl>
+          </div>
         ) : null}
 
-        {page.sessions?.length ? (
+        {view.sessions?.length ? (
           <ul className="enr-sessions">
-            {page.sessions.map((session) => (
+            {view.sessions.map((session) => (
               <li key={`${session.label}-${session.href}`}>
                 <span>{session.label}</span>
                 <SmartLink href={session.href}>Register</SmartLink>
@@ -168,9 +201,9 @@ export default function EnrichmentPage() {
           </ul>
         ) : null}
 
-        {page.levels?.length ? (
+        {view.levels?.length ? (
           <div className="enr-level-grid">
-            {page.levels.map((lvl) => (
+            {view.levels.map((lvl) => (
               <div key={lvl.level} className="enr-level-card">
                 <span className="enr-level-num">{lvl.level}</span>
                 <strong>{lvl.name}</strong>
@@ -180,18 +213,18 @@ export default function EnrichmentPage() {
           </div>
         ) : null}
 
-        {page.table ? (
+        {view.table ? (
           <div className="enr-table-wrap">
             <table className="enr-table">
               <thead>
                 <tr>
-                  {page.table.columns.map((col) => (
+                  {view.table.columns.map((col) => (
                     <th key={col}>{col}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {page.table.rows.map((row) => (
+                {view.table.rows.map((row) => (
                   <tr key={row.join("-")}>
                     {row.map((cell, i) => (
                       <td key={`${row[0]}-${i}`}>{cell}</td>
@@ -203,9 +236,9 @@ export default function EnrichmentPage() {
           </div>
         ) : null}
 
-        {page.schools?.length ? (
+        {view.schools?.length ? (
           <div className="enr-school-grid">
-            {page.schools.map((school) => (
+            {view.schools.map((school) => (
               <div key={`${school.name}-${school.city}`} className="enr-school-chip">
                 <strong>{school.name}</strong>
                 <span>{school.city}</span>
@@ -214,9 +247,9 @@ export default function EnrichmentPage() {
           </div>
         ) : null}
 
-        {page.people?.length ? (
+        {view.people?.length ? (
           <div className="enr-people-grid">
-            {page.people.map((person) => (
+            {view.people.map((person) => (
               <SmartLink key={person.href} href={person.href} className="enr-people-card">
                 {person.name}
               </SmartLink>
@@ -224,9 +257,9 @@ export default function EnrichmentPage() {
           </div>
         ) : null}
 
-        {page.quotes?.length ? (
+        {view.quotes?.length ? (
           <div className="enr-quote-list">
-            {page.quotes.map((quote) => (
+            {view.quotes.map((quote) => (
               <blockquote key={quote.text.slice(0, 40)} className="enr-quote">
                 <p>“{quote.text}”</p>
                 {quote.by ? <cite>{quote.by}</cite> : null}
@@ -235,25 +268,27 @@ export default function EnrichmentPage() {
           </div>
         ) : null}
 
-        {page.faqs?.length ? (
+        {view.faqs?.length ? (
           <div className="enr-faq-list">
             <h2 className="enr-subhead">FAQ</h2>
-            {page.faqs.map((item) => (
+            {view.faqs.map((item) => (
               <AccordionItem key={item.q} item={item} />
             ))}
           </div>
         ) : null}
 
         {ctaHref ? (
-          <SmartLink href={ctaHref} className="enr-cta">
-            {ctaLabel}
-            {externalCta ? " ↗" : ""}
-          </SmartLink>
+          <div className="enr-cta-row">
+            <SmartLink href={ctaHref} className="enr-cta">
+              {ctaLabel}
+              {externalCta ? " ↗" : ""}
+            </SmartLink>
+          </div>
         ) : null}
 
-        {page.links?.length ? (
+        {view.links?.length ? (
           <div className="enr-links">
-            {page.links.map((link) => (
+            {view.links.map((link) => (
               <SmartLink key={link.href} href={link.href}>
                 {link.label}
                 {isLocalHref(link.href) ? "" : " ↗"}

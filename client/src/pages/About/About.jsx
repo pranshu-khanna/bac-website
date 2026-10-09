@@ -39,6 +39,7 @@ export default function About({ embedded = false }) {
           <header className="about-hero">
             <p className="about-hero-tag">{data.hero.tag}</p>
             <h1 className="about-hero-title">{data.hero.title}</h1>
+            <h2 className="about-h2">Mission</h2>
             <p className="about-mission-lead">{data.hero.missionLead}</p>
             <p className="about-mission-text">{data.hero.missionText}</p>
             <p className="about-mission-welcome">{data.hero.welcome}</p>

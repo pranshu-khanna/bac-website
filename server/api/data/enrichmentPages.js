@@ -18,9 +18,7 @@ module.exports = {
   "fsa-receipts",
   "lunchtime",
   "new-players",
-  "online",
   "rising-stars",
-  "schools",
   "simul",
   "skill-levels",
   "strategy-games",
@@ -29,89 +27,6 @@ module.exports = {
   "volunteers"
 ],
   pages: {
-  "online": {
-    "slug": "online",
-    "kicker": "Online classes",
-    "title": "Online chess classes",
-    "intro": "60-minute live sessions once per week via Zoom and ChessKid. Lessons and gameplay in one class. New online students receive a ChessKid Gold membership (if not already in the BAC club).",
-    "notice": "Upcoming Track A5 \u00b7 Oct 28 \u2013 Dec 18, 2026 \u00b7 Pacific Standard Time",
-    "points": [
-      "Track A: 7-week terms with a championship on the final class",
-      "Track S (summer): 6-week sessions with multi-class bundle options",
-      "Register for as many classes as you like \u2014 10% off extra items in the same checkout",
-      "Target coach ratio 10:1 or better",
-      "ChessKid memberships emailed a few days before the course starts; Orientations/Zoom links ~24 hours before first session",
-      "Absolute beginners: Level 1\u20131.5. Older new players may join Level 2 on Thu/Fri"
-    ],
-    "sessions": [
-      {
-        "label": "Thu \u00b7 Level 1 / 1.5 Absolute Beginner \u00b7 5:15\u20136:15 PM (10/29\u201312/17)",
-        "href": "https://enrichment.bayareachess.com/event/26-level-115-absolute-beginnerbeginner-thursdays-515-615pm-pst-1029-1217"
-      },
-      {
-        "label": "Thu \u00b7 Level 2\u20133 Beginner\u2013Intermediate \u00b7 5:15\u20136:15 PM (10/29\u201312/17)",
-        "href": "https://enrichment.bayareachess.com/event/26-level-23-beginner-intermediate-thursdays-515-615-pm-pst-1029-1217"
-      },
-      {
-        "label": "Wed \u00b7 Level 2\u20134 Beginner\u2013Advanced I \u00b7 5:15\u20136:15 PM (10/28\u201312/16)",
-        "href": "https://enrichment.bayareachess.com/event/26-level-2-4-beginner-advanced-i-wednesdays-515-615-pm-pst-1028-1216"
-      },
-      {
-        "label": "Fri \u00b7 Level 2\u20135 Beginner\u2013Advanced II \u00b7 5:15\u20136:15 PM (10/30\u201312/18)",
-        "href": "https://enrichment.bayareachess.com/event/26-level-2-5-beginneradvanced-2-fridays-515-615-pm-pst-1030-1218"
-      }
-    ],
-    "faqs": [
-      {
-        "q": "What is the online course format?",
-        "a": "A 60-minute session once per week for levels 1\u20135 (Tracks A or S). Lessons and gameplay share one session. Players receive ChessKid Gold memberships if they are not already in the BAC club."
-      },
-      {
-        "q": "What is the difference between Track A and Track S?",
-        "a": "Track A regular terms are 7 weeks with a championship on the final class. Track S summer sessions are 6 weeks and may offer multi-class bundles. Curriculum and format are otherwise the same."
-      },
-      {
-        "q": "Can I register for 2+ classes per week?",
-        "a": "Yes \u2014 courses are \u00e0 la carte. Multiple purchases in the same transaction trigger a 10% discount on the extra items."
-      },
-      {
-        "q": "When do I get Zoom / ChessKid info?",
-        "a": "Memberships go to your registered email a few days before the course starts. Orientations (schedule + Zoom) go out ~24 hours before the first session. Late registrants receive info as soon as we process the order. Check spam first (Hotmail is often the culprit)."
-      },
-      {
-        "q": "Do you have trial classes?",
-        "a": "We do not offer term trials. Occasional single-session online options may be posted separately."
-      },
-      {
-        "q": "Do I have to pay with PayPal?",
-        "a": "Most registrants use PayPal\u2019s Guest Payment option for debit/credit without a PayPal login. Look for the guest link under the PayPal button."
-      },
-      {
-        "q": "Can I choose my coach in advance?",
-        "a": "Staffing can change through the course start date as some courses do not run and others need multiple coaches. Mentorship preferences are noted when possible but are not guaranteed."
-      }
-    ],
-    "ctaLabel": "Register",
-    "ctaHref": "/login",
-    "links": [
-      {
-        "label": "Online FAQ",
-        "href": "/enrichment/faq-online"
-      },
-      {
-        "label": "Skill levels",
-        "href": "/enrichment/skill-levels"
-      },
-      {
-        "label": "New players",
-        "href": "/enrichment/new-players"
-      },
-      {
-        "label": "Policies (PDF)",
-        "href": "https://enrichment.bayareachess.com/sites/default/files/2026-05/Policies.-2026.pdf"
-      }
-    ]
-  },
   "faq-online": {
     "slug": "faq-online",
     "kicker": "Online FAQ",
@@ -186,7 +101,7 @@ module.exports = {
     "links": [
       {
         "label": "Online classes",
-        "href": "/enrichment/online"
+        "href": "/enrichment#classes"
       },
       {
         "label": "Skill levels",
@@ -247,7 +162,7 @@ module.exports = {
     "links": [
       {
         "label": "Online classes",
-        "href": "/enrichment/online"
+        "href": "/enrichment#classes"
       },
       {
         "label": "New players",
@@ -281,7 +196,7 @@ module.exports = {
       }
     ],
     "ctaLabel": "Browse online classes",
-    "ctaHref": "/enrichment/online",
+    "ctaHref": "/enrichment#classes",
     "links": [
       {
         "label": "Skill levels",
@@ -427,8 +342,8 @@ module.exports = {
         "a": "Before first class: refund minus $25. After first before second: prorated minus one class and $25. No refunds after the second class. Sibling discount 10% when registered in one transaction."
       }
     ],
-    "ctaLabel": "Browse school programs",
-    "ctaHref": "/enrichment/schools",
+    "ctaLabel": "Find a school",
+    "ctaHref": "/enrichment#afterschool",
     "links": [
       {
         "label": "Lunchtime chess",
@@ -445,90 +360,6 @@ module.exports = {
       {
         "label": "Policies (PDF)",
         "href": "https://enrichment.bayareachess.com/sites/default/files/2026-05/Policies.-2026.pdf"
-      }
-    ]
-  },
-  "schools": {
-    "slug": "schools",
-    "kicker": "School list",
-    "title": "After-school programs",
-    "intro": "Sample campuses with BAC enrichment this fall. Full registration lists live on the enrichment site \u2014 don\u2019t see your school? Email enrich@bayareachess.com.",
-    "schools": [
-      {
-        "name": "Sandpiper",
-        "city": "Redwood City"
-      },
-      {
-        "name": "Alta Vista",
-        "city": "Los Gatos"
-      },
-      {
-        "name": "Amy Imai",
-        "city": "Mountain View"
-      },
-      {
-        "name": "Azevada",
-        "city": "Fremont"
-      },
-      {
-        "name": "Bowman",
-        "city": "Palo Alto"
-      },
-      {
-        "name": "Challenger Berryessa",
-        "city": "San Jose"
-      },
-      {
-        "name": "Clifford",
-        "city": "Redwood City"
-      },
-      {
-        "name": "Covington",
-        "city": "Los Altos"
-      },
-      {
-        "name": "Encinal",
-        "city": "Atherton"
-      },
-      {
-        "name": "Fairwood",
-        "city": "Sunnyvale"
-      },
-      {
-        "name": "Forest Park",
-        "city": "Fremont"
-      },
-      {
-        "name": "Weibel",
-        "city": "Fremont"
-      },
-      {
-        "name": "Nixon",
-        "city": "Stanford"
-      },
-      {
-        "name": "Oak Knoll",
-        "city": "Menlo Park"
-      },
-      {
-        "name": "Stevenson",
-        "city": "Mountain View"
-      },
-      {
-        "name": "Tom Matsumoto",
-        "city": "San Jose"
-      }
-    ],
-    "ctaLabel": "Full list on enrichment site",
-    "ctaHref": "/login",
-    "links": [
-      {
-        "label": "After-school FAQ",
-        "href": "/enrichment/afterschool-info"
-      },
-      {
-        "label": "Lunchtime",
-        "href": "/enrichment/lunchtime"
       }
     ]
   },
@@ -554,8 +385,8 @@ module.exports = {
         "href": "/enrichment/afterschool-info"
       },
       {
-        "label": "School programs",
-        "href": "/enrichment/schools"
+        "label": "Find a school",
+        "href": "/enrichment#afterschool"
       }
     ]
   },

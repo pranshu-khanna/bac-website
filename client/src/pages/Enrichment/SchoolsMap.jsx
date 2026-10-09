@@ -1,6 +1,8 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import OsmPinsMap, { osmSearchUrl } from "./OsmPinsMap";
+import OsmPinsMap, { googleMapsUrl } from "./OsmPinsMap";
+
+const PAGE_SIZE = 7;
 
 function formatGrades(grades) {
   if (!grades?.length) return null;
@@ -88,6 +90,7 @@ export default function SchoolsMap({ schools }) {
   );
   const [activeId, setActiveId] = useState(null);
   const [query, setQuery] = useState("");
+  const [listPage, setListPage] = useState(0);
   const detailRef = useRef(null);
 
   const activeCampus = campuses.find((c) => c.id === activeId) || null;
@@ -100,6 +103,14 @@ export default function SchoolsMap({ schools }) {
       return hay.includes(q);
     });
   }, [campuses, query]);
+
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const safePage = Math.min(listPage, pageCount - 1);
+  const paged = filtered.slice(safePage * PAGE_SIZE, safePage * PAGE_SIZE + PAGE_SIZE);
+
+  useEffect(() => {
+    setListPage(0);
+  }, [query]);
 
   const mapPoints = useMemo(
     () =>
@@ -155,7 +166,7 @@ export default function SchoolsMap({ schools }) {
 
         <div className="enr-school-side">
           <ul className="enr-school-list">
-            {filtered.map((campus) => {
+            {paged.map((campus) => {
               const active = campus.id === activeId;
               const sessions = campus.programs?.length || 0;
               return (
@@ -178,6 +189,32 @@ export default function SchoolsMap({ schools }) {
             })}
             {!filtered.length ? <li className="enr-school-empty">No schools match that search.</li> : null}
           </ul>
+          {filtered.length > PAGE_SIZE ? (
+            <div className="enr-cal-pager enr-school-pager" role="navigation" aria-label="School list pages">
+              <button
+                type="button"
+                className="enr-cal-pager-btn"
+                onClick={() => setListPage((page) => Math.max(0, page - 1))}
+                disabled={safePage <= 0}
+                aria-label="Previous schools"
+              >
+                <span aria-hidden>‹</span>
+              </button>
+              <p className="enr-cal-pager-status">
+                {safePage * PAGE_SIZE + 1}–
+                {Math.min((safePage + 1) * PAGE_SIZE, filtered.length)} of {filtered.length}
+              </p>
+              <button
+                type="button"
+                className="enr-cal-pager-btn"
+                onClick={() => setListPage((page) => Math.min(pageCount - 1, page + 1))}
+                disabled={safePage >= pageCount - 1}
+                aria-label="Next schools"
+              >
+                <span aria-hidden>›</span>
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
 
@@ -219,11 +256,11 @@ export default function SchoolsMap({ schools }) {
                 />
                 <a
                   className="enr-school-gmaps-link"
-                  href={osmSearchUrl(activeCampus)}
+                  href={googleMapsUrl(activeCampus)}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Open in OpenStreetMap ↗
+                  Open in Google Map ↗
                 </a>
               </div>
               <div className="enr-school-programs">
