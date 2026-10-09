@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import api from "../../axios";
 import PageFrame from "../../components/PageFrame/PageFrame";
 import EnrichmentReturnBar from "./EnrichmentReturnBar";
@@ -7,6 +7,12 @@ import "./Enrichment.scss";
 
 function isLocalHref(href) {
   return typeof href === "string" && href.startsWith("/") && !href.startsWith("//");
+}
+
+function pagePathFromLocation(pathname, slug) {
+  if (pathname.includes("/enrichment/camp/")) return `camp/${slug}`;
+  if (pathname.includes("/enrichment/event/")) return `event/${slug}`;
+  return slug;
 }
 
 function SmartLink({ href, children, className }) {
@@ -40,6 +46,8 @@ function AccordionItem({ item }) {
 
 export default function EnrichmentPage() {
   const { slug } = useParams();
+  const { pathname } = useLocation();
+  const pagePath = pagePathFromLocation(pathname, slug);
   const [page, setPage] = useState(null);
   const [error, setError] = useState(false);
 
@@ -48,10 +56,10 @@ export default function EnrichmentPage() {
     setError(false);
     window.scrollTo(0, 0);
     api
-      .get(`/enrichment/pages/${slug}`)
+      .get(`/enrichment/pages/${pagePath}`)
       .then((res) => setPage(res.data))
       .catch(() => setError(true));
-  }, [slug]);
+  }, [pagePath]);
 
   if (error) {
     return (
@@ -79,7 +87,15 @@ export default function EnrichmentPage() {
     );
   }
 
-  const externalCta = page.ctaHref && !isLocalHref(page.ctaHref);
+  const rawCtaHref = page.ctaHref || "";
+  const ctaHref = rawCtaHref.includes("enrichment.bayareachess.com") ? "/login" : rawCtaHref;
+  const ctaLabel = rawCtaHref.includes("enrichment.bayareachess.com")
+    ? (page.ctaLabel || "Register")
+        .replace(/\s*on enrichment site/i, "")
+        .replace(/\s*\(enrichment site\)/i, "")
+        .trim() || "Register"
+    : page.ctaLabel || "Continue";
+  const externalCta = ctaHref && !isLocalHref(ctaHref);
 
   return (
     <PageFrame className="enrichment-subpage">
@@ -88,9 +104,8 @@ export default function EnrichmentPage() {
         {page.kicker ? <p className="landing-section-label">{page.kicker}</p> : null}
         <h1>{page.title}</h1>
         {page.intro ? <p className="enr-intro">{page.intro}</p> : null}
-        {page.notice ? <p className="enr-notice">{page.notice}</p> : null}
 
-        {page.highlight ? (
+        {page.highlight && (page.highlight.when || page.highlight.where || page.highlight.cost || page.highlight.detail) ? (
           <div className="enr-highlight">
             {page.highlight.when ? (
               <p>
@@ -103,6 +118,8 @@ export default function EnrichmentPage() {
           </div>
         ) : null}
 
+        {page.notice ? <p className="enr-notice">{page.notice}</p> : null}
+
         {page.points?.length ? (
           <ul className="enr-points">
             {page.points.map((point) => (
@@ -111,11 +128,34 @@ export default function EnrichmentPage() {
           </ul>
         ) : null}
 
-        {page.paragraphs?.map((p) => (
-          <p key={p.slice(0, 48)} className="enr-body">
-            {p}
-          </p>
-        ))}
+        {page.paragraphs?.length ? (
+          <div className="enr-body-blocks">
+            {page.paragraphs.map((p, idx) => (
+              <p key={`${idx}-${p.slice(0, 32)}`} className="enr-body">
+                {p}
+              </p>
+            ))}
+          </div>
+        ) : null}
+
+        {page.fields?.length ? (
+          <dl className="enr-field-list">
+            {page.fields.map((field) => (
+              <div key={`${field.label}-${field.value}`} className="enr-field-row">
+                <dt>{field.label}</dt>
+                <dd>
+                  {field.href ? (
+                    <a href={field.href} target="_blank" rel="noreferrer">
+                      {field.label === "Flyer" ? "Download PDF" : field.value}
+                    </a>
+                  ) : (
+                    field.value
+                  )}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        ) : null}
 
         {page.sessions?.length ? (
           <ul className="enr-sessions">
@@ -204,9 +244,9 @@ export default function EnrichmentPage() {
           </div>
         ) : null}
 
-        {page.ctaHref ? (
-          <SmartLink href={page.ctaHref} className="enr-cta">
-            {page.ctaLabel || "Continue"}
+        {ctaHref ? (
+          <SmartLink href={ctaHref} className="enr-cta">
+            {ctaLabel}
             {externalCta ? " ↗" : ""}
           </SmartLink>
         ) : null}

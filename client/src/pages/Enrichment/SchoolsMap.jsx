@@ -1,4 +1,5 @@
 import { useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import OsmPinsMap, { osmSearchUrl } from "./OsmPinsMap";
 
 function formatGrades(grades) {
@@ -60,6 +61,11 @@ function ProgramCard({ program }) {
       {program.scheduleNote ? <p className="enr-school-note">{program.scheduleNote}</p> : null}
       {program.blurb ? <p className="enr-school-blurb">{program.blurb}</p> : null}
       <div className="enr-school-actions">
+        {program.slug ? (
+          <Link className="enr-cta enr-cta--compact" to={`/enrichment/${program.slug}`}>
+            Details
+          </Link>
+        ) : null}
         {program.registerHref ? (
           <a className="enr-cta enr-cta--compact" href={program.registerHref} target="_blank" rel="noreferrer">
             Register ↗

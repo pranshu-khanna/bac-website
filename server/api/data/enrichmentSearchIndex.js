@@ -1,5 +1,6 @@
 const home = require("./enrichmentData");
 const { pages } = require("./enrichmentPages");
+const { listProgramPageMeta } = require("./enrichmentProgramPages");
 
 function pushText(parts, value) {
   if (!value) return;
@@ -152,6 +153,19 @@ function buildIndex() {
         href: `/enrichment/${page.slug}`,
         type: "page",
         keywords,
+      }),
+    );
+  });
+
+  listProgramPageMeta().forEach((meta) => {
+    entries.push(
+      makeEntry({
+        id: `program-${meta.slug}`,
+        title: meta.title,
+        blurb: meta.blurb || "",
+        href: meta.href,
+        type: "program",
+        keywords: [meta.slug, meta.blurb],
       }),
     );
   });

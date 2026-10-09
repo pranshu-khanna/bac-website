@@ -1,0 +1,61 @@
+.feedback-tab {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 120;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.35rem;
+  padding: 1.1rem 0.55rem;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none !important;
+  box-shadow: -2px 4px 16px rgba(8, 18, 32, 0.22);
+  transform: translateY(-50%);
+  transition: background 0.15s ease, padding-right 0.15s ease;
+}
+
+.feedback-tab:hover,
+.feedback-tab:focus-visible {
+  background: var(--ink-hover);
+  padding-right: 0.7rem;
+  outline: none;
+}
+
+.feedback-tab-label {
+  font-family: var(--font-condensed);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  line-height: 1;
+}
+
+[data-theme="dark"] .feedback-tab {
+  background: var(--ink);
+  color: #0b1220;
+}
+
+[data-theme="dark"] .feedback-tab:hover,
+[data-theme="dark"] .feedback-tab:focus-visible {
+  background: var(--ink-dark);
+  color: #0b1220;
+}
+
+@media (max-width: 640px) {
+  .feedback-tab {
+    min-width: 2.1rem;
+    padding: 0.9rem 0.45rem;
+  }
+
+  .feedback-tab-label {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+}

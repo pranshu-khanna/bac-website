@@ -5,7 +5,6 @@ module.exports = {
   slugs: [
   "afterschool-info",
   "camps-all",
-  "camps-menu",
   "club-cupertino",
   "club-fremont",
   "club-los-gatos",
@@ -92,8 +91,8 @@ module.exports = {
         "a": "Staffing can change through the course start date as some courses do not run and others need multiple coaches. Mentorship preferences are noted when possible but are not guaranteed."
       }
     ],
-    "ctaLabel": "Register on enrichment site",
-    "ctaHref": "https://enrichment.bayareachess.com/SPRING2022",
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "Online FAQ",
@@ -330,41 +329,12 @@ module.exports = {
     "ctaHref": "/enrichment#camps",
     "links": [
       {
-        "label": "Camps by city",
-        "href": "/enrichment/camps-menu"
-      },
-      {
         "label": "Strategy-Games camps",
         "href": "/enrichment/strategy-games"
       },
       {
         "label": "Policies (PDF)",
         "href": "https://enrichment.bayareachess.com/sites/default/files/2026-05/Policies.-2026.pdf"
-      }
-    ]
-  },
-  "camps-menu": {
-    "slug": "camps-menu",
-    "kicker": "Registration menu",
-    "title": "Camps by city",
-    "intro": "Jump to a city on the enrichment home map, or open registration on the live enrichment site for a specific session.",
-    "paragraphs": [
-      "Fall & winter 2026 sessions are listed on the Enrichment home Camps section with direct registration links for San Jose, Palo Alto, Redwood City, and Burlingame."
-    ],
-    "ctaLabel": "Open camps map",
-    "ctaHref": "/enrichment#camps",
-    "links": [
-      {
-        "label": "Camp general info",
-        "href": "/enrichment/camps-all"
-      },
-      {
-        "label": "Strategy-Games",
-        "href": "/enrichment/strategy-games"
-      },
-      {
-        "label": "Browse on enrichment site",
-        "href": "https://enrichment.bayareachess.com/page/camps"
       }
     ]
   },
@@ -550,7 +520,7 @@ module.exports = {
       }
     ],
     "ctaLabel": "Full list on enrichment site",
-    "ctaHref": "https://enrichment.bayareachess.com/afterschool-event-view",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "After-school FAQ",
@@ -725,8 +695,8 @@ module.exports = {
         "a": "Masks are not required. Please stay home if the child is sick or showing symptoms. Parent rooms are generally not available \u2014 drop-off/sign-in at the door."
       }
     ],
-    "ctaLabel": "Register next session (enrichment site)",
-    "ctaHref": "https://enrichment.bayareachess.com/SanJoseChessClub22-23",
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "All clubs",
@@ -773,8 +743,8 @@ module.exports = {
         "a": "Masks are not required. Please stay home if the child is sick or showing symptoms. Parent rooms are generally not available \u2014 drop-off/sign-in at the door."
       }
     ],
-    "ctaLabel": "Register next session (enrichment site)",
-    "ctaHref": "https://enrichment.bayareachess.com/LosGatosChessClub",
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "All clubs",
@@ -817,8 +787,8 @@ module.exports = {
         "a": "Masks are not required. Please stay home if the child is sick or showing symptoms. Parent rooms are generally not available \u2014 drop-off/sign-in at the door."
       }
     ],
-    "ctaLabel": "Register next session (enrichment site)",
-    "ctaHref": "https://enrichment.bayareachess.com/PaloAltoInPersonChessClub",
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "All clubs",
@@ -861,8 +831,8 @@ module.exports = {
         "a": "Masks are not required. Please stay home if the child is sick or showing symptoms. Parent rooms are generally not available \u2014 drop-off/sign-in at the door."
       }
     ],
-    "ctaLabel": "Register next session (enrichment site)",
-    "ctaHref": "https://enrichment.bayareachess.com/PaloAltoThursdays",
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "All clubs",
@@ -905,8 +875,8 @@ module.exports = {
         "a": "Masks are not required. Please stay home if the child is sick or showing symptoms. Parent rooms are generally not available \u2014 drop-off/sign-in at the door."
       }
     ],
-    "ctaLabel": "Register next session (enrichment site)",
-    "ctaHref": "https://enrichment.bayareachess.com/club/cupertino-sunday-person-drop-club",
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "All clubs",
@@ -947,8 +917,8 @@ module.exports = {
         "a": "Masks are not required. Please stay home if the child is sick or showing symptoms. Parent rooms are generally not available \u2014 drop-off/sign-in at the door."
       }
     ],
-    "ctaLabel": "Register next session (enrichment site)",
-    "ctaHref": "https://enrichment.bayareachess.com/SanJoseAdvancedChessClub25",
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "All clubs",
@@ -995,8 +965,8 @@ module.exports = {
         "a": "Masks are not required. Please stay home if the child is sick or showing symptoms. Parent rooms are generally not available \u2014 drop-off/sign-in at the door."
       }
     ],
-    "ctaLabel": "Register next session (enrichment site)",
-    "ctaHref": "https://enrichment.bayareachess.com/FremontChessClub22-23",
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "All clubs",
@@ -1037,7 +1007,7 @@ module.exports = {
       }
     ],
     "ctaLabel": "Register for simul",
-    "ctaHref": "https://enrichment.bayareachess.com/club/SimulEvent",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "Map",
@@ -1138,8 +1108,8 @@ module.exports = {
         "a": "Rising Star is on the Enrichment site (this stack / enrichment.bayareachess.com), not the USCF tournament site. Logins differ between the two sites."
       }
     ],
-    "ctaLabel": "Register on enrichment site",
-    "ctaHref": "https://enrichment.bayareachess.com/RisingStars",
+    "ctaLabel": "Register",
+    "ctaHref": "/login",
     "links": [
       {
         "label": "Map",

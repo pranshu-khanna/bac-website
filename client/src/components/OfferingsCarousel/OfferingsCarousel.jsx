@@ -38,7 +38,7 @@ export default function OfferingsCarousel({ pillars, linkBase = "/" }) {
   };
 
   return (
-    <div className="landing-offerings">
+    <div className={`landing-offerings landing-offerings--n${count}`}>
       <div className="landing-offerings-row">
         <button
           type="button"

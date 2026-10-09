@@ -90,7 +90,7 @@ function SessionList({ sessions, title }) {
         {sessions.map((session) => (
           <li key={`${session.label}-${session.href}`}>
             <span>{session.label}</span>
-            <ExtLink href={session.href}>Register</ExtLink>
+            <ExtLink href={session.href}>{isLocalHref(session.href) ? "Details" : "Register"}</ExtLink>
           </li>
         ))}
       </ul>
@@ -139,7 +139,6 @@ function CampsSection({ camps }) {
       links={camps.links}
     >
       <Points items={camps.points} />
-      <p className="enr-map-hint">{camps.mapHint}</p>
       <div className="enr-camps-layout">
         <CampsMap locations={camps.locations} activeId={activeId} onSelect={selectCity} />
         <div className="enr-camp-side">

@@ -3,6 +3,7 @@
  * online classes, tournament team, and Rising Star data.
  */
 const data = require("./enrichmentData");
+const { localHrefForCalendar } = require("./enrichmentProgramPages");
 
 const DAY_INDEX = {
   sunday: 0,
@@ -255,7 +256,7 @@ function eventsFromSchools() {
             timeLabel: timeLabel || program.scheduleLine || "",
             startMinutes,
             rating: "All levels",
-            href: program.registerHref || `/enrichment#afterschool`,
+            href: localHrefForCalendar(program.registerHref) || `/enrichment#afterschool`,
             detail: program.scheduleLine || program.term || "",
           }),
         );
@@ -353,7 +354,7 @@ function eventsFromCamps() {
               timeLabel,
               startMinutes,
               rating: normalizeRating(type),
-              href: slot.href,
+              href: localHrefForCalendar(slot.href),
               detail: session.when,
             }),
           );
@@ -451,7 +452,7 @@ function eventsFromClasses() {
           timeLabel: parsed.timeLabel,
           startMinutes: parsed.startMinutes,
           rating: parsed.rating,
-          href: session.href,
+          href: localHrefForCalendar(session.href),
           detail: session.label,
         }),
       );

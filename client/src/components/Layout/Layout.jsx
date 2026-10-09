@@ -1,6 +1,8 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import FeedbackTab from "../FeedbackTab/FeedbackTab";
+import "../FeedbackTab/FeedbackTab.scss";
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -11,6 +13,7 @@ export default function Layout() {
       <Header />
       <Outlet />
       {!hideFooter ? <Footer /> : null}
+      <FeedbackTab />
     </div>
   );
 }

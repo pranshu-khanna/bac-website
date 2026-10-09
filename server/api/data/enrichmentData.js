@@ -5,6 +5,8 @@ const TEAM_APPLY =
 const schoolMap = require("./enrichmentSchools");
 
 const L = (path) => (path.startsWith("http") ? path : `${ENRICHMENT_BASE}${path}`);
+const CAMP = (slug) => `/enrichment/camp/${slug}`;
+const EVENT = (slug) => `/enrichment/event/${slug}`;
 
 module.exports = {
   hero: {
@@ -86,19 +88,19 @@ module.exports = {
     currentSessions: [
       {
         label: "Wednesdays — Beginner to Advanced I · 5:15–6:15 PM (9/2–10/14)",
-        href: L("/event/26-level-2-4-beginner-advanced-i-wednesdays-515-615-pm-pst-92-1014"),
+        href: EVENT("26-level-2-4-beginner-advanced-i-wednesdays-515-615-pm-pst-92-1014"),
       },
       {
         label: "Thursdays — Absolute Beginner / Beginner · 5:15–6:15 PM (9/3–10/15)",
-        href: L("/event/26-level-115-absolute-beginnerbeginner-thursdays-515-615pm-pst-93-1015"),
+        href: EVENT("26-level-115-absolute-beginnerbeginner-thursdays-515-615pm-pst-93-1015"),
       },
       {
         label: "Thursdays — Beginner to Intermediate · 5:15–6:15 PM (9/3–10/15)",
-        href: L("/event/26-level-23-beginner-intermediate-thursdays-515-615-pm-pst-93-1015"),
+        href: EVENT("26-level-23-beginner-intermediate-thursdays-515-615-pm-pst-93-1015"),
       },
       {
         label: "Fridays — Beginner to Advanced II · 5:15–6:15 PM (9/4–10/16)",
-        href: L("/event/26-level-2-5-beginneradvanced-2-fridays-515-615-pm-pst-94-1016"),
+        href: EVENT("26-level-2-5-beginneradvanced-2-fridays-515-615-pm-pst-94-1016"),
       },
     ],
     upcomingSessions: [
@@ -162,7 +164,6 @@ module.exports = {
       "Redwood City & Burlingame sessions may also be listed via City Parks & Rec",
       "Early drop-off / late pick-up available at many sites",
     ],
-    mapHint: "Select a city to view sessions and registration links",
     locations: [
       {
         id: "san-jose",
@@ -174,19 +175,19 @@ module.exports = {
         map: { x: 62, y: 78 },
         sessions: [
           { when: "Sep 7 (Labor Day)", slots: [
-            { label: "9AM–1PM", href: L("/camp/26-labor-day-chess-camp-9am-1pm-san-jose-972026") },
-            { label: "1PM–5PM", href: L("/camp/26-labor-day-chess-camp-1pm-5pm-san-jose-972026") },
+            { label: "9AM–1PM", href: CAMP("26-labor-day-chess-camp-9am-1pm-san-jose-972026") },
+            { label: "1PM–5PM", href: CAMP("26-labor-day-chess-camp-1pm-5pm-san-jose-972026") },
           ]},
           { when: "Nov 23–25 · Thanksgiving", type: "Chess", slots: [
-            { label: "9AM–1PM", href: L("/camp/26-thanksgiving-chess-camp-9am-1pm-san-jose-1123-1125") },
+            { label: "9AM–1PM", href: CAMP("26-thanksgiving-chess-camp-9am-1pm-san-jose-1123-1125") },
           ]},
           { when: "Dec 21–23 · Winter", type: "Chess", slots: [
-            { label: "9AM–1PM", href: L("/camp/26-winter-chess-camp-9am-1pm-san-jose-1221-1223") },
-            { label: "1PM–5PM", href: L("/camp/26-winter-chess-camp-1pm-5pm-san-jose-1221-1223") },
+            { label: "9AM–1PM", href: CAMP("26-winter-chess-camp-9am-1pm-san-jose-1221-1223") },
+            { label: "1PM–5PM", href: CAMP("26-winter-chess-camp-1pm-5pm-san-jose-1221-1223") },
           ]},
           { when: "Dec 28–31 · Winter", type: "Chess", slots: [
-            { label: "9AM–1PM", href: L("/camp/26-winter-chess-camp-9am-1pm-san-jose-1228-1231") },
-            { label: "1PM–5PM", href: L("/camp/26-winter-chess-camp-1pm-5pm-san-jose-1228-1231") },
+            { label: "9AM–1PM", href: CAMP("26-winter-chess-camp-9am-1pm-san-jose-1228-1231") },
+            { label: "1PM–5PM", href: CAMP("26-winter-chess-camp-1pm-5pm-san-jose-1228-1231") },
           ]},
         ],
       },
@@ -200,25 +201,25 @@ module.exports = {
         map: { x: 48, y: 58 },
         sessions: [
           { when: "Nov 23–25 · Thanksgiving", type: "Chess", slots: [
-            { label: "9AM–1PM", href: L("/camp/26-thanksgiving-chess-camp-9am-1pm-palo-alto-1123-1125") },
-            { label: "1PM–5PM", href: L("/camp/26-thanksgiving-chess-camp-1pm-5pm-palo-alto-1123-1125") },
+            { label: "9AM–1PM", href: CAMP("26-thanksgiving-chess-camp-9am-1pm-palo-alto-1123-1125") },
+            { label: "1PM–5PM", href: CAMP("26-thanksgiving-chess-camp-1pm-5pm-palo-alto-1123-1125") },
           ]},
           { when: "Nov 23–25 · Thanksgiving", type: "Master", slots: [
-            { label: "9AM–1PM", href: L("/camp/26-thanksgiving-master-chess-camp-9am-1pm-palo-alto-1123-1125") },
+            { label: "9AM–1PM", href: CAMP("26-thanksgiving-master-chess-camp-9am-1pm-palo-alto-1123-1125") },
           ]},
           { when: "Dec 21–23 · Winter", type: "Chess", slots: [
-            { label: "9AM–1PM", href: L("/camp/26-winter-chess-camp-9am-1pm-palo-alto-1221-1223") },
-            { label: "1PM–5PM", href: L("/camp/26-winter-chess-camp-1pm-5pm-palo-alto-1221-1223") },
+            { label: "9AM–1PM", href: CAMP("26-winter-chess-camp-9am-1pm-palo-alto-1221-1223") },
+            { label: "1PM–5PM", href: CAMP("26-winter-chess-camp-1pm-5pm-palo-alto-1221-1223") },
           ]},
           { when: "Dec 21–23 · Winter", type: "Master", slots: [
-            { label: "9AM–1PM", href: L("/camp/26-winter-master-chess-camp-9am-1pm-palo-alto-1221-1223") },
+            { label: "9AM–1PM", href: CAMP("26-winter-master-chess-camp-9am-1pm-palo-alto-1221-1223") },
           ]},
           { when: "Dec 28–31 · Winter", type: "Chess", slots: [
-            { label: "9AM–1PM", href: L("/camp/26-winter-chess-camp-9am-1pm-palo-alto-1228-1231") },
-            { label: "1PM–5PM", href: L("/camp/26-winter-chess-camp-1pm-5pm-palo-alto-1228-1231") },
+            { label: "9AM–1PM", href: CAMP("26-winter-chess-camp-9am-1pm-palo-alto-1228-1231") },
+            { label: "1PM–5PM", href: CAMP("26-winter-chess-camp-1pm-5pm-palo-alto-1228-1231") },
           ]},
           { when: "Dec 28–31 · Winter", type: "Strategy Games", slots: [
-            { label: "9AM–1PM", href: L("/camp/26-winter-strategy-games-camp-9am-1pm-palo-alto-1228-1231") },
+            { label: "9AM–1PM", href: CAMP("26-winter-strategy-games-camp-9am-1pm-palo-alto-1228-1231") },
           ]},
         ],
       },
@@ -232,16 +233,16 @@ module.exports = {
         map: { x: 38, y: 48 },
         sessions: [
           { when: "Sep 28 · Fall", type: "Chess", slots: [
-            { label: "9AM–12PM", href: L("/camp/26-fall-chess-camp-sandpiper-community-center-redwood-city-9am-12pm-928") },
+            { label: "9AM–12PM", href: CAMP("26-fall-chess-camp-sandpiper-community-center-redwood-city-9am-12pm-928") },
           ]},
           { when: "Oct 12 · Fall", type: "Chess", slots: [
-            { label: "9AM–12PM", href: L("/camp/26-fall-chess-camp-sandpiper-community-center-redwood-city-9am-12pm-1012") },
+            { label: "9AM–12PM", href: CAMP("26-fall-chess-camp-sandpiper-community-center-redwood-city-9am-12pm-1012") },
           ]},
           { when: "Nov 23–25 · Thanksgiving", type: "Chess", slots: [
-            { label: "1PM–4PM", href: L("/camp/26-thanksgiving-chess-camp-sandpiper-community-center-redwood-city-1-4pm-1123-1125") },
+            { label: "1PM–4PM", href: CAMP("26-thanksgiving-chess-camp-sandpiper-community-center-redwood-city-1-4pm-1123-1125") },
           ]},
           { when: "Nov 23–25 · Thanksgiving", type: "Strategy Games", slots: [
-            { label: "9AM–12PM", href: L("/camp/26-thanksgiving-strategy-game-camp-sandpiper-community-center-redwood-city-9am-12pm-1123-1125") },
+            { label: "9AM–12PM", href: CAMP("26-thanksgiving-strategy-game-camp-sandpiper-community-center-redwood-city-9am-12pm-1123-1125") },
           ]},
         ],
       },
@@ -255,19 +256,16 @@ module.exports = {
         map: { x: 28, y: 32 },
         sessions: [
           { when: "Dec 21–23 · Winter", type: "Chess", slots: [
-            { label: "9AM–12PM", href: L("/camp/26-winter-chess-camp-9am-12pm-burlingame-1221-1223") },
-            { label: "1PM–4PM", href: L("/camp/26-winter-chess-camp-1-4pm-burlingame-1221-1223") },
+            { label: "9AM–12PM", href: CAMP("26-winter-chess-camp-9am-12pm-burlingame-1221-1223") },
+            { label: "1PM–4PM", href: CAMP("26-winter-chess-camp-1-4pm-burlingame-1221-1223") },
           ]},
         ],
       },
     ],
-    strategyNote:
-      "Strategy-Games camps teach logic, probability, and game design through board games (not chess). Led by coaches James Bethany and Jason Uerkvitz. Also available as Saturday clubs in San Jose (combo) and Palo Alto.",
     ctaLabel: "Camp guide",
     ctaHref: "/enrichment/camps-all",
     links: [
       { label: "Camp menu (All)", href: "/enrichment/camps-all" },
-      { label: "Camps by city", href: "/enrichment/camps-menu" },
       { label: "Strategy-Games camps", href: "/enrichment/strategy-games" },
       { label: "Policies (PDF)", href: POLICIES_PDF },
     ],

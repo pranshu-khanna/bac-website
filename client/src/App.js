@@ -20,6 +20,8 @@ export default function App() {
         <Route path="leaderboard" element={<HomeSectionRedirect section="leaderboard" />} />
         <Route path="enrichment" element={<EnrichmentHome />} />
         <Route path="enrichment/launch/:slug" element={<EnrichmentLaunch />} />
+        <Route path="enrichment/camp/:slug" element={<EnrichmentPage />} />
+        <Route path="enrichment/event/:slug" element={<EnrichmentPage />} />
         <Route path="enrichment/:slug" element={<EnrichmentPage />} />
         <Route path="results" element={<HomeSectionRedirect section="faq" />} />
         <Route path="faq" element={<HomeSectionRedirect section="faq" />} />

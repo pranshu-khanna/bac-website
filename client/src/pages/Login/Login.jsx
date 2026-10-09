@@ -222,6 +222,9 @@ export default function Login() {
   if (!meta) {
     return (
       <main className="content-main login-page">
+        <div className="login-banner" role="status">
+          Login functionality is not ready yet.
+        </div>
         <div className="login-shell">
           <p className="muted">Loading…</p>
         </div>
@@ -234,6 +237,9 @@ export default function Login() {
 
   return (
     <main className="content-main login-page">
+      <div className="login-banner" role="status">
+        Login functionality is not ready yet.
+      </div>
       <div className="login-shell">
         <div className="login-card">
           <header className="login-card-header">
