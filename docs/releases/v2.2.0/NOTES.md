@@ -10,39 +10,39 @@ Enrichment calendar destinations that used to open on enrichment.bayareachess.co
 - Google Docs and Homeroom destinations stay external — only enrichment.bayareachess.com program URLs are mirrored locally
 - **Register** on program pages goes to `/login` on this site (not the legacy enrichment host)
 
-![Program page](03-program-page.png)
+![Program page](https://github.com/pranshu-khanna/bac-website/releases/download/v2.2.0/03-program-page.png)
 
-![Register CTA](03b-program-register-cta.png)
+![Register CTA](https://github.com/pranshu-khanna/bac-website/releases/download/v2.2.0/03b-program-register-cta.png)
 
 ### Calendar stays on-site
 - Day/session links in **Calendar – All Programs** prefer the new local pages
 - Parents can browse the calendar and open program detail without leaving the new site
 
-![Enrichment calendar](06-enrichment-calendar.png)
+![Enrichment calendar](https://github.com/pranshu-khanna/bac-website/releases/download/v2.2.0/06-enrichment-calendar.png)
 
 ### Feedback tab
 - Persistent **Feedback** tab on the right edge of every page
 - Opens the BAC feedback form (`forms.gle/A55yks9JYMKLEa4WA`) in a new tab
 
-![Feedback tab on enrichment home](01-enrichment-home.png)
+![Feedback tab on enrichment home](https://github.com/pranshu-khanna/bac-website/releases/download/v2.2.0/01-enrichment-home.png)
 
 ### Offerings & dark-mode polish
 - Home/enrichment **What we offer** layout updated for a clearer six-item presentation (3-across on wide viewports)
 - Featured activity tiles keep readable hover contrast in dark mode (tile surface darkens with the theme instead of washing out)
 
-![Offerings section](02-offerings-grid.png)
+![Offerings section](https://github.com/pranshu-khanna/bac-website/releases/download/v2.2.0/02-offerings-grid.png)
 
 ### Camps copy cleanup
 - Removed camps map hint and strategy-game note clutter from the camps experience
 - Camps-by-city remains available from the camps overview; the unused camps-menu page/links are gone
 
-![Camps overview](05-camps-all.png)
+![Camps overview](https://github.com/pranshu-khanna/bac-website/releases/download/v2.2.0/05-camps-all.png)
 
 ### Login readiness banner
 - Login page shows a clear notice: **Login functionality is not ready yet.**
 - Sign-in UI remains visible so the flow can be finished without surprising visitors
 
-![Login banner](04-login-banner.png)
+![Login banner](https://github.com/pranshu-khanna/bac-website/releases/download/v2.2.0/04-login-banner.png)
 
 ## Upgrade checklist
 
