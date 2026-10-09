@@ -1,0 +1,36 @@
+name: Publish v2.2.0 release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/releases/v2.2.0/**"
+      - ".github/workflows/publish-v2.2.0-release.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create GitHub Release (idempotent)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if gh release view v2.2.0 >/dev/null 2>&1; then
+            echo "Release v2.2.0 already exists — updating notes/assets"
+            gh release edit v2.2.0 \
+              --title "v2.2.0 — Local enrichment pages & UI polish" \
+              --notes-file docs/releases/v2.2.0/NOTES.md
+            gh release upload v2.2.0 docs/releases/v2.2.0/*.png --clobber
+          else
+            gh release create v2.2.0 \
+              --title "v2.2.0 — Local enrichment pages & UI polish" \
+              --notes-file docs/releases/v2.2.0/NOTES.md \
+              docs/releases/v2.2.0/*.png
+          fi
+          gh release view v2.2.0 --json url -q .url
